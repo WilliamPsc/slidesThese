@@ -12,9 +12,11 @@ all: $(TARGETS)
 	$(PDFLATEX) $< -o $@
 	$(PDFLATEX) $< -o $@
 	$(PDFLATEX) $< -o $@
-	rm -f $(CLEAN_FILES)
 
-.PHONY: clean scratch
+.PHONY: clean scratch force
+
+force: scratch
+	make
 
 clean: 
 	rm -f $(CLEAN_FILES)
