@@ -1,0 +1,80 @@
+\documentclass[svgnames, table, 10pt, aspectratio=169]{beamer} % aspectratio=1610, 149, 54, 43 et 32.]{beamer}
+\usepackage{ae,lmodern}
+\usepackage[english]{babel}  % package pour langue française
+\usepackage[utf8]{inputenc} % compilation des mots accentués
+\usepackage[T1]{fontenc}      % césure correcte des mots accentués 
+\usepackage{eso-pic,rotating,graphicx} % insertion d'images et manipulation de la position
+\usepackage{xcolor}
+\usepackage{subcaption} % utilisation d'une légende intermédiaire dans le cas d'une image multiple
+\usepackage{url} % utilisation des liens url (utilisation dans le cas de la bibliographie par exemple
+\usepackage{tcolorbox,listings} % coloration du texte et possibilité d'inclure blocs de codes
+\usepackage{geometry} % customisation des layouts de page (marges, bordures, espacements)
+\usepackage{amssymb} % caractères mathématiques
+\usepackage{multirow, makecell} % tableau sur plusieurs colonnes fusionnées
+\usepackage{bibentry}
+\usepackage[backend=biber,style=numeric-comp, sorting=none, natbib=true]{biblatex} % exemples styles : https://fr.overleaf.com/learn/latex/Biblatex_bibliography_styles (mla pas mal)
+\usepackage{comment} % utilisation des commentaires de blocs
+\setcounter{tocdepth}{2} % profondeur du sommaire (2 = sections, sous sections)
+\setcounter{secnumdepth}{1} % profondeur de la numérotation (1 : sections)
+\usepackage{ragged2e} % justification du texte dans les itemizes
+\usepackage{tikz} % création de schémas directement dans les slides
+\usepackage{csquotes} % pour enlever un warning avec biblatex
+\usepackage{fontawesome} %emoji
+\usepackage[normalem]{ulem}
+\usepackage{booktabs}
+\usepackage{nth}
+
+% William PENSEC, étudiant en Doctorat à Lorient 2021/2024
+
+%-------- Lab-STICC Backgound -------------------
+% \usebackgroundtemplate{%
+% 	\tikz[overlay,remember picture] \node[opacity=0.02, at=(current page.center)] {
+% 		\includegraphics[width=4.5in]{images/logo/labsticc.png}};
+% }
+
+
+\input{include/header/include.tex}
+\input{include/header/titlepage.tex}
+
+\begin{document}
+	% ---------------------------------------------------------------- %
+	\begin{frame}
+	    \titlepage
+	\end{frame}
+	% ---------------------------------------------------------------- %
+	% \input{src/1_introduction/introduction}
+	%
+	% ---------------------------------------------------------------- %
+	% \begin{frame}<beamer>{Outline}
+	% 	\begin{columns}[c]
+	% 		% \fbox{
+	% 		\begin{column}{.62\textwidth}
+	% 			\tableofcontents[
+	% 				hideothersubsections,
+	% 				sections={1-2}
+	% 			]
+	% 		\end{column}
+	% 		% }
+	% 		\hfill
+	% 		% \fbox{
+	% 		\begin{column}{.35\textwidth}
+	% 			\tableofcontents[
+	% 				hideothersubsections,
+	% 				sections={3-4}
+	% 			]
+	% 		\end{column}
+	% 		% }
+	% 	\end{columns}
+	% \end{frame}
+	% \begin{frame}{Outline}
+	% 	\tableofcontents
+	% \end{frame}
+	%
+	% ---------------------------------------------------------------- %
+	% \input{src/2_vuln_assessment/driscy}
+	%
+	% ---------------------------------------------------------------- %
+	% \input{bib/bibliographie}
+	%
+	% ---------------------------------------------------------------- %
+\end{document}

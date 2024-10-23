@@ -1,0 +1,97 @@
+\usetheme[secheader]{Madrid}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{frametitle continuation}{}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{headline}
+
+
+\definecolor{bleuLabSTICC}{RGB}{0,49,99}
+\colorlet{beamer@blendedblue}{bleuLabSTICC}
+
+\newcommand{\manualshortsubtitle}{PhD Dissertation Defense - Lorient, France}
+
+\makeatletter
+\setbeamercolor{footlinecolor}{fg=bleuLabSTICC, bg=white}
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.55\paperwidth,ht=2.25ex,dp=1ex,left]{footlinecolor}%
+    \usebeamerfont{author in head/foot}\insertshortauthor (\insertshortinstitute)
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[wd=.45\paperwidth,ht=2.25ex,dp=1ex,right]{footlinecolor}%
+    \usebeamercolor{date in head/foot}\manualshortsubtitle~--~
+    \usebeamerfont{date in head/foot}\insertdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+\makeatletter
+\setbeamercolor{frametitlecolor}{fg=bleuLabSTICC!75, bg=bleuLabSTICC!10}
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[sep=.3ex,wd=\paperwidth,leftskip=.5cm,rightskip=0cm]{frametitlecolor}%
+    \usebeamerfont{frametitle}\insertframetitle\\[1pt]
+  \end{beamercolorbox}
+  \ifx\insertframesubtitle\@empty%
+  \else
+  \nointerlineskip%
+  \begin{beamercolorbox}[sep=.3ex,wd=\paperwidth,leftskip=.5cm,rightskip=0cm]{frametitlecolor}%
+  \usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle%
+  \end{beamercolorbox}
+  \fi
+}
+\makeatother
+
+\hypersetup{
+  colorlinks=true,       % false: boxed links; true: colored links
+  linkcolor=gray,          % color of internal links (change box color with linkbordercolor)
+  citecolor=red,        % color of links to bibliography
+  filecolor=black,         % color of file links
+  urlcolor=red,        % color of external links
+  pdfauthor = {William PENSEC},			                        % Auteurs
+  pdftitle = {Enhanced Processor Defence Against Physical and Software Threats by Securing DIFT Against Fault Injection Attacks},	% Titre du document
+  pdfsubject = {PhD Dissertation Defense},		            % Sujet
+  pdfkeywords = {Hardware security, DIFT, Fault Injection Attacks, Countermeasures, Error Correction Code, Error Detection Code, Embedded Processor},  % Mots-clefs
+  pdfstartview={FitV}                                         % ajuste la page à la largueur de l'écran
+}
+
+\bibliography{bib/bibliographie.bib}
+\renewcommand*{\bibfont}{\footnotesize}
+
+\AtBeginSection[] {
+  \begin{frame}[noframenumbering]{Outline}
+    \begin{columns}[c]
+        \begin{column}{.6\textwidth}
+          \tableofcontents[
+            currentsection,
+            currentsubsection,
+            hideothersubsections,
+            sectionstyle=show/shaded,
+            sections={1-2}
+          ]
+        \end{column}
+      \hfill
+        \begin{column}{.375\textwidth}
+          \tableofcontents[
+            currentsection,
+            currentsubsection,
+            hideothersubsections,
+            sectionstyle=show/shaded,
+            sections={3-4}
+          ]
+        \end{column}
+    \end{columns}
+  \end{frame}
+}
+
+\newcommand{\filigrane}[2]{\begin{tikzpicture}[remember picture,overlay]
+	\node [rotate=#2,scale=2,text opacity=0.75]
+	at (current page.center) {\textcolor{red}{\textbf{#1}}};
+	\end{tikzpicture}
+}
+
+% Define color
+\definecolor[named]{LightGray}{RGB}{230,230,230}
