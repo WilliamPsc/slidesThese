@@ -5,6 +5,7 @@
 \usepackage[T1]{fontenc}      % césure correcte des mots accentués 
 \usepackage{eso-pic,rotating,graphicx} % insertion d'images et manipulation de la position
 \usepackage{xcolor}
+\usepackage[font=scriptsize]{caption}
 \usepackage{subcaption} % utilisation d'une légende intermédiaire dans le cas d'une image multiple
 \usepackage{url} % utilisation des liens url (utilisation dans le cas de la bibliographie par exemple
 \usepackage{tcolorbox,listings} % coloration du texte et possibilité d'inclure blocs de codes
@@ -42,37 +43,12 @@
 	    \titlepage
 	\end{frame}
 	% ---------------------------------------------------------------- %
-	% \begin{frame}<beamer>{Outline}
-	% 	\begin{columns}[c]
-	% 		% \fbox{
-	% 		\begin{column}{.62\textwidth}
-	% 			\tableofcontents[
-	% 				hideothersubsections,
-	% 				sections={1-2}
-	% 			]
-	% 		\end{column}
-	% 		% }
-	% 		\hfill
-	% 		% \fbox{
-	% 		\begin{column}{.35\textwidth}
-	% 			\tableofcontents[
-	% 				hideothersubsections,
-	% 				sections={3-4}
-	% 			]
-	% 		\end{column}
-	% 		% }
-	% 	\end{columns}
-	% \end{frame}
-
-	
-	%
-	% ---------------------------------------------------------------- %
-	\input{src/1_introduction/introduction}
-	%
-	% ---------------------------------------------------------------- %
 	\begin{frame}{Outline}
 		\tableofcontents
 	\end{frame}
+	%
+	% ---------------------------------------------------------------- %
+	\input{src/1_introduction/introduction}
 	%
 	% ---------------------------------------------------------------- %
 	\input{src/2_vuln_assessment/driscy}

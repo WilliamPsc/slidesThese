@@ -1,50 +1,116 @@
-\section*{Introduction}
+\section{Introduction}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Context: IoT and Embedded Systems}
-	\begin{minipage}[c]{0.4\textwidth}
-        \begin{itemize}
-            \setbeamertemplate{itemize items}[square]
-            \justifying
-            \item Rapid expansion of connected objects.
-            \item Objects with physical proximity.
-            \item Several fault injection attack vulnerabilities revealed
-        \end{itemize}
+\subsection{Context}
+\begin{frame}{Context: Embedded Systems and IoT}
+	\begin{minipage}[c]{0.5\textwidth}
+        \begin{block}{Internet of Things (IoT)}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item Wide range of application
+                \item Fast growing market with rapid expansion of use
+                \item Rely on sensors depending on their usage
+                \item Collect and share data
+                \item Manipulation of critical data
+                \item Increasingly vulnerable to multiple threats
+            \end{itemize}
+        \end{block}
 	\end{minipage}\hfill%
-	\begin{minipage}[c]{0.6\textwidth}
+	\begin{minipage}[c]{0.5\textwidth}
 		\begin{figure}
 			\centering
-			\includegraphics[width=\textwidth]{src/1_introduction/img/iotapplications.pdf}
+			\includegraphics[width=.825\textwidth, trim={4.5cm 2.25cm 5.75cm 3.25cm}, clip]{src/1_introduction/img/iotapplications.pdf}
+            % \caption{Example of IoT applications}
 			\label{fig:iot_application}
 		\end{figure}
-	\end{minipage}
-\end{frame}
-
-\begin{frame}{Context: IoT and Embedded Systems}
-    \begin{minipage}[c]{0.4\textwidth}
-        \begin{itemize}
-            \setbeamertemplate{itemize items}[square]
-            \justifying
-            \item Rapid expansion of connected objects.
-            \item Objects with physical proximity.
-            \item Several fault injection attack vulnerabilities revealed
-        \end{itemize}
-	\end{minipage}\hfill%
-	\begin{minipage}[c]{0.6\textwidth}
-		\begin{figure}
+        \vspace{-5pt}
+        \begin{figure}
             \centering
-            \includegraphics[width=.9\textwidth]{src/1_introduction/img/iot_forecasts.pdf}
+            \includegraphics[width=.825\textwidth]{src/1_introduction/img/iot_forecasts.pdf}
             \label{fig:nbr_iot}
         \end{figure}
 	\end{minipage}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Motivations}
-    
+\subsection{Motivations}
+\begin{frame}{Motivations: IoT Under Threats}
+    \begin{block}{Threats}
+        \begin{itemize}
+            \setbeamertemplate{itemize items}[square]
+            \justifying
+            \item Software threats: malwares, memory overflow attacks, SQL injection, etc
+            \item Network threats: DDoS, man-in-the-middle, jamming, etc
+            \item Hardware threats: physical attacks such as reverse engineering, Side-Channel Attacks (SCA), Fault Injection Attacks (FIA)
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Vulnerabilities on critical systems}
+        \begin{itemize}
+            \setbeamertemplate{itemize items}[square]
+            \justifying
+            \item 
+        \end{itemize}
+    \end{block}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Objectives}
-    
+\subsection{Information Flow Tracking}
+\begin{frame}{Information Flow Tracking}
+    \begin{block}{}
+        \begin{itemize}
+            \setbeamertemplate{itemize items}[square]
+            \justifying
+            \item Protection against software attacks (e.g.: \textit{buffer overflow}, \textit{format string}, \textit{SQL injections}, \ldots)~\cite{BSMCVEJCO-21-acmcsur, HAK-21-acmcsur}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Dynamic Information Flow Tracking}
+    \begin{minipage}[c]{0.35\linewidth}
+        \begingroup
+        \begin{block}{\textbf{Three} steps}
+            \begin{itemize}
+                \item<1-> Tag initialisation
+                \item<2-> Tag propagation
+                \item<3-> Tag check
+            \end{itemize}
+        \end{block}
+        \endgroup
+    \end{minipage}\hfill%
+    \begin{minipage}[c]{0.6\linewidth}
+        \begin{figure}
+            \centering
+            \only<1>{\includegraphics<1>[width=1\textwidth, page=1]{src/1_introduction/img/schemaDIFT.pdf}}
+            \only<2>{\includegraphics<2>[width=1\textwidth, page=2]{src/1_introduction/img/schemaDIFT.pdf}}
+            \only<3->{\includegraphics<3->[width=1\textwidth, page=3]{src/1_introduction/img/schemaDIFT.pdf}}
+            \label{fig:schemaDIFT}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Physical Attacks}
+\begin{frame}{Physical Attacks}
+    \begin{block}{}
+        \begin{itemize}
+            \setbeamertemplate{itemize items}[square]
+            \justifying
+            \item 
+        \end{itemize}
+    \end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Objectives}
+\begin{frame}{Objectives of this PhD Thesis}
+    \begin{block}{Contributions}
+        \begin{itemize}
+            \setbeamertemplate{itemize items}[triangle]
+            \justifying
+            \item Provide a robust security mechanism against software and hardware threats.
+            \item Taking into account Fault Injection Attacks
+            \item Propose lightweight countermeasures against FIA
+            \item Take into account constraints, such as area and performance overhead
+        \end{itemize}
+    \end{block}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

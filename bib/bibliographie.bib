@@ -1,15 +1,54 @@
-@inproceedings{PDLC-18-hpec,
-  author    = {
-               Palmiero, Christian and
-               Di Guglielmo, Giuseppe and
-               Lavagno, Luciano and
-               Carloni, Luca P.
-               },
-  booktitle = {2018 IEEE High Performance extreme Computing Conference (HPEC)},
-  title     = {Design and Implementation of a Dynamic Information Flow Tracking Architecture to Secure a RISC-V Core for IoT Applications},
-  year      = {2018},
-  pages     = {1-7},
-  doi       = {10.1109/HPEC.2018.8547578}
+@Comment{================================ LINKS - misc ================================}
+@online{gnu_lib_c,
+    author      = {
+        Loosemore, Sandra and
+        Stallman, Richard M. and
+        McGrath, Roland and
+        Oram, Andrew and 
+        Drepper, Ulrich
+    },
+    title       = {{The {GNU C} Library Reference Manual}},
+    year        = {2023},
+    url         = {https://www.gnu.org/s/libc/manual/pdf/libc.pdf},
+    lastvisited = {2024-07-25}
+}
+
+@online{driscy,
+    author = {
+        Palmiero, Christian and 
+        Di Guglielmo, Giuseppe and 
+        Lavagno, Luciano and 
+        Carloni, Luca P.
+    },
+    title  = {{A Hardware Dynamic Information Flow Tracking Architecture for Low-level Security on a RISC-V Core}},
+    year   = {2018},
+    url    = {https://github.com/sld-columbia/riscv-dift}
+}
+
+@online{pulpino,
+    author = {
+        ETH Zurich and
+        Pulp Platform
+    },
+    title  = {{A Hardware Dynamic Information Flow Tracking Architecture for Low-level Security on a RISC-V Core}},
+    year   = {2016},
+    url    = {https://github.com/pulp-platform/pulpino}
+}
+
+@online{pulp,
+    author = {
+        ETH Zurich and
+        Pulp Platform
+    },
+    title  = {PULP Platform - Open hardware, the way it should be!},
+    year   = {2016},
+    url    = {https://pulp-platform.org/}
+}
+
+@misc{fisim,
+    author = {Riscure},
+    title  = {{FiSim: An open-source deterministic Fault Attack Simulator Prototype}},
+    url    = {https://github.com/Keysight/FiSim}
 }
 
 @misc{fissa,
@@ -18,45 +57,170 @@
     url    = {https://github.com/WilliamPsc/FISSA}
 }
 
+@misc{questasim,
+    author = {Siemens},
+    title  = {{QuestaSim}},
+    url    = {https://eda.sw.siemens.com/en-US/ic/questa/simulation/advanced-simulator/}
+}
+
+@misc{vivado,
+    author = {Xilinx},
+    title  = {{Vivado Design Suite}},
+    url    = {https://www.xilinx.com/products/design-tools/vivado.html}
+}
+
+@misc{verilator,
+    author = {Verilator},
+    title  = {{Verilator}},
+    url    = {https://github.com/verilator/verilator}
+}
+
+@misc{modelsim-force,
+    author = {Microsemi},
+    title  = {{Modelsim reference manual 10.4c}},
+    pages  = {170},
+    url    = {https://www.microsemi.com/document-portal/doc_view/136364-modelsim-me-10-4c-command-reference-manual-for-libero-soc-v11-7}
+}
+
+@misc{vivado-force,
+    author = {Xilinx},
+    title  = {{Vivado reference manual 2023.2}},
+    url    = {https://docs.xilinx.com/r/en-US/ug835-vivado-tcl-commands/add_force}
+}
+
+@misc{ebrary,
+    author = {Ebrary},
+    title  = {{Overview of Embedded Application Development for Intel Architecture}},
+    url    = {https://ebrary.net/22038/computer_science/overview_embedded_application_development_intel_architecture#734}
+}
+
+@misc{rayvlite_wired,
+    author = {Andy Greenberg},
+    title  = {{A \$500 Open Source Tool Lets Anyone Hack Computer Chips With Lasers}},
+    url    = {https://www.wired.com/story/rayv-lite-laser-chip-hacking-tool/}
+}
+
+@misc{riscure_station,
+    author = {Riscure},
+    title  = {{Laser Station 2}},
+    url    = {https://www.riscure.com/products/laser-station-2/}
+}
+
+@misc{riscure_emfi,
+    author = {Riscure},
+    title  = {{EM-FI Transient Probe with Adjustable Pulse Width}},
+    url    = {https://www.riscure.com/em-fi-transient-probe-apw/}
+}
+
+@misc{chipwhisperer,
+    author = {NewAE},
+    title  = {{ChipWhisperer}},
+    url    = {https://www.newae.com/chipwhisperer}
+}
+
+@misc{newae_clock,
+    author = {NewAE},
+    title  = {{ChipWhisperer}},
+    url    = {http://wiki.newae.com/V4:Tutorial_A2_Introduction_to_Glitch_Attacks_(including_Glitch_Explorer)},
+    note   = {Online. Accessed 11 September 2024}
+}
+
+@misc{chipshouter,
+    author = {NewAE},
+    title  = {{ChipSHOUTER}},
+    url    = {https://www.newae.com/chipshouter}
+}
+
 @misc{statista_iot,
     author = {Transforma Insights; Exploding Topics},
     title  = {{Number of Internet of Things (IoT) connections worldwide from 2022 to 2023, with forecasts from 2024 to 2033}},
     url    = {https://www.statista.com/statistics/1183457/iot-connected-devices-worldwide/},
     year   = {2024},
-    note   = {Online. Accessed 13th August 2024}
+    note   = {Online. Accessed 13 August 2024}
 }
 
-@article{iot_figure,
-  author  = {
-             Muhammad Zia Ur Rahman and
-             Ali Hassan Raza and
-             Abeer Abdulaziz AlSanad and
-             Muhammad Azeem Akbar and
-             Rabia Liaquat and
-             Muhammad Tanveer Riaz and
-             Lulwah AlSuwaidan and
-             Halah Abdulaziz Al-Alshaikh and
-             Hatoon S Alsagri
-             },
-  title   = {Real-time artificial intelligence based health monitoring, diagnosing and environmental control system for COVID-19 patients},
-  journal = {Mathematical Biosciences and Engineering},
-  year    = {2022},
-  doi     = {10.3934/mbe.2022357}
+@misc{statista_iot_revenu,
+    author = {Transforma Insights},
+    title  = {{Internet of Things (IoT) total annual revenue worldwide from 2020 to 2030}},
+    url    = {https://www.statista.com/statistics/1194709/iot-revenue-worldwide/},
+    year   = {2023},
+    note   = {Online. Accessed 13 August 2024}
 }
 
-@INPROCEEDINGS{AWMN-20-host,
-    author={
-        Arribas, Victor and
-        Wegener, Felix and
-        Moradi, Amir and
-        Nikova, Svetla
+@misc{decapping-19-wikipedia,
+    author = {{Wikipedia contributors}},
+    title  = {{Decapping--- Wikipedia}},
+    year   = {2019},
+    url    = {https://en.wikipedia.org/wiki/Decapping},
+    note   = {[Online; accessed 26-August-2024]}
+}
+
+@misc{fib-24-wikipedia,
+    author = {{Wikipedia contributors}},
+    title  = {{Focused Ion Beam --- Wikipedia}},
+    year   = {2024},
+    url    = {https://en.wikipedia.org/wiki/Focused_ion_beam},
+    note   = {[Online; accessed 01-September-2024]}
+}
+
+@misc{alphanov-fourLFI,
+    author = {{ALPhANOV}},
+    title  = {{ALPhANOV has designed a four-point laser rig for laser fault injections on integrated circuits.}},
+    year   = {2019},
+    url    = {https://www.alphanov.com/en/news/alphanov-has-designed-four-point-laser-rig-laser-fault-injections-integrated-circuits},
+    note   = {[Online; accessed 23-September-2024]}
+}
+
+@misc{alphanov-doubleLFI,
+    author = {{ALPhANOV}},
+    title  = {{Double Laser Fault Injection Microscope -- D-LMS}},
+    url    = {https://www.alphanov.com/en/products-services/double-laser-fault-injection},
+    note   = {[Online; accessed 23-September-2024]}
+}
+
+@Comment{================================ MISC - military ================================}
+@article{BLP-76-military,
+	author    = {
+		Bell, David E and
+		La Padula, Leonard J and
+		others
+	},
+	title     = {Secure computer system: Unified exposition and multics interpretation},
+	year      = {1976},
+    journal   = {Defense Technical Information Center},
+	publisher = {Mitre Corporation Bedford, MA}
+}
+
+@article{F-72-nsa,
+    author    = {
+        Friedman, Jeffrey
     },
-    title={{Cryptographic Fault Diagnosis using VerFI}},
-    booktitle={{IEEE International Symposium on Hardware Oriented Security and Trust (HOST)}},
-    year={2020},
-    doi={10.1109/HOST45689.2020.9300264}
+    title     = {TEMPEST: A Signal Problem},
+    year      = {1972},
+    publisher = {NSA Cryptologic Spectrum},
+    journal   = {National Security Agency and NATO certification},
+    volume    = {2},
+    url       = {https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/cryptologic-spectrum/tempest.pdf}
 }
 
+@misc{RDJSBL-13-nsa,
+    author    = {
+        Ray Beaulieu and
+        Douglas Shors and
+        Jason Smith and
+        Stefan Treatman-Clark and
+        Bryan Weeks and
+        Louis Wingers
+    },
+    title     = {The {SIMON} and {SPECK} Families of Lightweight Block Ciphers},
+    publisher = {Cryptology {ePrint} Archive, Paper 2013/404},
+    year      = {2013},
+    url       = {https://eprint.iacr.org/2013/404}
+}
+
+
+@Comment{================================ JOURNALS ================================}
+@Comment{============= Proceedings IEEE =============}
 @ARTICLE{BCNTW-06-procieee,
     author={
         Bar-El, H. and
@@ -68,10 +232,69 @@
     title={{The Sorcerer's Apprentice Guide to Fault Attacks}}, 
     journal={{Proceedings of the IEEE}}, 
     year={2006},
+    volume={94},
+    number={2},
+    pages={370-382},
     doi={10.1109/JPROC.2005.862424}
 }
 
-@article{BSSMG-21-tchess, 
+@article{BBKN-12-procieee,
+    author   = {
+        Barenghi, Alessandro and
+        Breveglieri, Luca and
+        Koren, Israel and
+        Naccache, David
+    },
+    title    = {Fault Injection Attacks on Cryptographic Devices: Theory, Practice, and Countermeasures},
+    journal  = {Proceedings of the IEEE},
+    year     = {2012},
+    volume   = {100},
+    number   = {11},
+    pages    = {3056-3076},
+    doi      = {10.1109/JPROC.2012.2188769}
+}
+
+@Comment{============= ACM SURVEYS =============}
+@article{HAK-21-acmcsur,
+    author    = {
+        Hu, Wei and
+        Ardeshiricham, Armaiti and
+        Kastner, Ryan
+    },
+    title     = {{Hardware Information Flow Tracking}},
+    year      = {2021},
+    doi       = {10.1145/3447867},
+    publisher = {Association for Computing Machinery ({ACM})},
+    journal   = {{ACM} Computing Surveys}
+}
+
+@article{BSMCVEJCO-21-acmcsur,
+	author    = {
+		Brant, Christopher and
+		Shrestha, Prakash and
+		Mixon-Baca, Benjamin and
+		Chen, Kejun and
+		Varlioglu, Said and
+		Elsayed, Nelly and
+		Jin, Yier and
+		Crandall, Jedidiah and
+		Oliveira, Daniela
+	},
+	title     = {Challenges and Opportunities for Practical and Effective Dynamic Information Flow Tracking},
+	year      = {2021},
+	publisher = {Association for Computing Machinery ({ACM})},
+	journal   = {{ACM} Computing Surveys},
+	volume    = {55},
+	number    = {1},
+	issn      = {0360-0300},
+	month     = {11},
+	articleno = {17},
+	numpages  = {33},
+	doi       = {10.1145/3483790}
+}
+
+@Comment{============= TCHES =============}
+@article{BSSMG-21-tches, 
     author={
         Richter-Brockmann, Jan and 
         Rezaei Shahmirzadi, Aein and 
@@ -85,18 +308,1203 @@
     doi={10.46586/tches.v2021.i4.447-473}
 }
 
-@INPROCEEDINGS{ANR-18-ices,
+@article{BFP-19-tches,
     author={
-        Arribas, Victor and
-        Nikova, Svetla and
-        Rijmen, Vincent
+        Bozzato, Claudio and
+        Focardi, Riccardo and
+        Palmarini, Francesco
     },
-    title={{VerMI: Verification Tool for Masked Implementations}}, 
-    booktitle={{25th IEEE International Conference on Electronics, Circuits and Systems (ICECS)}}, 
-    year={2018},
-    doi={10.1109/ICECS.2018.8617841}
+    title={{Shaping the Glitch: Optimizing Voltage Fault Injection Attacks}},
+    journal={{IACR Transactions on Cryptographic Hardware and Embedded Systems}},
+    year={2019},
+    doi={10.13154/tches.v2019.i2.199-224}
 }
 
+@article{NSUH-21-tches,
+	author={
+        Nashimoto, Shoei and
+        Suzuki, Daisuke and
+        Ueno, Rei and
+        Homma, Naofumi
+    },
+	title={{Bypassing Isolated Execution on {RISC-V} using Side-Channel-Assisted Fault-Injection and Its Countermeasure}},
+	journal={{IACR} Transactions on Cryptographic Hardware and Embedded Systems ({TCHES})},
+	year={2021},
+	DOI={10.46586/tches.v2022.i1.28-68}
+}
+
+
+
+@Comment{============= CRYPTO =============}
+@article{CMLCVR-11-crypto,
+    author  = {
+        Canivet, Gaetan and
+        Maistri, Paolo and
+        Leveugle, R{\'e}gis and
+        Cl{\'e}di{\`e}re, Jessy and
+        Valette, Florent and
+        Renaudin, Marc
+    },
+    title   = {{Glitch and laser fault attacks onto a secure AES implementation on a SRAM-based FPGA}},
+    journal = {Journal of Cryptology},
+    year    = {2011},
+    doi     = {10.1007/s00145-010-9083-9}
+}
+
+@article{BDL-01-crypto,
+    author  = {
+        Boneh, Dan and
+        DeMillo, Richard A. and
+        Lipton, Richard J.
+    },
+    title   = {{On the Importance of Eliminating Errors in Cryptographic Computations}},
+    journal = {Journal of Cryptology},
+    year    = {2001},
+    pages   = {101-119},
+    volume  = {14},
+    doi     = {10.1007/s001450010016}
+}
+
+@article{GST-17-crypto,
+    author  = {
+        Genkin, Daniel and
+        Shamir, Adi and
+        Tromer, Eran
+    },
+    title   = {{Acoustic Cryptanalysis}},
+    journal = {Journal of Cryptology},
+    year    = {2017},
+    pages   = {392-443},
+    volume  = {30},
+    doi     = {10.1007/s00145-015-9224-2}
+}
+
+@Comment{============= IEEE ACCESS =============}
+@ARTICLE{BLK-23-access,
+    author={
+        Bekele, Yohannes B. and
+        Limbrick, Daniel B. and
+        Kelly, John C.
+    },
+    title={{A Survey of QEMU-Based Fault Injection Tools \& Techniques for Emulating Physical Faults}},
+    journal={{IEEE Access}},
+    year={2023},
+    doi={10.1109/ACCESS.2023.3287503}
+}
+
+@article{BH-22-access,
+    author   = {
+        Breier, Jakub and
+        Hou, Xiaolu
+    },
+    journal  = {IEEE Access},
+    title    = {How Practical Are Fault Injection Attacks, Really?},
+    year     = {2022},
+    volume   = {10},
+    pages    = {113122-113130},
+    doi      = {10.1109/ACCESS.2022.3217212}
+}
+
+@article{FIMI-23-access,
+    author   = {
+        Ferdous, Jannatul and
+        Islam, Rafiqul and
+        Mahboubi, Arash and
+        Islam, Md. Zahidul
+    },
+    journal  = {IEEE Access},
+    title    = {A Review of State-of-the-Art Malware Attack Trends and Defense Mechanisms},
+    year     = {2023},
+    volume   = {11},
+    pages    = {121118-121141},
+    doi      = {10.1109/ACCESS.2023.3328351}
+}
+
+
+
+@Comment{============= EPRINT =============}
+@article{SVPMRDKMS-24-eprint,
+    author ={
+        Simon Tollec and
+        Vedad Hadžić and
+        Pascal Nasahl and
+        Mihail Asavoae and
+        Roderick Bloem and
+        Damien Couroussé and
+        Karine Heydemann and
+        Mathieu Jan and
+        Stefan Mangard
+    },
+    title = {Fault-Resistant Partitioning of Secure CPUs for System Co- Verification against Faults},
+    howpublished = {Cryptology ePrint Archive, Paper 2024/247},
+    year = {2024},
+    url = {https://eprint.iacr.org/2024/247}
+}
+
+@Comment{============= Micromachines =============}
+@Article{CGDJ-21-micromac,
+    AUTHOR = {
+        Chen, Kejun and 
+        Guo, Xiaolong and 
+        Deng, Qingxu and 
+        Jin, Yier
+    },
+    TITLE = {Dynamic Information Flow Tracking: Taxonomy, Challenges, and Opportunities},
+    JOURNAL = {Micromachines},
+    VOLUME = {12},
+    NUMBER = {8},
+    ARTICLE-NUMBER = {898},
+    ISSN = {2072-666X},
+    YEAR = {2021},
+    DOI = {10.3390/mi12080898}
+}
+
+@Comment{============= SIGPLAN =============}
+@article{SLD-04-sigplan,
+    author = {
+        Suh, G. Edward and
+        Lee, Jae W. and
+        Zhang, David and
+        Devadas, Srinivas
+    },
+    title = {{Secure Program Execution via Dynamic Information Flow Tracking}},
+    year = {2004},
+    publisher = {Association for Computing Machinery},
+    issue_date = {November 2004},
+    doi = {10.1145/1037187.1024404},
+    volume = {39},
+    number = {11},
+    issn = {0362-1340},
+    journal = {SIGPLAN Not.},
+    pages = {85–96},
+    numpages = {12}
+}
+
+@article{KPJK-12-sigplan,
+    author     = {
+        Kemerlis, Vasileios P. and
+        Portokalidis, Georgios and
+        Jee, Kangkook and
+        Keromytis, Angelos D.
+    },
+    title      = {libdft: practical dynamic data flow tracking for commodity systems},
+    year       = {2012},
+    publisher  = {Association for Computing Machinery},
+    volume     = {47},
+    number     = {7},
+    issn       = {0362-1340},
+    journal    = {SIGPLAN Not.},
+    month      = {3},
+    pages      = {121–132},
+    numpages   = {12},
+    doi        = {10.1145/2365864.2151042}
+}
+
+@Comment{============= Open Source Software =============}
+@article{seaborn,
+    author = {Michael L. Waskom},
+    title = {{Seaborn: statistical data visualization}},
+    journal = {{Journal of Open Source Software}},
+    year = {2021},
+    doi = {10.21105/joss.03021}
+}
+
+@Comment{============= Computing in Science & Engineering =============}
+@Article{matplotlib,
+  Author    = {Hunter, J. D.},
+  Title     = {{Matplotlib: A 2D graphics environment}},
+  Journal   = {{Computing in Science \& Engineering}},
+  publisher = {IEEE COMPUTER SOC},
+  year      = 2007,
+  doi       = {10.5281/zenodo.7697899}
+}
+
+@Comment{============= Computing in Science & Engineering =============}
+@article{EGHTCCJMS-14-tocs,
+    author     = {
+        Enck, William and
+        Gilbert, Peter and
+        Han, Seungyeop and
+        Tendulkar, Vasant and
+        Chun, Byung-Gon and
+        Cox, Landon P. and
+        Jung, Jaeyeon and
+        McDaniel, Patrick and
+        Sheth, Anmol N.
+    },
+    title      = {TaintDroid: An Information-Flow Tracking System for Realtime Privacy Monitoring on Smartphones},
+    year       = {2014},
+    publisher  = {Association for Computing Machinery},
+    journal    = {ACM Trans. Comput. Syst.},
+    volume     = {32},
+    number     = {2},
+    issn       = {0734-2071},
+    month      = {6},
+    articleno  = {5},
+    numpages   = {29},
+    doi        = {10.1145/2619091}
+}
+
+@Comment{============= Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD) =============}
+@article{HOITSMK-11-tcad,
+    author  = {
+        Hu, Wei and
+        Oberg, Jason and
+        Irturk, Ali and
+        Tiwari, Mohit and
+        Sherwood, Timothy and
+        Mu, Dejun and
+        Kastner, Ryan
+    },
+    title   = {{Theoretical Fundamentals of Gate Level Information Flow Tracking}},
+    journal = {IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},
+    year    = {2011},
+    volume  = {30},
+    number  = {8},
+    pages   = {1128-1140},
+    doi     = {10.1109/TCAD.2011.2120970}
+}
+
+@article{GK-13-tcad,
+    author   = {
+        Guo, Xiaofei and
+        Karri, Ramesh
+    },
+    title    = {Recomputing with Permuted Operands: A Concurrent Error Detection Approach},
+    journal  = {IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},
+    year     = {2013},
+    volume   = {32},
+    number   = {10},
+    pages    = {1595-1608},
+    doi      = {10.1109/TCAD.2013.2263037}
+}
+
+@article{WLRTF-22-tcad,
+    author   = {
+        Wang, Huanyu and
+        Li, Henian and
+        Rahman, Fahim and
+        Tehranipoor, Mark M. and
+        Farahmandi, Farimah
+    },
+    journal  = {IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},
+    title    = {SoFI: Security Property-Driven Vulnerability Assessments of ICs Against Fault-Injection Attacks},
+    year     = {2022},
+    volume   = {41},
+    number   = {3},
+    pages    = {452-465},
+    doi      = {10.1109/TCAD.2021.3063998}
+}
+
+
+@Comment{============= Communications of the ACM =============}
+@article{D-76-commacm,
+	author     = {Denning, Dorothy E.},
+	title      = {A lattice model of secure information flow},
+	year       = {1976},
+	publisher  = {Association for Computing Machinery},
+	address    = {New York, NY, USA},
+	volume     = {19},
+	number     = {5},
+	issn       = {0001-0782},
+	journal    = {Commun. ACM},
+	month      = {5},
+	pages      = {236–243},
+	numpages   = {8},
+	doi        = {10.1145/360051.360056}
+}
+
+@article{ZBKM-11-commacm,
+	author    = {
+		Zeldovich, Nickolai and
+		Boyd-Wickizer, Silas and
+		Kohler, Eddie and
+		Mazi\`{e}res, David
+	},
+	title     = {Making information flow explicit in HiStar},
+	year      = {2011},
+	publisher = {Association for Computing Machinery},
+	volume    = {54},
+	number    = {11},
+	issn      = {0001-0782},
+	journal   = {Commun. ACM},
+	month     = {11},
+	pages     = {93–101},
+	numpages  = {9},
+	doi       = {10.1145/2018396.2018419}
+}
+
+@Comment{============= SIGARCH =============}
+@article{DKK-07-sigarch,
+    author     = {
+        Dalton, Michael and
+        Kannan, Hari and
+        Kozyrakis, Christos
+    },
+    title      = {Raksha: a flexible information flow architecture for software security},
+    year       = {2007},
+    publisher  = {Association for Computing Machinery},
+    volume     = {35},
+    number     = {2},
+    issn       = {0163-5964},
+    journal    = {SIGARCH Comput. Archit. News},
+    month      = {6},
+    pages      = {482–493},
+    numpages   = {12},
+    doi        = {10.1145/1273440.1250722}
+}
+
+@article{CKSFGMRRRV-08-sigarch,
+    author     = {
+        Chen, Shimin and
+        Kozuch, Michael and
+        Strigkos, Theodoros and
+        Falsafi, Babak and
+        Gibbons, Phillip B. and
+        Mowry, Todd C. and
+        Ramachandran, Vijaya and
+        Ruwase, Olatunji and
+        Ryan, Michael and
+        Vlachos, Evangelos
+    },
+    title      = {Flexible Hardware Acceleration for Instruction-Grain Program Monitoring},
+    year       = {2008},
+    publisher  = {Association for Computing Machinery},
+    volume     = {36},
+    number     = {3},
+    issn       = {0163-5964},
+    journal    = {SIGARCH Comput. Archit. News},
+    month      = {6},
+    pages      = {377–388},
+    numpages   = {12},
+    doi        = {10.1145/1394608.1382153}
+}
+
+@article{FXZMS-17-sigarch,
+    author     = {
+        Ferraiuolo, Andrew and
+        Xu, Rui and
+        Zhang, Danfeng and
+        Myers, Andrew C. and
+        Suh, G. Edward
+    },
+    title      = {Verification of a Practical Hardware Security Architecture Through Static Information Flow Analysis},
+    year       = {2017},
+    issue_date = {March 2017},
+    publisher  = {Association for Computing Machinery},
+    volume     = {45},
+    number     = {1},
+    issn       = {0163-5964},
+    journal    = {SIGARCH Comput. Archit. News},
+    month      = {04},
+    pages      = {555–568},
+    numpages   = {14},
+    doi        = {10.1145/3093337.3037739}
+}
+
+@Comment{============= Computer Science Review =============}
+@article{EAJJMB-22-compscrev,
+    author   = {
+        Eryk Schiller and
+        Andy Aidoo and
+        Jara Fuhrer and
+        Jonathan Stahl and
+        Michael Ziörjen and
+        Burkhard Stiller
+    },
+    title    = {Landscape of IoT security},
+    journal  = {Computer Science Review},
+    volume   = {44},
+    pages    = {100467},
+    year     = {2022},
+    issn     = {1574-0137},
+    doi      = {https://doi.org/10.1016/j.cosrev.2022.100467}
+}
+
+@Comment{============= Computer Networks =============}
+@article{MW-19-compnet,
+    author   = {
+        Mardiana binti {Mohamad Noor} and
+        Wan Haslina Hassan
+    },
+    title    = {Current research on Internet of Things (IoT) security: A survey},
+    journal  = {Computer Networks},
+    volume   = {148},
+    pages    = {283-294},
+    year     = {2019},
+    issn     = {1389-1286},
+    doi      = {https://doi.org/10.1016/j.comnet.2018.11.025}
+}
+
+@article{DD-05-compnet,
+    author   = {
+        David Brumley and
+        Dan Boneh
+    },
+    title    = {Remote timing attacks are practical},
+    journal  = {Computer Networks},
+    volume   = {48},
+    number   = {5},
+    pages    = {701-716},
+    year     = {2005},
+    note     = {Web Security},
+    issn     = {1389-1286},
+    doi      = {https://doi.org/10.1016/j.comnet.2005.01.010}
+}
+
+@Comment{============= Hardware and Systems Security =============}
+@article{YSW-18-hss,
+    author   = {
+        Yuce, Bilgiday and
+        Schaumont, Patrick and
+        Witteman, Marc
+    },
+    title    = {Fault Attacks on Secure Embedded Software: Threats, Design, and Evaluation},
+    journal  = {Journal of Hardware and Systems Security},
+    volume   = {2},
+    pages    = {111-130},
+    year     = {2018},
+    doi      = {10.1007/s41635-018-0038-1}
+}
+
+@article{JHJBC-17-hss,
+    author  = {
+        Jakub, Breier and
+        He, Wei and
+        Jap, Dirmanto and
+        Bhasin, Shivam and
+        Chattopadhyay, Anupam
+    },
+    title   = {Attacks in Reality: the Limits of Concurrent Error Detection Codes Against Laser Fault Injection},
+    journal = {Journal of Hardware and Systems Security},
+    year    = {2017},
+    month   = {12},
+    volume  = {1},
+    doi     = {10.1007/s41635-017-0020-3}
+}
+
+@Comment{============= Digital Investigation =============}
+@article{ANM-19-di,
+    author  = {
+        Asanka Sayakkara and
+        Nhien-An Le-Khac and
+        Mark Scanlon
+    },
+    title   = {A survey of electromagnetic side-channel attacks and discussion on their case-progressing potential for digital forensics},
+    journal = {Digital Investigation},
+    volume  = {29},
+    pages   = {43-54},
+    year    = {2019},
+    issn    = {1742-2876},
+    doi     = {10.1016/j.diin.2019.03.002}
+}
+
+@Comment{============= Cryptographic Engineering =============}
+@article{TBELB-21-jce,
+    author = {
+        Trouchkine, Thomas and
+        Bukasa, S{\'e}banjila Kevin K and
+        Escouteloup, Mathieu and
+        Lashermes, Ronan and
+        Bouffard, Guillaume
+    },
+    title = {{Electromagnetic Fault Injection Against a Complex CPU, toward new Micro-architectural Fault Models}},
+    journal = {{Journal of Cryptographic Engineering}},
+    publisher = {{Springer}},
+    year = {2021},
+    doi = {10.1007/s13389-021-00259-6}
+}
+
+@techreport{KJJ-98-crypto,
+    author      = {
+        Kocher, Paul and
+        Jaffe, Joshua and
+        Jun, Benjamin and
+        others
+    },
+    title       = {Introduction to differential power analysis and related attacks},
+    year        = {1998}
+}
+
+@article{KJJR-11-jce,
+    author    = {
+        Kocher, Paul and
+        Jaffe, Joshua and
+        Jun, Benjamin and
+        Rohatgi, Pankaj
+    },
+    title     = {{Introduction to differential power analysis}},
+    journal   = {{Journal of Cryptographic Engineering}},
+    publisher = {{Springer}},
+    volume    = {1},
+    pages     = {5--27},
+    year      = {2011},
+    doi       = {10.1007/s13389-011-0006-y}
+}
+
+@article{VDSPB-24-jce,
+    author    = {
+        Viera, Raphael and
+        Dutertre, Jean-Max and
+        Silva Lima, Rodrigo and
+        Pommies, Matthieu and
+        Bertrand, Anthony
+    },
+    title     = {{Tampering with the flash memory of microcontrollers: permanent fault injection via laser illumination during read operations}},
+    journal   = {{Journal of Cryptographic Engineering}},
+    publisher = {{Springer}},
+    volume    = {14},
+    pages     = {207--221},
+    year      = {2024},
+    doi       = {10.1007/s13389-023-00335-z}
+}
+
+
+@Comment{============= Computers & Security =============}
+@article{CKNDCTD-21-compsec,
+    author   = {
+        Carlton Shepherd and
+        Konstantinos Markantonakis and
+        Nico {van Heijningen} and
+        Driss Aboulkassimi and
+        Clément Gaine and
+        Thibaut Heckmann and
+        David Naccache
+    },
+    title    = {Physical fault injection and side-channel attacks on mobile devices: A comprehensive analysis},
+    journal  = {Computers \& Security},
+    volume   = {111},
+    year     = {2021},
+    issn     = {0167-4048},
+    doi      = {10.1016/j.cose.2021.102471}
+}
+
+@Comment{============= IEEE Design & Test =============}
+@article{HGTVJ-22-dt,
+    author   = {
+        He, Jiaji and
+        Guo, Xiaolong and
+        Tehranipoor, Mark and
+        Vassilev, Apostol and
+        Jin, Yier
+    },
+    title    = {EM Side Channels in Hardware Security: Attacks and Defenses},
+    journal  = {IEEE Design \& Test},
+    year     = {2022},
+    volume   = {39},
+    number   = {2},
+    pages    = {100-111},
+    doi      = {10.1109/MDAT.2021.3135324}
+}
+
+@Comment{============= Transactions on Very Large Scale Integration (VLSI) =============}
+@article{AZRHT-21-tvlsi,
+    author   = {
+        Aljuffri, Abdullah and
+        Zwalua, Marc and
+        Reinbrecht, Cezar Rodolfo Wedig and
+        Hamdioui, Said and
+        Taouil, Mottaqiallah
+    },
+    title    = {Applying Thermal Side-Channel Attacks on Asymmetric Cryptography},
+    journal  = {IEEE Transactions on Very Large Scale Integration (VLSI) Systems},
+    year     = {2021},
+    volume   = {29},
+    number   = {11},
+    pages    = {1930-1942},
+    doi      = {10.1109/TVLSI.2021.3111407}
+}
+
+@article{KSV-13-tvlsi,
+    author   = {
+        Karaklajić, Duško and
+        Schmidt, Jörn-Marc and
+        Verbauwhede, Ingrid
+    },
+    title    = {Hardware Designer's Guide to Fault Attacks},
+    journal  = {IEEE Transactions on Very Large Scale Integration (VLSI) Systems},
+    year     = {2013},
+    volume   = {21},
+    number   = {12},
+    pages    = {2295-2306},
+    doi      = {10.1109/TVLSI.2012.2231707}
+}
+
+
+@Comment{============= The international Arab journal of information technology =============}
+@article{ZAV-06-jarab,
+    author      = {
+        Ziade, Haissam and
+        Ayoubi, Rafic and
+        Velazco, Raoul
+    },
+    title       = {{A survey on Fault Injection Techniques}},
+    journal     = {{The international Arab journal of information technology}},
+    publisher   = {{Colleges of Computing and Information Society (CCIS)}},
+    volume      = {1},
+    number      = {2},
+    pages       = {171-186},
+    year        = {2004},
+    month       = Jan,
+    url         = {https://hal.science/hal-00105562}
+}
+
+@Comment{============= IEEE Transactions on Nuclear Science =============}
+@article{BSH-75-tns,
+    author  = {
+        Binder, D. and
+        Smith, E. C. and
+        Holman, A. B.
+    },
+    journal = {IEEE Transactions on Nuclear Science},
+    title   = {Satellite Anomalies from Galactic Cosmic Rays},
+    year    = {1975},
+    volume  = {22},
+    number  = {6},
+    pages   = {2675-2680},
+    doi     = {10.1109/TNS.1975.4328188}
+}
+
+@Comment{============= Science =============}
+@article{ZL-79-science,
+    author   = {
+        Ziegler, J. F. and
+        Lanford, W. A.
+    },
+    title    = {Effect of Cosmic Rays on Computer Memories},
+    journal  = {Science},
+    volume   = {206},
+    number   = {4420},
+    pages    = {776-788},
+    year     = {1979},
+    doi      = {10.1126/science.206.4420.776},
+}
+
+@Comment{============= IBM Journal of Research and Development =============}
+@article{Z-96-ibm,
+    author   = {Ziegler, J. F.},
+    journal  = {IBM Journal of Research and Development},
+    title    = {Terrestrial cosmic rays},
+    year     = {1996},
+    volume   = {40},
+    number   = {1},
+    pages    = {19-39},
+    doi      = {10.1147/rd.401.0019}
+}
+
+@Comment{============= Computer =============}
+@article{ST-12-computer,
+    author   = {
+        Shar, Lwin Khin and
+        Tan, Hee Beng Kuan
+    },
+    title    = {Defending against Cross-Site Scripting Attacks},
+    journal  = {Computer},
+    year     = {2012},
+    volume   = {45},
+    number   = {3},
+    pages    = {55-62},
+    doi      = {10.1109/MC.2011.261}
+}
+
+@Comment{============= IEEE Communications Surveys & Tutorials =============}
+@article{CDL-16-commsurtuto,
+    author   = {
+        Conti, Mauro and
+        Dragoni, Nicola and
+        Lesyk, Viktor
+    },
+    title    = {A Survey of Man In The Middle Attacks},
+    journal  = {IEEE Communications Surveys \& Tutorials},
+    year     = {2016},
+    volume   = {18},
+    number   = {3},
+    pages    = {2027-2051},
+    doi      = {10.1109/COMST.2016.2548426}
+}
+
+@article{PZ-22-commsurtuto,
+    author   = {
+        Pirayesh, Hossein and
+        Zeng, Huacheng
+    },
+    journal  = {IEEE Communications Surveys \& Tutorials},
+    title    = {Jamming Attacks and Anti-Jamming Strategies in Wireless Networks: A Comprehensive Survey},
+    year     = {2022},
+    volume   = {24},
+    number   = {2},
+    pages    = {767-809},
+    doi      = {10.1109/COMST.2022.3159185}
+}
+
+
+@Comment{============= Information Systems Frontiers =============}
+@article{MRT-10-isf,
+    author   = {
+        Mitrokotsa, Aikaterini and
+        Rieback, Melanie R. and
+        Tanenbaum, Andrew S.
+    },
+    title    = {Classifying RFID attacks and defenses},
+    journal  = {Information Systems Frontiers},
+    year     = {2010},
+    volume   = {12},
+    number   = {5},
+    pages    = {491-505},
+    doi      = {10.1007/s10796-009-9210-z}
+}
+
+@Comment{============= Emerging Technologies in Computing Systems =============}
+@article{QCFASWCT-16-emergTech,
+    author     = {
+        Quadir, Shahed E. and
+        Chen, Junlin and
+        Forte, Domenic and
+        Asadizanjani, Navid and
+        Shahbazmohamadi, Sina and
+        Wang, Lei and
+        Chandy, John and 
+        Tehranipoor, Mark
+    },
+    title      = {A Survey on Chip to System Reverse Engineering},
+    year       = {2016},
+    issue_date = {January 2017},
+    publisher  = {Association for Computing Machinery},
+    volume     = {13},
+    number     = {1},
+    issn       = {1550-4832},
+    journal    = {J. Emerg. Technol. Comput. Syst.},
+    month      = 4,
+    articleno  = {6},
+    numpages   = {34},
+    doi        = {10.1145/2755563}
+}
+
+@Comment{============= Electronics =============}
+@article{GMA-22-electronics,
+    author         = {
+        Gangolli, Aakash and
+        Mahmoud, Qusay H. and
+        Azim, Akramul
+    },
+    title          = {A Systematic Review of Fault Injection Attacks on IoT Systems},
+    journal        = {Electronics},
+    volume         = {11},
+    year           = {2022},
+    number         = {13},
+    article-number = {2023},
+    issn           = {2079-9292},
+    doi            = {10.3390/electronics11132023}
+}
+
+@Comment{============= Microprocessors and Microsystems =============}
+@article{LBDPP-19-microproc,
+    author   = {
+        Laurent, Johan and
+        Beroulle, Vincent and
+        Deleuze, Christophe and
+        Pebay-Peyroula, Florian and
+        Papadimitriou, Athanasios
+    },
+    title    = {Cross-layer analysis of software fault models and countermeasures against hardware fault attacks in a RISC-V processor},
+    journal  = {Microprocessors and Microsystems},
+    volume   = {71},
+    pages    = {102862},
+    year     = {2019},
+    issn     = {0141-9331},
+    doi      = {10.1016/j.micpro.2019.102862}
+}
+
+@Comment{============= Applied Sciences =============}
+@article{PTAJC-22-appSci,
+    author         = {
+        Potestad-Ordóñez, Francisco Eugenio and
+        Tena-Sánchez, Erica and
+        Acosta-Jiménez, Antonio José and
+        Jiménez-Fernández, Carlos Jesús and
+        Chaves, Ricardo
+    },
+    title          = {Hardware Countermeasures Benchmarking against Fault Attacks},
+    journal        = {Applied Sciences},
+    volume         = {12},
+    year           = {2022},
+    number         = {5},
+    article-number = {2443},
+    issn           = {2076-3417},
+    doi            = {10.3390/app12052443}
+}
+
+@Comment{============= IET Inf. Secur. =============}
+@article{JMR-07-iet,
+    author  = {
+        Joye, Marc and
+        Manet, Pascal and
+        Rigaud, Jean-Baptiste
+    },
+    title   = {Strengthening hardware AES implementations against fault attacks.},
+    journal = {IET Inf. Secur.},
+    volume  = {1},
+    number  = {3},
+    pages   = {106--110},
+    year    = {2007},
+    doi     = {10.1049/iet-ifs_20060163}
+}
+
+@Comment{============= IEEE Transactions on Computers =============}
+@article{BBKMP-03-toc,
+    author   = {
+        Bertoni, G. and
+        Breveglieri, L. and
+        Koren, I. and
+        Maistri, P. and
+        Piuri, V.
+    },
+    journal  = {IEEE Transactions on Computers},
+    title    = {Error analysis and detection procedures for a hardware implementation of the advanced encryption standard},
+    year     = {2003},
+    volume   = {52},
+    number   = {4},
+    pages    = {492-505},
+    doi      = {10.1109/TC.2003.1190590}
+}
+
+@article{CB-06-toc,
+    author   = {
+        Chih-Hsu Yen and
+        Bing-Fei Wu
+    },
+    title    = {Simple error detection methods for hardware implementation of Advanced Encryption Standard},
+    journal  = {IEEE Transactions on Computers},
+    year     = {2006},
+    volume   = {55},
+    number   = {6},
+    pages    = {720-731},
+    doi      = {10.1109/TC.2006.90}
+}
+
+@Comment{============= IEEE Transactions on Information Forensics and Security =============}
+@article{HSP-21-ifs,
+    author   = {
+        Hoffmann, Max and
+        Schellenberg, Falk and
+        Paar, Christof
+    },
+    journal  = {IEEE Transactions on Information Forensics and Security},
+    title    = {ARMORY: Fully Automated and Exhaustive Fault Simulation on ARM-M Binaries},
+    year     = {2021},
+    volume   = {16},
+    pages    = {1058-1073},
+    doi      = {10.1109/TIFS.2020.3027143}
+}
+
+@Comment{============= IEEE Transactions on Information Forensics and Security =============}
+@article{GS-21-jcrypto,
+    author         = {
+        Grycel, Jacob and
+        Schaumont, Patrick
+    },
+    title          = {SimpliFI: Hardware Simulation of Embedded Software Fault Attacks},
+    journal        = {Cryptography},
+    volume         = {5},
+    year           = {2021},
+    number         = {2},
+    article-number = {15},
+    issn           = {2410-387X},
+    doi            = {10.3390/cryptography5020015}
+}
+
+@Comment{============= The Bell System Technical Journal =============}
+@article{H-50-bstj,
+    author  = {
+        Hamming, R. W.
+    },
+    title   = {Error detecting and error correcting codes},
+    journal = {The Bell System Technical Journal},
+    year    = {1950},
+    doi     = {10.1002/j.1538-7305.1950.tb00463.x}
+}
+
+@Comment{============= International Journal of Soft Computing and Engineering (IJSCE) =============}
+@article{MSS-12-ijsce,
+    author    = {
+        Mahadevaswamy, VP and
+        Sunitha, SL and
+        Shobha, BN
+    },
+    title     = {Implementation of fault tolerant method using BCH code on FPGA},
+    journal   = {International Journal of Soft Computing and Engineering (IJSCE)},
+    volume    = {2},
+    number    = {4},
+    pages     = {2231--2307},
+    year      = {2012},
+    publisher = {Citeseer}
+}
+
+@Comment{================================ CONFERENCES ================================}
+@Comment{============= ACM Sensors S&P =============}
+@inproceedings{PLG-22-SensorsSP,
+  author    = {
+               Pensec, William and
+               Lap\^{o}tre, Vianney and
+               Gogniat, Guy
+               },
+  title     = {{Another Break in the Wall: Harnessing Fault Injection Attacks to Penetrate Software Fortresses}},
+  year      = {2023},
+  publisher = {Association for Computing Machinery},
+  booktitle = {Proceedings of the First International Workshop on Security and Privacy of Sensing Systems},
+  pages     = {8–14},
+  numpages  = {7},
+  keywords  = {fault injections attacks, DIFT, RISC-V, hardware security},
+  location  = {Istanbul, Turkiye},
+  series    = {SensorsS\&P},
+  doi       = {10.1145/3628356.3630116}
+}
+
+@Comment{============= IEEE HPEC =============}
+@inproceedings{PDGLC-18-hpec,
+  author    = {
+               Palmiero, Christian and 
+               Di Guglielmo, Giuseppe and 
+               Lavagno, Luciano and 
+               Carloni, Luca P.
+               },
+  title     = {{Design and Implementation of a Dynamic Information Flow Tracking Architecture to Secure a {RISC-V} Core for {IoT} Applications}},
+  booktitle = {High Performance Extreme Computing},
+  year      = {2018},
+  doi       = {10.1109/HPEC.2018.8547578}
+}
+
+@Comment{============= IEEE DSD =============}
+@INPROCEEDINGS{NNHRS-14-dsd,
+    author={
+        Nyberg, Ralph and
+        Nolles, Jürgen and
+        Heyszl, Johann and
+        Rabe, Dirk and
+        Sigl, Georg
+    },
+    title={{Closing the Gap between Speed and Configurability of Multi-bit Fault Emulation Environments for Security and Safety-Critical Designs}}, 
+    booktitle={{17th Euromicro Conference on Digital System Design}},
+    year={2014},
+    doi={10.1109/DSD.2014.39}
+}
+
+@inproceedings{KDD-21-dsd,
+    author    = {
+        Khuat, Vanthanh and
+        Dutertre, Jean-Max and
+        Danger, Jean-Luc
+    },
+    booktitle = {{24th Euromicro Conference on Digital System Design (DSD)}},
+    title     = {{Analysis of a Laser-induced Instructions Replay Fault Model in a 32-bit Microcontroller}},
+    year      = {2021},
+    pages     = {363-370},
+    doi       = {10.1109/DSD53832.2021.00061}
+}
+
+@inproceedings{PLG-24-dsd,
+    author       = {Pensec, William and Lapotre, Vianney and Guy, Gogniat},
+    title        = {{Scripting the Unpredictable: Automate Fault Injection in RTL Simulation for Vulnerability Assessment}},
+    url          = {https://hal.science/hal-04683084},
+    booktitle    = {{27th Euromicro Conference Series on Digital System Design (DSD)}},
+    address      = {Paris, France},
+    organization = {{Sorbonne University}},
+    year         = {2024},
+    month        = Aug,
+    hal_id       = {hal-04683084},
+    hal_version  = {v1}
+}
+
+@inproceedings{AARSGK-18-dsd,
+    author    = {
+        Anagnostopoulos, Nikolaos Athanasios and
+        Arul, Tolga and
+        Rosenstihl, Markus and
+        Schaller, André and
+        Gabmeyer, Sebastian and
+        Katzenbeisser, Stefan
+    },
+    title     = {Low-Temperature Data Remanence Attacks Against Intrinsic SRAM PUFs},
+    booktitle = {2018 21st Euromicro Conference on Digital System Design (DSD)},
+    year      = {2018},
+    pages     = {581-585},
+    doi       = {10.1109/DSD.2018.00102}
+}
+
+@inproceedings{QPTDL-24-dsd,
+    author       = {
+        Qu{\'e}n{\'e}herv{\'e}, K{\'e}vin and
+        Pensec, William and
+        Tanguy, Philippe and
+        Dafali, Rachid and
+        Lapôtre, Vianney
+    },
+    title        = {{Exploring Fault Injection Attacks on CVA6 PMP Configuration Flow}},
+    booktitle    = {{27th Euromicro Conference Series on Digital System Design (DSD)}},
+    address      = {Paris, France},
+    organization = {{Sorbonne University}},
+    year         = {2024},
+    month        = Aug,
+    hal_id       = {hal-04683083},
+    hal_version  = {v1},
+    url          = {https://hal.science/hal-04683083}
+}
+
+@Comment{============= Springer CARDIS =============}
+@InProceedings{CGVCBLC-22-cardis,
+    author={
+        Colombier, Brice and
+        Grandamme, Paul and
+        Vernay, Julien and
+        Chanavat, {\'E}milie and
+        Bossuet, Lilian and
+        de Laulani{\'e}, Lucie and
+        Chassagne, Bruno
+    },
+    title={{Multi-Spot Laser Fault Injection Setup: New Possibilities for Fault Injection Attacks}},
+    booktitle={{Smart Card Research and Advanced Applications}},
+    year={2022},
+    doi={10.1007/978-3-030-97348-3_9}
+}
+
+@inproceedings{HS-14-cardis,
+    author    = {
+        Hutter, Michael and
+        Schmidt, J{\"o}rn-Marc
+    },
+    title     = {The Temperature Side Channel and Heating Fault Attacks},
+    booktitle = {{Smart Card Research and Advanced Applications}},
+    year      = {2014},
+    publisher = {Springer International Publishing},
+    address   = {Cham},
+    pages     = {219--235},
+    isbn      = {978-3-319-08302-5},
+    doi       = {10.1007/978-3-319-08302-5_15}
+}
+
+@Comment{============= CRYPTO Conf =============}
+@inproceedings{SMG-16-crypto,
+    author={
+        Schneider, Tobias and
+        Moradi, Amir and
+        G{\"u}neysu, Tim
+    },
+    title={{ParTI--towards combined hardware countermeasures against side-channel and fault-injection attacks}},
+    booktitle={{Advances in Cryptology--CRYPTO: 36th Annual International Cryptology Conference, Proceedings, Part II 36}},
+    year={2016},
+    doi={10.1007/978-3-662-53008-5_11}
+}
+
+@inproceedings{K-96-crypto,
+    author    = {Kocher, Paul C.},
+    title     = {Timing Attacks on Implementations of Diffie-Hellman, RSA, DSS, and Other Systems},
+    booktitle = {Advances in Cryptology --- CRYPTO '96},
+    year      = {1996},
+    publisher = {Springer Berlin Heidelberg},
+    pages     = {104--113},
+    isbn      = {978-3-540-68697-2},
+    doi       = {10.1007/3-540-68697-5_9}
+}
+
+@Comment{============= HOST =============}
+@INPROCEEDINGS{AWMN-20-host,
+    author={
+        Arribas, Victor and
+        Wegener, Felix and
+        Moradi, Amir and
+        Nikova, Svetla
+    },
+    title={{Cryptographic Fault Diagnosis using VerFI}},
+    booktitle={{IEEE International Symposium on Hardware Oriented Security and Trust (HOST)}},
+    year={2020},
+    doi={10.1109/HOST45689.2020.9300264}
+}
+
+@inproceedings{KM-20-host,
+    author    = {
+        Kelly, Martin S. and
+        Mayes, Keith
+    },
+    booktitle = {2020 IEEE International Symposium on Hardware Oriented Security and Trust (HOST)},
+    title     = {High Precision Laser Fault Injection using Low-cost Components},
+    year      = {2020},
+    pages     = {219-228},
+    doi       = {10.1109/HOST45689.2020.9300265}
+}
+
+@inproceedings{CMDMRD-19-host,
+    author    = {
+        Colombier, Brice and
+        Menu, Alexandre and
+        Dutertre, Jean-Max and
+        Moëllic, Pierre-Alain and
+        Rigaud, Jean-Baptiste and
+        Danger, Jean-Luc
+    },
+    booktitle = {2019 IEEE International Symposium on Hardware Oriented Security and Trust (HOST)},
+    title     = {Laser-induced Single-bit Faults in Flash Memory: Instructions Corruption on a 32-bit Microcontroller},
+    year      = {2019},
+    pages     = {1-10},
+    doi       = {10.1109/HST.2019.8741030}
+}
+
+@inproceedings{MZTF-22-host,
+    author    = {
+        Muttaki, Md Rafid and
+        Zhang, Tao and
+        Tehranipoor, Mark and
+        Farahmandi, Farimah
+    },
+    title     = {FTC: A Universal Sensor for Fault Injection Attack Detection},
+    booktitle = {2022 IEEE International Symposium on Hardware Oriented Security and Trust (HOST)},
+    year      = {2022},
+    pages     = {117-120},
+    doi       = {10.1109/HOST54066.2022.9840177}
+}
+
+@inproceedings{RBMK-10-host,
+    author    = {
+        Rajendran, Jeyavijayan and
+        Borad, Hetal and
+        Mantravadi, Shyam and
+        Karri, Ramesh
+    },
+    title     = {SLICED: Slide-based concurrent error detection technique for symmetric block ciphers},
+    booktitle = {2010 IEEE International Symposium on Hardware-Oriented Security and Trust (HOST)},
+    year      = {2010},
+    pages     = {70-75},
+    doi       = {10.1109/HST.2010.5513109}
+}
+
+
+
+@Comment{============= PAINE =============}
+@INPROCEEDINGS{GBD-23-paine,
+    author={
+        Grandamme, Paul and
+        Bossuet, Lilian and
+        Dutertre, Jean-Max
+    },
+    title={{X-Ray Fault Injection in Non-Volatile Memories on Power OFF Devices}},
+    booktitle={2023 IEEE Physical Assurance and Inspection of Electronics (PAINE)},
+    year={2023},
+    doi={10.1109/PAINE58317.2023.10318018}
+}
+
+@Comment{============= ACNS =============}
+@InProceedings{AB-23-acns,
+    author={
+        Adhikary, Asmita and
+        Buhan, Ileana
+    },
+    title={{SoK: Assisted Fault Simulation}},
+    booktitle={{Applied Cryptography and Network Security Workshops}},
+    year={2023},
+    publisher={Springer Nature Switzerland},
+    doi={10.1007/978-3-031-41181-6_10}
+}
+
+@Comment{============= ESORICS =============}
 @inproceedings{BBCFGS-19-esorics,
     author = {
         Barthe, Gilles and
@@ -112,68 +1520,20 @@
     doi = {10.1007/978-3-030-29959-0_15}
 }
 
-@InProceedings{AB-23-acns,
+@Comment{============= ICECS =============}
+@INPROCEEDINGS{ANR-18-ices,
     author={
-        Adhikary, Asmita and
-        Buhan, Ileana
+        Arribas, Victor and
+        Nikova, Svetla and
+        Rijmen, Vincent
     },
-    title={{SoK: Assisted Fault Simulation}},
-    booktitle={{Applied Cryptography and Network Security Workshops}},
-    year={2023},
-    publisher={Springer Nature Switzerland},
-    doi={10.1007/978-3-031-41181-6_10}
+    title={{VerMI: Verification Tool for Masked Implementations}}, 
+    booktitle={{25th IEEE International Conference on Electronics, Circuits and Systems (ICECS)}}, 
+    year={2018},
+    doi={10.1109/ICECS.2018.8617841}
 }
 
-@INPROCEEDINGS{GBD-23-paine,
-    author={
-        Grandamme, Paul and
-        Bossuet, Lilian and
-        Dutertre, Jean-Max
-    },
-    title={{X-Ray Fault Injection in Non-Volatile Memories on Power OFF Devices}},
-    booktitle={2023 IEEE Physical Assurance and Inspection of Electronics (PAINE)},
-    year={2023},
-    doi={10.1109/PAINE58317.2023.10318018}
-}
-
-@InProceedings{CGVCBLC-22-cardis,
-    author={
-        Colombier, Brice and
-        Grandamme, Paul and
-        Vernay, Julien and
-        Chanavat, {\'E}milie and
-        Bossuet, Lilian and
-        de Laulani{\'e}, Lucie and
-        Chassagne, Bruno
-    },
-    editor={
-        Grosso, Vincent and
-        P{\"o}ppelmann, Thomas
-    },
-    title={{Multi-Spot Laser Fault Injection Setup: New Possibilities for Fault Injection Attacks}},
-    booktitle={{Smart Card Research and Advanced Applications}},
-    year={2022},
-    doi={10.1007/978-3-030-97348-3_9}
-}
-
-@article{BFP-19-tches,
-    author={
-        Bozzato, Claudio and
-        Focardi, Riccardo and
-        Palmarini, Francesco
-    },
-    title={{Shaping the Glitch: Optimizing Voltage Fault Injection Attacks}},
-    journal={{IACR Transactions on Cryptographic Hardware and Embedded Systems}},
-    year={2019},
-    doi={10.13154/tches.v2019.i2.199-224}
-}
-
-@misc{fisim,
-    author={Riscure},
-    title={{FiSim: An open-source deterministic Fault Attack Simulator Prototype}},
-    url={https://github.com/Riscure/FiSim}
-}
-
+@Comment{============= FDTC =============}
 @INPROCEEDINGS{HGASO-21-fdtc,
     author={
         Hauschild, Florian and
@@ -188,63 +1548,1111 @@
     doi={10.1109/FDTC53659.2021.00013}
 }
 
-@ARTICLE{BLK-23-access,
+@INPROCEEDINGS{TSW-16-fdtc,
     author={
-        Bekele, Yohannes B. and
-        Limbrick, Daniel B. and
-        Kelly, John C.
+        Timmers, Niek and
+        Spruyt, Albert and
+        Witteman, Marc
     },
-    title={{A Survey of QEMU-Based Fault Injection Tools \& Techniques for Emulating Physical Faults}},
-    journal={{IEEE Access}},
-    year={2023},
-    doi={10.1109/ACCESS.2023.3287503}
+    booktitle={Workshop on Fault Diagnosis and Tolerance in Cryptography (FDTC)}, 
+    title={{Controlling PC on ARM Using Fault Injection}}, 
+    year={2016},
+    doi={10.1109/FDTC.2016.18}
 }
 
-@article{SVPMRDKMS-24-eprint,
-    author ={
-        Simon Tollec and
-        Vedad Hadžić and
-        Pascal Nasahl and
-        Mihail Asavoae and
-        Roderick Bloem and
-        Damien Couroussé and
-        Karine Heydemann and
-        Mathieu Jan and
-        Stefan Mangard
+@inproceedings{DBCDFFGHLMDPR-18-fdtc,
+    author    = {
+        Dutertre, Jean-Max and
+        Beroulle, Vincent and
+        Candelier, Philippe and
+        De Castro, Stephan and
+        Faber, Louis-Barthelemy and
+        Flottes, Marie-Lise and
+        Gendrier, Philippe and
+        Hély, David and
+        Leveugle, Regis and
+        Maistri, Paolo and
+        Di Natale, Giorgio and
+        Papadimitriou, Athanasios and
+        Rouzeyre, Bruno
     },
-    title = {Fault-Resistant Partitioning of Secure CPUs for System Co-Verification against Faults},
-    howpublished = {Cryptology ePrint Archive, Paper 2024/247},
-    year = {2024},
-    url = {https://eprint.iacr.org/2024/247}
+    title     = {Laser Fault Injection at the CMOS 28 nm Technology Node: an Analysis of the Fault Model},
+    booktitle = {2018 Workshop on Fault Diagnosis and Tolerance in Cryptography (FDTC)},
+    year      = {2018},
+    pages     = {1-6},
+    doi       = {10.1109/FDTC.2018.00009}
 }
 
-@INPROCEEDINGS{NNHRS-14-dsd,
+@inproceedings{BGV-11-fdtc,
+    author    = {
+        Balasch, Josep and
+        Gierlichs, Benedikt and
+        Verbauwhede, Ingrid
+    },
+    title     = {An In-depth and Black-box Characterization of the Effects of Clock Glitches on 8-bit MCUs},
+    booktitle = {2011 Workshop on Fault Diagnosis and Tolerance in Cryptography},
+    year      = {2011},
+    pages     = {105-114},
+    doi       = {10.1109/FDTC.2011.9}
+}
+
+@inproceedings{BBPP-09-fdtc,
+    author    = {
+        Barenghi, Alessandro and
+        Bertoni, Guido and
+        Parrinello, Emanuele and
+        Pelosi, Gerardo
+    },
+    title     = {Low Voltage Fault Attacks on the RSA Cryptosystem},
+    booktitle = {2009 Workshop on Fault Diagnosis and Tolerance in Cryptography (FDTC)},
+    year      = {2009},
+    pages     = {23-31},
+    doi       = {10.1109/FDTC.2009.30}
+}
+
+@inproceedings{TM-17-fdtc,
+    author    = {
+        Timmers, Niek and
+        Mune, Cristofaro
+    },
+    title     = {Escalating Privileges in Linux Using Voltage Fault Injection},
+    booktitle = {2017 Workshop on Fault Diagnosis and Tolerance in Cryptography (FDTC)},
+    year      = {2017},
+    pages     = {1-8},
+    doi       = {10.1109/FDTC.2017.16}
+}
+
+@inproceedings{LFZD-16-fdtc,
+    author    = {
+        Luo, Pei and
+        Fei, Yunsi and
+        Zhang, Liwei and
+        Ding, A. Adam
+    },
+    booktitle = {2016 Workshop on Fault Diagnosis and Tolerance in Cryptography (FDTC)},
+    title     = {Differential Fault Analysis of SHA3-224 and SHA3-256},
+    year      = {2016},
+    pages     = {4-15},
+    doi       = {10.1109/FDTC.2016.17}
+}
+
+@inproceedings{MABGHMRSYV-18-fdtc,
+    author    = {
+        Madau, Maxime and
+        Agoyan, Michel and
+        Balasch, Josep and
+        Grujić, Miloš and
+        Haddad, Patrick and
+        Maurine, Philippe and
+        Rožić, Vladimir and
+        Singelée, Dave and
+        Yang, Bohan and
+        Verbauwhede, Ingrid
+    },
+    title     = {The Impact of Pulsed Electromagnetic Fault Injection on True Random Number Generators},
+    booktitle = {2018 Workshop on Fault Diagnosis and Tolerance in Cryptography (FDTC)},
+    year      = {2018},
+    pages     = {43-48},
+    doi       = {10.1109/FDTC.2018.00015}
+}
+
+@inproceedings{MVL-07-fdtc,
+    author    = {
+        Maistri, P. and
+        Vanhauwaert, P. and
+        Leveugle, R.
+    },
+    title     = {A Novel Double-Data-Rate AES Architecture Resistant against Fault Injection},
+    booktitle = {Workshop on Fault Diagnosis and Tolerance in Cryptography (FDTC 2007)},
+    year      = {2007},
+    pages     = {54-61},
+    doi       = {10.1109/FDTC.2007.8}
+}
+
+
+@Comment{============= ASPLOS =============}
+@inproceedings{TWMMCS-09-asplos,
+    author    = {
+        Tiwari, Mohit and
+        Wassel, Hassan M.G. and
+        Mazloom, Bita and
+        Mysore, Shashidhar and
+        Chong, Frederic T. and
+        Sherwood, Timothy
+    },
+    title     = {Complete information flow tracking from the gates up},
+    year      = {2009},
+    isbn      = {9781605584065},
+    publisher = {Association for Computing Machinery},
+    booktitle = {Proceedings of the 14th International Conference on Architectural Support for Programming Languages and Operating Systems ({ASPLOS})},
+    pages     = {109–120},
+    numpages  = {12},
+    location  = {Washington, DC, USA},
+    doi       = {10.1145/1508244.1508258}
+}
+
+@Comment{============= DSN =============}
+@inproceedings{KDK-09-dsn,
+    author    = {
+        Kannan, Hari and
+        Dalton, Michael and
+        Kozyrakis, Christos
+    },
+    title     = {Decoupling Dynamic Information Flow Tracking with a dedicated coprocessor},
+    booktitle = {2009 IEEE/IFIP International Conference on Dependable Systems \& Networks},
+    year      = {2009},
+    pages     = {105-114},
+    doi       = {10.1109/DSN.2009.5270347}
+}
+
+@Comment{============= POPL =============}
+@inproceedings{M-99-popl,
+    author    = {
+        Myers, Andrew C.
+    },
+    title     = {JFlow: practical mostly-static information flow control},
+    booktitle = {Proceedings of the 26th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+    year      = {1999},
+    isbn      = {1581130953},
+    publisher = {Association for Computing Machinery},
+    pages     = {228–241},
+    numpages  = {14},
+    location  = {San Antonio, Texas, USA},
+    series    = {POPL '99},
+    doi       = {10.1145/292540.292561}
+}
+
+@inproceedings{DFR-07-dsn,
+    author      = {
+        Di Natale, Giorgio and
+        Flottes, Marie-Lise and
+        Rouzeyre, Bruno
+    },
+    title       = {{On-Line Self-Test of AES Hardware Implementations}},
+    booktitle   = {{DSN'07: Workshop on Dependable and Secure Nanocomputing}},
+    year        = {2007},
+    month       = Jun,
+    hal_id      = {lirmm-00163405},
+    url         = {https://hal-lirmm.ccsd.cnrs.fr/lirmm-00163405},
+}
+
+@Comment{============= CCS =============}
+@inproceedings{CN-15-ccs,
+	author    = {
+		Chudnov, Andrey and
+		Naumann, David A.
+	},
+	title     = {Inlined Information Flow Monitoring for JavaScript},
+	year      = {2015},
+	isbn      = {9781450338325},
+	publisher = {Association for Computing Machinery},
+	doi       = {10.1145/2810103.2813684},
+	booktitle = {Proceedings of the 22nd ACM SIGSAC Conference on Computer and Communications Security},
+	pages     = {629–643},
+	numpages  = {15},
+	location  = {Denver, Colorado, USA},
+	series    = {CCS '15}
+}
+
+@Comment{============= PLAS =============}
+@inproceedings{AF-09-plas,
+	author    = {
+		Austin, Thomas H. and
+		Flanagan, Cormac
+	},
+	title     = {Efficient purely-dynamic information flow analysis},
+	year      = {2009},
+	isbn      = {9781605586458},
+	publisher = {Association for Computing Machinery},
+	doi       = {10.1145/1554339.1554353},
+	booktitle = {Proceedings of the ACM SIGPLAN Fourth Workshop on Programming Languages and Analysis for Security},
+	pages     = {113–124},
+	numpages  = {12},
+	location  = {Dublin, Ireland},
+	series    = {PLAS '09}
+}
+
+@Comment{============= FPL =============}
+@inproceedings{WCAHLG-17-fpl,
+	author    = {
+		Wahab, Muhammad A. and
+		Cotret, Pascal and
+		Allah, Mounir N. and
+		Hiet, Guillaume and
+		Lapôtre, Vianney and
+		Gogniat, Guy
+	},
+	booktitle = {2017 27th International Conference on Field Programmable Logic and Applications (FPL)},
+	title     = {ARMHEx: A hardware extension for DIFT on ARM-based SoCs},
+	year      = {2017},
+	pages     = {1-7},
+	doi       = {10.23919/FPL.2017.8056767}
+}
+
+@Comment{============= RECONFIG =============}
+@inproceedings{WCAHBLG-18-reconfig,
+	author    = {
+		Wahab, Muhammad Abdul and
+		Cotret, Pascal and
+		Allah, Mounir Nasr and
+		Hiet, Guillaume and
+		Biswas, Arnab Kumar and
+		Lapôtre, Vianney and
+		Gogniat, Guy
+	},
+	title     = {A small and adaptive coprocessor for information flow tracking in ARM SoCs},
+	booktitle = {2018 International Conference on ReConFigurable Computing and FPGAs (ReConFig)},
+	year      = {2018},
+	pages     = {1-8},
+	doi       = {10.1109/RECONFIG.2018.8641695}
+}
+
+@Comment{============= Workshop on Interaction between Compilers and Computer Architectures =============}
+@inproceedings{VHYR-08-cca,
+    author    = {
+        Vijay Nagarajan and
+        Ho-Seop Kim and
+        Youfeng Wu and
+        Rajiv Gupta
+    },
+    title     = {Dynamic Information Flow Tracking on Multicores},
+    year      = {2008},
+    booktitle = {Workshop on Interaction between Compilers and Computer Architectures},
+    url       = {https://www.research.ed.ac.uk/en/publications/dynamic-information-flow-tracking-on-multicores}
+}
+
+@Comment{============= SPAA =============}
+@inproceedings{RGMRCKR-08-spaa,
+    author    = {
+        Ruwase, Olatunji and
+        Gibbons, Phillip B. and
+        Mowry, Todd C. and
+        Ramachandran, Vijaya and
+        Chen, Shimin and
+        Kozuch, Michael and
+        Ryan, Michael
+    },
+    title     = {Parallelizing dynamic information flow tracking},
+    booktitle = {Proceedings of the 20th Annual Symposium on Parallelism in Algorithms and Architectures},
+    year      = {2008},
+    isbn      = {9781595939739},
+    publisher = {Association for Computing Machinery},
+    pages     = {35–45},
+    numpages  = {11},
+    location  = {Munich, Germany},
+    series    = {SPAA '08},
+    doi       = {10.1145/1378533.1378538}
+}
+
+@Comment{============= MICRO =============}
+@inproceedings{VBCROBRVA-04-micro,
+    author    = {
+        Vachharajani, N. and
+        Bridges, M.J. and
+        Chang, J. and
+        Rangan, R. and
+        Ottoni, G. and
+        Blome, J.A. and
+        Reis, G.A. and
+        Vachharajani, M. and
+        August, D.I.
+    },
+    title     = {RIFLE: An Architectural Framework for User-Centric Information-Flow Security},
+    booktitle = {37th International Symposium on Microarchitecture (MICRO-37'04)},
+    year      = {2004},
+    pages     = {243-254},
+    doi       = {10.1109/MICRO.2004.31}
+}
+
+@inproceedings{TKPAY-19-micro,
+    author    = {
+        Townley, Daniel and
+        Khasawneh, Khaled N. and
+        Ponomarev, Dmitry and
+        Abu-Ghazaleh, Nael and
+        Yu, Lei
+    },
+    title     = {LATCH: A Locality-Aware Taint CHecker},
+    year      = {2019},
+    isbn      = {9781450369381},
+    publisher = {Association for Computing Machinery},
+    booktitle = {Proceedings of the 52nd Annual IEEE/ACM International Symposium on Microarchitecture},
+    pages     = {969–982},
+    numpages  = {14},
+    location  = {Columbus, OH, USA},
+    series    = {MICRO '52},
+    doi       = {10.1145/3352460.3358327}
+}
+
+@Comment{============= CODES =============}
+@inproceedings{PS-13-codes,
+    author    = {
+        Porquet, Joël and
+        Sethumadhavan, Simha
+    },
+    title     = {WHISK: An uncore architecture for Dynamic Information Flow Tracking in heterogeneous embedded SoCs},
+    booktitle = {2013 International Conference on Hardware/Software Codesign and System Synthesis (CODES+ISSS)},
+    year      = {2013},
+    pages     = {1-9},
+    doi       = {10.1109/CODES-ISSS.2013.6658991}
+}
+
+@Comment{============= HASP =============}
+
+@Comment{============= EUROCRYPT =============}
+@inproceedings{BDL-97-eurocrypt,
+    author    = {
+        Boneh, Dan and
+        DeMillo, Richard A. and
+        Lipton, Richard J.
+    },
+    title     = {On the Importance of Checking Cryptographic Protocols for Faults},
+    booktitle = {Advances in Cryptology --- EUROCRYPT '97},
+    year      = {1997},
+    publisher = {Springer Berlin Heidelberg},
+    address   = {Berlin, Heidelberg},
+    pages     = {37--51},
+    isbn      = {978-3-540-69053-5},
+    doi       = {10.1007/3-540-69053-0_4}
+}
+
+@Comment{============= Applications of Internet of Things =============}
+@inproceedings{DM-21-appiot,
+    author    = {
+        Devi, Mampi and
+        Majumder, Abhishek
+    },
+    title     = {Side-Channel Attack in Internet of Things: A Survey},
+    booktitle = {Applications of Internet of Things},
+    year      = {2021},
+    publisher = {Springer Singapore},
+    address   = {Singapore},
+    pages     = {213--222},
+    isbn      = {978-981-15-6198-6},
+    doi       = {10.1007/978-981-15-6198-6_20}
+}
+
+@Comment{============= DATE =============}
+@INPROCEEDINGS{LBDP-19-date,
     author={
-        Nyberg, Ralph and
-        Nolles, Jürgen and
-        Heyszl, Johann and
-        Rabe, Dirk and
+        Laurent, Johan and
+        Beroulle, Vincent and
+        Deleuze, Christophe and
+        Pebay-Peyroula, Florian
+    },
+    booktitle={Design, Automation \& Test in Europe Conference ({DATE})}, 
+    title={{Fault Injection on Hidden Registers in a RISC-V Rocket Processor and Software Countermeasures}}, 
+    year={2019},
+    doi={10.23919/DATE.2019.8715158}
+}
+
+@inproceedings{ERM-16-date,
+    author    = {
+        El-Baze, David and
+        Rigaud, Jean-Baptiste and
+        Maurine, Philippe
+    },
+    booktitle = {2016 Design, Automation \& Test in Europe Conference \& Exhibition (DATE)},
+    title     = {A fully-digital EM pulse detector},
+    year      = {2016},
+    pages     = {439-444},
+    url       = {https://ieeexplore.ieee.org/abstract/document/7459351},
+}
+
+@inproceedings{CCH-22-date,
+    author    = {
+        Chamelot, Thomas and
+        Couroussé, Damien and
+        Heydemann, Karine
+    },
+    booktitle = {2022 Design, Automation \& Test in Europe Conference \& Exhibition (DATE)},
+    title     = {SCI-FI: Control Signal, Code, and Control Flow Integrity against Fault Injection Attacks},
+    year      = {2022},
+    pages     = {556-559},
+    doi       = {10.23919/DATE54114.2022.9774685}
+}
+
+@inproceedings{SWM-18-date,
+    author    = {
+        Schilling, Robert and
+        Werner, Mario and
+        Mangard, Stefan
+    },
+    booktitle = {2018 Design, Automation \& Test in Europe Conference \& Exhibition (DATE)},
+    title     = {Securing conditional branches in the presence of fault attacks},
+    year      = {2018},
+    pages     = {1586-1591},
+    doi       = {10.23919/DATE.2018.8342268}
+}
+
+@inproceedings{TMSSS-13-date,
+    author    = {
+        Theißing, Nikolaus and
+        Merli, Dominik and
+        Smola, Michael and
+        Stumpf, Frederic and
         Sigl, Georg
     },
-    title={{Closing the Gap between Speed and Configurability of Multi-bit Fault Emulation Environments for Security and Safety-Critical Designs}}, 
-    booktitle={{17th Euromicro Conference on Digital System Design}},
-    year={2014},
-    doi={10.1109/DSD.2014.39}
+    booktitle = {2013 Design, Automation \& Test in Europe Conference \& Exhibition (DATE)},
+    title     = {Comprehensive analysis of software countermeasures against fault attacks},
+    year      = {2013},
+    pages     = {404-409},
+    doi       = {10.7873/DATE.2013.092}
 }
 
-@article{CMLCVR-11-crypto,
-    author={
-        Canivet, Gaetan and
+@inproceedings{APHBML-16-date,
+    author    = {
+        Ananiadis, Charalampos and
+        Papadimitriou, Athanasios and
+        Hély, David and
+        Beroulle, Vincent and
         Maistri, Paolo and
-        Leveugle, R{\'e}gis and
-        Cl{\'e}di{\`e}re, Jessy and
-        Valette, Florent and
-        Renaudin, Marc
+        Leveugle, Régis
     },
-    title={{Glitch and laser fault attacks onto a secure AES implementation on a SRAM-based FPGA}},
-    journal={Journal of cryptology},
-    year={2011},
-    doi={10.1007/s00145-010-9083-9}
+    booktitle = {2016 Design, Automation \& Test in Europe Conference \& Exhibition (DATE)},
+    title     = {On the development of a new countermeasure based on a laser attack RTL fault model},
+    year      = {2016},
+    pages     = {445-450},
+    url       = {https://ieeexplore.ieee.org/document/7459352}
+}
+
+@Comment{============= USENIX =============}
+@inproceedings{SMS-23-usenix,
+    author    = {
+        Sa{\ss}, Xhani Marvin and
+        Mitev, Richard and
+        Sadeghi, Ahmad-Reza
+    },
+    title     = {Oops..! I Glitched It Again! How to {Multi-Glitch} the {Glitching-Protections} on {ARM} {TrustZone-M}},
+    booktitle = {32nd USENIX Security Symposium (USENIX Security 23)},
+    year      = {2023},
+    isbn      = {978-1-939133-37-3},
+    pages     = {6239--6256},
+    publisher = {USENIX Association},
+    month     = {8},
+    doi       = {10.48550/arXiv.2302.06932}
+}
+
+@inproceedings{BDGPS-10-usenix,
+    author    = {
+        Backes, Michael and
+        D\"{u}rmuth, Markus and
+        Gerling, Sebastian and
+        Pinkal, Manfred and
+        Sporleder, Caroline
+    },
+    title     = {Acoustic side-channel attacks on printers},
+    year      = {2010},
+    publisher = {USENIX Association},
+    booktitle = {Proceedings of the 19th USENIX Conference on Security},
+    pages     = {20},
+    numpages  = {1},
+    location  = {Washington, DC},
+    series    = {USENIX Security'10},
+    doi       = {10.5555/1929820.1929847}
+}
+
+@Comment{============= CHES =============}
+@inproceedings{ABCMRT-17-ches,
+    author    = {
+        Anceau, St{\'e}phanie and
+        Bleuet, Pierre and
+        Cl{\'e}di{\`e}re, Jessy and
+        Maingault, Laurent and
+        Rainard, Jean-luc and
+        Tucoulou, R{\'e}mi
+    },
+    title     = {Nanofocused X-Ray Beam to Reprogram Secure Circuits},
+    booktitle = {Cryptographic Hardware and Embedded Systems -- CHES 2017},
+    year      = {2017},
+    publisher = {Springer International Publishing},
+    pages     = {175--188},
+    isbn      = {978-3-319-66787-4},
+    doi       = {10.1007/978-3-319-66787-4_9},
+}
+
+@inproceedings{SA-02-ches,
+    author    = {
+        Skorobogatov, Sergei P. and
+        Anderson, Ross J.
+    },
+    title     = {Optical Fault Induction Attacks},
+    booktitle = {Cryptographic Hardware and Embedded Systems},
+    year      = {2002},
+    publisher = {Springer Berlin Heidelberg},
+    pages     = {2--12},
+    isbn      = {978-3-540-36400-9},
+    doi       = {10.1007/3-540-36400-5_2}
+}
+
+@inproceedings{GP-99-ches,
+    author    = {
+        Goubin, Louis and
+        Patarin, Jacques
+    },
+    title     = {DES and Differential Power Analysis The "Duplication" Method},
+    booktitle = {Cryptographic Hardware and Embedded Systems},
+    year      = {1999},
+    publisher = {Springer Berlin Heidelberg},
+    pages     = {158--172},
+    isbn      = {978-3-540-48059-4},
+    doi       = {10.1007/3-540-48059-5_15}
+}
+
+@inproceedings{TJ-09-ches,
+    author    = {
+        Torrance, Randy and
+        James, Dick
+    },
+    title     = {The State-of-the-Art in IC Reverse Engineering},
+    booktitle = {Cryptographic Hardware and Embedded Systems - CHES 2009},
+    year      = {2009},
+    publisher = {Springer Berlin Heidelberg},
+    pages     = {363--381},
+    isbn      = {978-3-642-04138-9},
+    doi       = {10.1007/978-3-642-04138-9_26}
 }
 
 
+
+@Comment{============= IOLTS =============}
+@inproceedings{TMZHM-23-iolts,
+    author    = {
+        Tebina, Nasr-eddine Ouldei and
+        Maingault, Laurent and
+        Zergainoh, Nacer-Eddine and
+        Hubert, Guillaume and
+        Maistri, Paolo
+    },
+    title     = {Ray-Spect: Local Parametric Degradation for Secure Designs: An application to X-Ray Fault Injection},
+    booktitle = {2023 IEEE 29th International Symposium on On-Line Testing and Robust System Design (IOLTS)},
+    year      = {2023},
+    pages     = {1-7},
+    doi       = {10.1109/IOLTS59296.2023.10224894}
+}
+
+@Comment{============= Security and Privacy (SP) =============}
+@inproceedings{LKOSECG-21-sp,
+    author    = {
+        Lipp, Moritz and
+        Kogler, Andreas and
+        Oswald, David and
+        Schwarz, Michael and
+        Easdon, Catherine and
+        Canella, Claudio and
+        Gruss, Daniel
+    },
+    title     = {PLATYPUS: Software-based Power Side-Channel Attacks on x86},
+    booktitle = {2021 IEEE Symposium on Security and Privacy (SP)},
+    year      = {2021},
+    pages     = {355-371},
+    doi       = {10.1109/SP40001.2021.00063}
+}
+
+@Comment{============= EuroS&PW =============}
+@inproceedings{HTM-23-eurospw,
+    author    = {
+        Harrison, Joshua and
+        Toreini, Ehsan and
+        Mehrnezhad, Maryam
+    },
+    title     = {A Practical Deep Learning-Based Acoustic Side Channel Attack on Keyboards},
+    booktitle = {2023 IEEE European Symposium on Security and Privacy Workshops (EuroS\&PW)},
+    year      = {2023},
+    pages     = {270-280},
+    doi       = {10.1109/EuroSPW59978.2023.00034}
+}
+
+@Comment{============= Smart Card Programming and Security =============}
+@inproceedings{QS-01-scps,
+    author    = {
+        Quisquater, Jean-Jacques and
+        Samyde, David
+    },
+    title     = {ElectroMagnetic Analysis (EMA): Measures and Counter-measures for Smart Cards},
+    booktitle = {Smart Card Programming and Security},
+    year      = {2001},
+    publisher = {Springer Berlin Heidelberg},
+    pages     = {200--210},
+    isbn      = {978-3-540-45418-2},
+    doi       = {10.1007/3-540-45418-7_17}
+}
+
+@Comment{============= Topics in Cryptology =============}
+@inproceedings{HMHSS-12-tcrypo,
+    author    = {
+        Heyszl, Johann and
+        Mangard, Stefan and
+        Heinz, Benedikt and
+        Stumpf, Frederic and
+        Sigl, Georg
+    },
+    title     = {Localized Electromagnetic Analysis of Cryptographic Implementations},
+    booktitle = {Topics in Cryptology -- CT-RSA 2012},
+    year      = {2012},
+    publisher = {Springer Berlin Heidelberg},
+    address   = {Berlin, Heidelberg},
+    pages     = {231--244},
+    isbn      = {978-3-642-27954-6},
+    doi       = {10.1007/978-3-642-27954-6_15}
+}
+
+@Comment{============= International Conference on Computer-Aided Design (ICCAD) =============}
+@inproceedings{KSTO-17-iccad,
+    author    = {
+        Kumar, Amit and
+        Scarborough, Cody and
+        Yilmaz, Ali and
+        Orshansky, Michael
+    },
+    booktitle = {2017 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)},
+    title     = {Efficient simulation of EM side-channel attack resilience},
+    year      = {2017},
+    pages     = {123-130},
+    doi       = {10.1109/ICCAD.2017.8203769}
+}
+
+@Comment{============= International Conference on New Technologies, Mobility and Security (NTMS) =============}
+@inproceedings{WDL-16-ntms,
+    author    = {
+        Wittke, Christian and
+        Dyka, Zoya and
+        Langendoerfer, Peter
+    },
+    booktitle = {2016 8th IFIP International Conference on New Technologies, Mobility and Security (NTMS)},
+    title     = {Comparison of EM Probes Using SEMA of an ECC Design},
+    year      = {2016},
+    pages     = {1-5},
+    doi       = {10.1109/NTMS.2016.7792439}
+}
+
+@Comment{============= IEEE Computer Society Annual Symposium on VLSI (ISVLSI) =============}
+@inproceedings{PRLG-24-isvlsi,
+    author    = {
+        PENSEC, William and
+        REGAZZONI, Francesco and
+        LAPOTRE, Vianney and
+        GOGNIAT, Guy
+    },
+    title     = {Defending the Citadel: Fault Injection Attacks Against Dynamic Information Flow Tracking and Related Countermeasures},
+    booktitle = {2024 IEEE Computer Society Annual Symposium on VLSI (ISVLSI)},
+    address   = {Knoxville, United States},
+    year      = {2024},
+    month     = {07},
+    pages     = {180-185},
+    doi       = {10.1109/ISVLSI61997.2024.00042}
+}
+
+@Comment{============= Design & Technology of Integrated Systems in Nanoscale Era (DTIS) =============}
+@inproceedings{PBR-15-dtis,
+    author    = {
+        Piscitelli, Roberta and
+        Bhasin, Shivam and
+        Regazzoni, Francesco
+    },
+    title     = {Fault attacks, injection techniques and tools for simulation},
+    booktitle = {2015 10th International Conference on Design \& Technology of Integrated Systems in Nanoscale Era (DTIS)},
+    year      = {2015},
+    pages     = {1-6},
+    doi       = {10.1109/DTIS.2015.7127352}
+}
+
+@inproceedings{MDPRD-20-dtis,
+    author    = {
+        Menu, Alexandre and
+        Dutertre, Jean-Max and
+        Potin, Olivier and
+        Rigaud, Jean-Baptiste and
+        Danger, Jean-Luc
+    },
+    title     = {Experimental Analysis of the Electromagnetic Instruction Skip Fault Model},
+    booktitle = {2020 15th Design \& Technology of Integrated Systems in Nanoscale Era (DTIS)},
+    year      = {2020},
+    pages     = {1-7},
+    keywords  = {EM fault injection;fault model},
+    doi       = {10.1109/DTIS48698.2020.9081261}
+}
+
+
+@Comment{============= Constructive Side-Channel Analysis and Secure Design (COSADE) =============}
+@inproceedings{GGD-17-cosade,
+    author    = {
+        Guillen, Oscar M. and
+        Gruber, Michael and
+        De Santis, Fabrizio
+    },
+    title     = {Low-Cost Setup for Localized Semi-invasive Optical Fault Injection Attacks},
+    booktitle = {Constructive Side-Channel Analysis and Secure Design},
+    year      = {2017},
+    publisher = {Springer International Publishing},
+    pages     = {207--222},
+    isbn      = {978-3-319-64647-3},
+    doi       = {10.1007/978-3-319-64647-3_13}
+}
+
+@inproceedings{DMMDT-13-cosade,
+    author    = {
+        Dehbaoui, Amine and
+        Mirbaha, Amir-Pasha and
+        Moro, Nicolas and
+        Dutertre, Jean-Max and
+        Tria, Assia
+    },
+    title     = {Electromagnetic Glitch on the AES Round Counter},
+    booktitle = {Constructive Side-Channel Analysis and Secure Design},
+    year      = {2013},
+    publisher = {Springer Berlin Heidelberg},
+    pages     = {17--31},
+    isbn      = {978-3-642-40026-1},
+    doi       = {10.1007/978-3-642-40026-1_2}
+}
+
+@inproceedings{CLFT-14-cosade,
+    author    = {
+        Courbon, Franck and
+        Loubet-Moundi, Philippe and
+        Fournier, Jacques J. A. and
+        Tria, Assia
+    },
+    title     = {Adjusting Laser Injections for Fully Controlled Faults},
+    booktitle = {Constructive Side-Channel Analysis and Secure Design},
+    year      = {2014},
+    publisher = {Springer International Publishing},
+    address   = {Cham},
+    pages     = {229--242},
+    isbn      = {978-3-319-10175-0},
+    doi       = {10.1007/978-3-319-10175-0_16}
+}
+
+
+
+@Comment{============= Austrochip 2007 : 15th Austrian Workhop on Microelectronics =============}
+@inproceedings{SH-07-austrochip,
+    author    = {
+        Schmidt, J{\"o}rn-Marc and
+        Hutter, Michael
+    },
+    title     = {Optical and EM Fault-Attacks on CRT-based RSA: Concrete Results},
+    booktitle = {Austrochip 2007 : 15th Austrian Workhop on Microelectronics},
+    year      = {2007},
+    isbn      = {978-3-902465-87-0},
+    pages     = {61--67},
+    publisher = {Verlag der Technischen Universit{\"a}t Graz},
+    url       = {https://graz.elsevierpure.com/en/publications/optical-and-em-fault-attacks-on-crt-based-rsa-concrete-results}
+}
+
+@Comment{============= Defect and Fault Tolerance in VLSI and Nanotechnology Systems (DFT) =============}
+@inproceedings{BAMCST-23-dft,
+    author    = {
+        Bouat, S. and
+        Anceau, S. and
+        Maingault, L. and
+        Clédière, J. and
+        Salvo, L. and
+        Tucoulou, R.
+    },
+    title     = {X ray nanoprobe for fault attacks and circuit edits on 28-nm integrated circuits},
+    booktitle = {2023 IEEE International Symposium on Defect and Fault Tolerance in VLSI and Nanotechnology Systems (DFT)},
+    year      = {2023},
+    pages     = {1-6},
+    doi       = {10.1109/DFT59622.2023.10313553}
+}
+
+@Comment{============= World Forum on Internet of Things (WF-IoT) =============}
+@inproceedings{FVMBMWP-23-wfiot,
+    author    = {
+        Faour, Sara and
+        Vučinić, Mališa and
+        Maksimovic, Filip and
+        Burnett, David and
+        Muhlethaler, Paul and
+        Watteyne, Thomas and
+        Pister, Kristofer
+    },
+    title     = {Implications of Physical Fault Injections on Single Chip Motes},
+    booktitle = {2023 IEEE 9th World Forum on Internet of Things (WF-IoT)},
+    year      = {2023},
+    pages     = {1-6},
+    doi       = {10.1109/WF-IoT58464.2023.10539380}
+}
+
+@Comment{============= DARPA Information Survivability Conference and Exposition =============}
+@inproceedings{CWCBW-00-discex,
+    author    = {
+        Cowan, C. and
+        Wagle, F. and
+        Calton Pu and
+        Beattie, S. and
+        Walpole, J.
+    },
+    title     = {Buffer overflows: attacks and defenses for the vulnerability of the decade},
+    booktitle = {Proceedings DARPA Information Survivability Conference and Exposition. DISCEX'00},
+    year      = {2000},
+    volume    = {2},
+    pages     = {119-129 vol.2},
+    doi       = {10.1109/DISCEX.2000.821514}
+}
+
+@Comment{============= New Technologies for Distributed Systems (NOTERE) =============}
+@inproceedings{DGWKU-16-notere,
+    author    = {
+        Dorsemaine, Bruno and
+        Gaulier, Jean-Philippe and
+        Wary, Jean-Philippe and
+        Kheir, Nizar and
+        Urien, Pascal
+    },
+    booktitle = {2016 13th International Conference on New Technologies for Distributed Systems (NOTERE)},
+    title     = {A new approach to investigate IoT threats based on a four layer model},
+    year      = {2016},
+    pages     = {1-6},
+    doi       = {10.1109/NOTERE.2016.7745830}
+}
+
+@Comment{============= Partial Evaluation and Semantics-Based Program Manipulation (PEPM) =============}
+@inproceedings{LMLW-08-pepm,
+    author    = {
+        Lam, Monica S. and
+        Martin, Michael and
+        Livshits, Benjamin and
+        Whaley, John
+    },
+    title     = {Securing web applications with static and dynamic information flow tracking},
+    booktitle = {Proceedings of the 2008 ACM SIGPLAN Symposium on Partial Evaluation and Semantics-Based Program Manipulation},
+    year      = {2008},
+    isbn      = {9781595939777},
+    publisher = {Association for Computing Machinery},
+    pages     = {3–12},
+    numpages  = {10},
+    doi       = {10.1145/1328408.1328410}
+}
+
+@Comment{============= Partial Evaluation and Semantics-Based Program Manipulation (PEPM) =============}
+@inproceedings{FSKWERP-17-ivsw,
+    author    = {
+        Fyrbiak, Marc and
+        Strauß, Sebastian and
+        Kison, Christian and
+        Wallat, Sebastian and
+        Elson, Malte and
+        Rummel, Nikol and
+        Paar, Christof
+    },
+    booktitle = {2017 IEEE 2nd International Verification and Security Workshop (IVSW)},
+    title     = {Hardware reverse engineering: Overview and open challenges},
+    year      = {2017},
+    pages     = {88-94},
+    doi       = {10.1109/IVSW.2017.8031550}
+}
+
+@Comment{============= Financial Cryptography =============}
+@inproceedings{BS-03-financialcrypto,
+    author    = {
+        Bl{\"o}mer, Johannes and
+        Seifert, Jean-Pierre
+    },
+    title     = {Fault Based Cryptanalysis of the Advanced Encryption Standard (AES)},
+    booktitle = {Financial Cryptography},
+    year      = {2003},
+    publisher = {Springer Berlin Heidelberg},
+    pages     = {162--181},
+    isbn      = {978-3-540-45126-6},
+    doi       = {10.1007/978-3-540-45126-6_12}
+}
+
+@Comment{============= Security, Privacy, and Applied Cryptography Engineering (SPACE) =============}
+@inproceedings{HBB-16-space,
+    author    = {
+        He, Wei and
+        Breier, Jakub and
+        Bhasin, Shivam
+    },
+    title     = {Cheap and Cheerful: A Low-Cost Digital Sensor for Detecting Laser Fault Injection Attacks},
+    booktitle = {Security, Privacy, and Applied Cryptography Engineering},
+    year      = {2016},
+    publisher = {Springer International Publishing},
+    pages     = {27--46},
+    isbn      = {978-3-319-49445-6},
+    doi       = {10.1007/978-3-319-49445-6_2}
+}
+
+@Comment{============= International Symposium on Design and Diagnostics of Electronic Circuits and Systems (DDECS) =============}
+@inproceedings{NLGT-22-ddecs,
+    author    = {
+        Manssour, Noura Ait and
+        Lapôtre, Vianney and
+        Gogniat, Guy and
+        Tisserand, Arnaud
+    },
+    title     = {Processor Extensions for Hardware Instruction Replay against Fault Injection Attacks},
+    booktitle = {2022 25th International Symposium on Design and Diagnostics of Electronic Circuits and Systems (DDECS)},
+    year      = {2022},
+    pages     = {26-31},
+    doi       = {10.1109/DDECS54261.2022.9770170}
+}
+
+@Comment{============= Workshop on Embedded Systems Security (WESS) =============}
+@inproceedings{BBKPR-10-wess,
+    author    = {
+        Barenghi, Alessandro and
+        Breveglieri, Luca and
+        Koren, Israel and
+        Pelosi, Gerardo and
+        Regazzoni, Francesco
+    },
+    title     = {Countermeasures against fault attacks on software implemented AES: effectiveness and cost},
+    booktitle = {Proceedings of the 5th Workshop on Embedded Systems Security},
+    year      = {2010},
+    isbn      = {9781450300780},
+    publisher = {Association for Computing Machinery},
+    articleno = {7},
+    numpages  = {10},
+    location  = {Scottsdale, Arizona},
+    series    = {WESS '10},
+    doi       = {10.1145/1873548.1873555}
+}
+
+@Comment{============= European Test Symposium (ETS) =============}
+@inproceedings{NDFR-08-ets,
+    author    = {
+        Natale, G. Di and
+        Doulcier, M. and
+        Flottes, M. L. and
+        Rouzeyre, B.
+    },
+    booktitle = {2008 13th European Test Symposium},
+    title     = {A Reliable Architecture for the Advanced Encryption Standard},
+    year      = {2008},
+    pages     = {13-18},
+    doi       = {10.1109/ETS.2008.26}
+}
+
+@Comment{============= Sciences and Techniques of Automatic Control and Computer Engineering (STA) =============}
+@inproceedings{MKBM-14-sta,
+    author    = {
+        Mestiri, Hassen and
+        Kahri, Fatma and
+        Bouallegue, Belgacem and
+        Machhout, Mohsen
+    },
+    booktitle = {2014 15th International Conference on Sciences and Techniques of Automatic Control and Computer Engineering (STA)},
+    title     = {A hardware FPGA implementation of fault attack countermeasure},
+    year      = {2014},
+    pages     = {178-183},
+    doi       = {10.1109/STA.2014.7086674}
+}
+
+@Comment{=============  IEEE International Symposium on Circuits and Systems (ISCAS) =============}
+@inproceedings{PTCVAJ-20-iscas,
+    author    = {
+        Potestad-Ordóńez, F. E. and
+        Tena-Sánchez, E. and
+        Chaves, R. and
+        Valencia-Barrero, M. and
+        Acosta-Jiménez, A. J. and
+        Jiménez-Fernández, C. J.
+    },
+    title     = {Hamming-Code Based Fault Detection Design Methodology for Block Ciphers},
+    booktitle = {2020 IEEE International Symposium on Circuits and Systems (ISCAS)},
+    year      = {2020},
+    pages     = {1-5},
+    doi       = {10.1109/ISCAS45731.2020.9180451}
+}
+
+@Comment{=============  IEEE International Symposium on Circuits and Systems (ISCAS) =============}
+@inproceedings{DGMMNM-20-arcs,
+    author    = {
+        D{\"o}rflinger, Alexander and
+        Guan, Yejun and
+        Michalik, S{\"o}ren and
+        Michalik, S{\"o}nke and
+        Naghmouchi, Jamin and
+        Michalik, Harald
+    },
+    title     = {ECC Memory for Fault Tolerant RISC-V Processors},
+    booktitle = {Architecture of Computing Systems -- ARCS 2020},
+    year      = {2020},
+    publisher = {Springer International Publishing},
+    address   = {Cham},
+    pages     = {44--55},
+    isbn      = {978-3-030-52794-5},
+    doi       = {10.1007/978-3-030-52794-5_4}
+}
+
+@Comment{=============  Design of Circuits and Integrated Systems (DCIS) =============}
+@inproceedings{ZDCRT-12-dcis,
+    author      = {
+        Zussa, Lo{\"i}c and
+        Dutertre, Jean-Max and
+        Cl{\'e}di{\`e}re, Jessy and
+        Robisson, Bruno and
+        Tria, Assia
+    },
+    title       = {{Investigation of timing constraints violation as a fault injection means}},
+    booktitle   = {{27th Conference on Design of Circuits and Integrated Systems (DCIS)}},
+    address     = {Avignon, France},
+    year        = {2012},
+    month       = Nov,
+    hal_id      = {emse-00742652},
+    hal_version = {v1},
+    url         = {https://hal-emse.ccsd.cnrs.fr/emse-00742652}
+}
+
+@Comment{=============  Workshop on Attacks and Solutions in Hardware Security 2024 (ASHES) =============}
+@inproceedings{KMD-24-ashes,
+    author    = {
+        Kit Murdock and
+        Martin Thompson and
+        David Oswald
+    },
+    title     = {FaultFinder: lightning-fast, multi-architectural fault injection simulation},
+    booktitle = {ASHES '24: Proceedings of the 2024 Workshop on Attacks and Solutions in Hardware Security},
+    note      = {Not yet published as of 16/10/2024},
+    year      = {2024},
+    month     = oct,
+    publisher = {Association for Computing Machinery (ACM)},
+    doi       = {10.1145/3689939.3695788},
+}
+
+@Comment{=============  International Conference on System Reliability and Safety (ICSRS) =============}
+@inproceedings{FTMLLE-21-icsrs,
+    author    = {
+        Frasheri, Mirgita and
+        Thule, Casper and
+        Macedo, Hugo Daniel and
+        Lausdahl, Kenneth and
+        Larsen, Peter Gorm and
+        Esterle, Lukas
+    },
+    booktitle = {2021 5th International Conference on System Reliability and Safety (ICSRS)},
+    title     = {Fault Injecting Co-simulations for Safety},
+    year      = {2021},
+    pages     = {6-13},
+    doi       = {10.1109/ICSRS53853.2021.9660728}
+}
+
+@Comment{=============  IEEE Design Automation Conference (DAC) =============}
+@inproceedings{BTSWSW-15-dac,
+    author    = {
+        Beaulieu, Ray and
+        Treatman-Clark, Stefan and
+        Shors, Douglas and
+        Weeks, Bryan and
+        Smith, Jason and
+        Wingers, Louis
+    },
+    booktitle = {2015 52nd ACM/EDAC/IEEE Design Automation Conference (DAC)},
+    title     = {The SIMON and SPECK lightweight block ciphers},
+    year      = {2015},
+    pages     = {1-6},
+    doi       = {10.1145/2744769.2747946}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THESES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@phdthesis{O-05-phd,
+  author = {Martin Otto},
+  title  = {Fault Attacks And Countermeasures},
+  school = {University of Paderborn},
+  year   = {2005}
+}

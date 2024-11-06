@@ -10,6 +10,7 @@ all: $(TARGETS)
 
 %.pdf: %.tex
 	$(PDFLATEX) $< -o $@
+	biber $(basename $<)
 	$(PDFLATEX) $< -o $@
 	$(PDFLATEX) $< -o $@
 
