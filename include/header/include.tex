@@ -87,11 +87,13 @@
   \end{frame}
 }
 
-\newcommand{\filigrane}[2]{\begin{tikzpicture}[remember picture,overlay]
-	\node [rotate=#2,scale=2,text opacity=0.75]
+\newcommand{\filigrane}[3]{\begin{tikzpicture}[remember picture,overlay]
+	\node [rotate=#2,scale=#3,text opacity=0.75]
 	at (current page.center) {\textcolor{red}{\textbf{#1}}};
 	\end{tikzpicture}
 }
 
 % Define color
 \definecolor[named]{LightGray}{RGB}{230,230,230}
+
+\setbeamercovered{transparent}

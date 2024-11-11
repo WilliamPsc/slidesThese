@@ -9,8 +9,8 @@
                 \setbeamertemplate{itemize items}[square]
                 \justifying
                 \item Wide range of application
-                \item Fast growing market with rapid expansion of use
-                \item Rely on sensors depending on their usage
+                \item Fast growing market with exponential usage
+                \item Rely on sensors depending on their use
                 \item Collect and share data
                 \item Manipulation of critical data
                 \item Increasingly vulnerable to multiple threats
@@ -36,34 +36,69 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Motivations}
 \begin{frame}{Motivations: IoT Under Threats}
-    \begin{block}{Threats}
-        \begin{itemize}
-            \setbeamertemplate{itemize items}[square]
-            \justifying
-            \item Software threats: malwares, memory overflow attacks, SQL injection, etc
-            \item Network threats: DDoS, man-in-the-middle, jamming, etc
-            \item Hardware threats: physical attacks such as reverse engineering, Side-Channel Attacks (SCA), Fault Injection Attacks (FIA)
-        \end{itemize}
-    \end{block}
+    \only<1>{
+        \begin{block}{Threats}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item Software threats: malwares, memory overflow attacks, SQL injection, etc
+                \item Network threats: DDoS, Man-In-The-Middle, jamming, etc
+                \item Hardware threats: physical attacks such as reverse engineering, Side-Channel Attacks (SCA), Fault Injection Attacks (FIA)
+            \end{itemize}
+        \end{block}
+    }
+    \only<2>{
+        \begin{block}{Threats}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item \textbf{\textcolor{red}{Software threats}}: malwares, memory overflow attacks, SQL injection, etc
+                \item Network threats: DDoS, man-in-the-middle, jamming, etc
+                \item \textbf{\textcolor{red}{Hardware threats}}: physical attacks such as reverse engineering, Side-Channel Attacks (SCA), \underline{Fault Injection Attacks (FIA)}
+            \end{itemize}
+        \end{block}
+    }
 
-    \begin{block}{Vulnerabilities on critical systems}
-        \begin{itemize}
-            \setbeamertemplate{itemize items}[square]
-            \justifying
-            \item 
-        \end{itemize}
-    \end{block}
+    \filigrane{A compléter}{45}{5}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Information Flow Tracking}
-\begin{frame}{Information Flow Tracking}
+\subsection{Software threats: Information Flow Tracking}
+\begin{frame}{Software threats: Information Flow Tracking}
     \begin{block}{}
         \begin{itemize}
             \setbeamertemplate{itemize items}[square]
             \justifying
+            \item Security mechanism
             \item Protection against software attacks (e.g.: \textit{buffer overflow}, \textit{format string}, \textit{SQL injections}, \ldots)~\cite{BSMCVEJCO-21-acmcsur, HAK-21-acmcsur}
+            \item Static or \underline{Dynamic}
+            \item Software, \underline{Hardware} or Hybrid
+            \only<1>{\item \textcolor{Gainsboro}{Hardware DIFT: off-core, off-loading core, in-core}}
+            \only<2->{\item Hardware DIFT:} \only<2>{\textbf{off-core}, \textcolor{Gainsboro}{off-loading core, in-core}}\only<3>{off-core, \textbf{off-loading core}, \textcolor{Gainsboro}{in-core}}\only<4>{off-core, off-loading core, \underline{\textbf{in-core}}}
         \end{itemize}
     \end{block}
+    
+
+    \only<2>{
+        \begin{figure}
+            \centering
+            \includegraphics[height=.5\textheight]{src/1_introduction/img/offcore.pdf}
+            \label{fig:offcore}
+        \end{figure}
+    }
+    \only<3>{
+        \begin{figure}
+            \centering
+            \includegraphics[height=.5\textheight]{src/1_introduction/img/offloading.pdf}
+            \label{fig:offloading}
+        \end{figure}
+    }
+    \only<4>{
+        \begin{figure}
+            \centering
+            \includegraphics[height=.5\textheight]{src/1_introduction/img/incore.pdf}
+            \label{fig:incore}
+        \end{figure}
+    }
 \end{frame}
 
 \begin{frame}{Dynamic Information Flow Tracking}
@@ -89,15 +124,40 @@
     \end{minipage}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Physical Attacks}
-\begin{frame}{Physical Attacks}
+\subsection{Hardware threats: Physical Attacks}
+\begin{frame}{Hardware threats: Physical Attacks}
     \begin{block}{}
         \begin{itemize}
             \setbeamertemplate{itemize items}[square]
             \justifying
-            \item 
+            \item<1> Reverse Engineering: process of information retrieval from a product by analysing and understanding the design, functionality, and operation of existing hardware
+            \item<2> Side-Channel Attacks: exploit information leakages on the circuit behaviour
+            \item<3> \underline{Fault Injection Attacks}: involve deliberately introducing one or more fault(s) into the system to observe its behaviour and identify potential vulnerabilities.
         \end{itemize}
     \end{block}
+
+    \only<2>{
+        \begin{figure}
+            \centering
+            \includegraphics[height=.5\textheight, page=3]{src/1_introduction/img/physicalAttacks.pdf}
+            \label{fig:sca}
+        \end{figure}
+    }
+
+    \only<3>{
+        \begin{figure}
+            \centering
+            \includegraphics[height=.5\textheight, page=2]{src/1_introduction/img/physicalAttacks.pdf}
+            \label{fig:fia}
+        \end{figure}
+    }
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Issue}
+\begin{frame}{Issue}
+    \begin{exampleblock}{}
+        How can we maintain maximum protection against software attacks in the presence of physical attacks?
+    \end{exampleblock}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Objectives}
@@ -107,7 +167,7 @@
             \setbeamertemplate{itemize items}[triangle]
             \justifying
             \item Provide a robust security mechanism against software and hardware threats.
-            \item Taking into account Fault Injection Attacks
+            \item Take into account Fault Injection Attacks
             \item Propose lightweight countermeasures against FIA
             \item Take into account constraints, such as area and performance overhead
         \end{itemize}
