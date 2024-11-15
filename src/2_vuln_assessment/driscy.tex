@@ -46,7 +46,7 @@
     % \begin{block}{Methodology}
     %     \begin{itemize}
     %         \item Analysis of 2 attacks use cases: buffer overflow attack, format string attack
-    %         \item Analysis of 1 use case to complete the DIFT surface: compare/compute
+    %         \item Analysis of 1 use case to cover the DIFT surface: compare/compute
     %     \end{itemize}
     % \end{block}
 \end{frame}
@@ -98,45 +98,6 @@
     \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Case 2: WU-FTPd}
-    \begin{itemize}
-        \justifying
-        \item The vulnerability is the use of an unchecked user input as the format string parameter in functions that perform formatting, e.g. printf()
-        \item An attacker can use the format tokens, to write into arbitrary locations of memory, e.g. the return address of the function.
-    \end{itemize}
-
-    % \vspace{1cm}
-    % \hspace{2cm}
-    \centering
-    \begin{minipage}[c]{\textwidth}
-        \begin{lstlisting}[language=C,label=code:printfNFormat]
-void echo(){
-    int a;
-    register int i asm("x8");
-    a = i;
-    printf("%224u%n%35u%n%253u%n%n", 1, (int*) (a-4), 1, (int*) (a-3), 1, (int*) (a-2), (int*) (a-1));
-}\end{lstlisting}
-    \end{minipage}
-\end{frame}
-
-\begin{frame}
-    \begin{figure}
-        \centering
-        \includegraphics[height=.85\textheight]{src/2_vuln_assessment/img/wuftpd/ftpd_short.pdf}
-        \caption{Temporal analysis of the tags propagation in a \textit{format string} attack}
-        \label{fig:analyseTempoFormatString}
-    \end{figure}
-\end{frame}
-
-\begin{frame}
-    \begin{figure}
-        \centering
-        \includegraphics[height=.85\textheight]{src/2_vuln_assessment/img/wuftpd/arborescence_wuftpd.pdf}
-        \caption{Logical analysis of the tags propagation in a \textit{format string} attack}
-        \label{fig:analyseLogiqueFormatString}
-    \end{figure}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Experimental Setup}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Experimental Setup - Simulation fault injections campaign}
@@ -158,6 +119,7 @@ void echo(){
                         \end{itemize}
               \end{itemize}
         \item Simulations with QuestaSim 10.6e.
+        \item FISSA is used in order to create our injection campaigns
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -170,7 +132,7 @@ void echo(){
             \toprule
                             & Crash & NSTR & Delay & Success     & Total \\
             \midrule
-            Buffer overflow & 0     & 1380 & 20    & 22 (1.55\%) & 1422  \\
+            Buffer overflow & 0     & 1380 & 20    & 24 (1.69\%) & 1422  \\
             WU-FTPd         & 0     & 1767 & 77    & 52 (2.74\%) & 1896  \\
             Compare/Compute & 0     & 917  & 12    & 19 (2.00\%) & 948   \\
             \bottomrule
@@ -190,6 +152,7 @@ void echo(){
                                                 & set0                           & set1                           & bitflip                        & set0                           & set1                           & bitflip    & set0       & set1 & bitflip    & set0       & set1 & bitflip    & set0       & set1 & bitflip    \\
                 \midrule
                 pc\_if\_o\_tag                  &                                &                                &                                &                                &                                &            &            &      &            & \checkmark &      & \checkmark &            &      &            \\
+                memory\_set\_o\_tag             &                                & \checkmark                     & \checkmark                     &                                &                                &            &            &      &            &            &      &            &            &      &            \\
                 rf\_reg[1]                      &                                &                                &                                &                                &                                &            & \checkmark &      & \checkmark &            &      &            &            &      &            \\
                 tcr\_q                          & \checkmark                     &                                &                                & \checkmark                     &                                &            & \checkmark &      &            & \checkmark &      &            & \checkmark &      &            \\
                 \rowcolor{LightGray} tcr\_q[21] &                                &                                & \checkmark                     &                                &                                & \checkmark &            &      & \checkmark &            &      & \checkmark &            &      & \checkmark \\
@@ -205,8 +168,8 @@ void echo(){
 \begin{frame}{Discussion}
     \begin{itemize}
         \setbeamertemplate{itemize items}[triangle]
-        \item 4212 simulations have been performed,
-        \item 93 successes (2.21\%),
+        \item 4266 simulations have been performed,
+        \item 95 successes (2.23\%),
         \item We have shown that the D-RI5CY DIFT is vulnerable to FIA
         \item Propagation of faults is facilitated by paths fully made of \textit{AND} gates
     \end{itemize}

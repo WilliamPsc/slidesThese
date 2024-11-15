@@ -62,28 +62,16 @@
 \renewcommand*{\bibfont}{\footnotesize}
 
 \AtBeginSection[] {
-  \begin{frame}[noframenumbering]{Outline}
-    \begin{columns}[c]
-        \begin{column}{.6\textwidth}
-          \tableofcontents[
-            currentsection,
-            currentsubsection,
-            hideothersubsections,
-            sectionstyle=show/shaded,
-            sections={1-3}
-          ]
-        \end{column}
-      \hfill
-        \begin{column}{.375\textwidth}
-          \tableofcontents[
-            currentsection,
-            currentsubsection,
-            hideothersubsections,
-            sectionstyle=show/shaded,
-            sections={4-6}
-          ]
-        \end{column}
-    \end{columns}
+  \begin{frame}[noframenumbering, plain]{Outline}
+    \vfill % Centres vertically
+    \tableofcontents[
+      currentsection,
+      currentsubsection,
+      hideothersubsections,
+      sectionstyle=show/shaded,
+      sections={\thesection}
+    ]
+    \vfill
   \end{frame}
 }
 

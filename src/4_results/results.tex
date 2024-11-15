@@ -5,3 +5,22 @@
     
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{FPGA implementation results - Strategy 1}
+    \begin{table}[t]
+        \footnotesize
+        \centering
+        \caption{FPGA implementation results — Vivado 2023.2}
+        \label{tab:chap5_implementation}
+        \begin{tabular}{@{}c|ccc@{}}
+            \toprule
+            Protection    & Number of LUTs   & Number of FFs    & Maximum frequency                \\ \midrule
+            Baseline      & 6,597 (-4.54\%) & 2,211 (-5.31\%) & \SI{49.1}{\mega\hertz} (3\%)     \\
+            D-RI5CY       & 6,911 (0\%)     & 2,335 (0\%)     & \SI{47.6}{\mega\hertz} (0\%)     \\
+            Simple parity & 7,011 (1.45\%)  & 2,337 (0.09\%)  & \SI{47.6}{\mega\hertz} (0\%)     \\
+            Hamming Code  & 7,283 (5.38\%)  & 2,361 (1.11\%)  & \SI{47.4}{\mega\hertz} (-0.36\%) \\
+            SECDED        & 7,428 (7.48\%)  & 2,366 (1.33\%)  & \SI{47.2}{\mega\hertz} (-0.95\%) \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
