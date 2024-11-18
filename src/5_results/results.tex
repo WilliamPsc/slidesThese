@@ -2,18 +2,26 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Experimental setup}
-    \begin{block}{}
-        \begin{itemize}
-            \item Use of FISSA for FIA campaigns
-            \item Few results presented here
-        \end{itemize}
-    \end{block}
+    \begin{minipage}[c]{0.7\linewidth}
+        \begin{block}{}
+            \begin{itemize}
+                \item Use of FISSA for FIA campaigns
+                \item Few results presented here
+            \end{itemize}
+        \end{block}
+    \end{minipage}\hfill%
+    \begin{minipage}[c]{0.3\linewidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=.75\textwidth]{src/5_results/img/experimental.png}
+        \end{figure}
+    \end{minipage}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{FPGA implementation results}
     \begin{table}[t]
-        \footnotesize
         \centering
+        \footnotesize
         \caption{FPGA implementation results — Vivado 2023.2}
         \label{tab:chap6_implementation}
         \begin{tabular}{@{}rccc@{}}
@@ -37,8 +45,8 @@
 
 \begin{frame}
     \begin{table}[H]
-        \scriptsize
         \centering
+        \footnotesize
         \caption{Logical fault injection simulation campaigns results for exhaustive multi-bits faults in two registers at a given clock cycle}
         \label{tab:chap6_results_multi_bitflip_reg_multi}
         \setlength{\tabcolsep}{1pt}

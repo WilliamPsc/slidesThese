@@ -5,6 +5,7 @@
 \begin{frame}{Introduction}
     \begin{block}{Protections}
         \begin{itemize}
+            \item Focusing into lightweight protections for small systems
             \item We propose 3 lightweight countermeasures using parity codes
             \begin{itemize}
                 \item Simple parity
@@ -20,7 +21,6 @@
         \begin{block}{}
             \begin{itemize}
                 \justifying
-                \item Focusing into lightweight protections for small systems
                 \item Often used for error detection.
                 \item Add an extra bit for parity computation.
                 \item Can only detect one error without correction.
@@ -163,17 +163,18 @@
 \begin{frame}{Implemented strategies - Group composition}
     \begin{table}[t]
         \centering
+        \small
         \caption{Grouping composition of implemented strategies}
         \label{tab:strategies_group}
         \begin{tabular}{@{}cccc@{}}
             \toprule
-                       & Grouping composition                                 & Number of groups & Number of registers \\ \midrule
-            Baseline   & --                                                   & --               & 55                  \\
-            Strategy 1 & Minimisation of groups                               & 5                & 65                  \\
-            Strategy 2 & Protection per pipeline stage                        & 7                & 69                  \\
-            Strategy 3 & Protection per register                              & 24               & 103                 \\
-            Strategy 4 & Protection per register with slicing of CSR & 38               & 131                 \\
-            Strategy 5 & Coupling sliced registers                            & 39               & 133                 \\
+                                & \tableTwoLines{Grouping}{strategy}       & \tableTwoLines{Number of}{groups} & \tableTwoLines{Number of}{registers} \\ \midrule
+            Baseline -- D-RI5CY & --                                          & --                                & 55                                   \\
+            Strategy 1          & Minimisation of groups                      & 5                                 & 65                                   \\
+            Strategy 2          & Protection per pipeline stage               & 7                                 & 69                                   \\
+            Strategy 3          & Protection per register                     & 24                                & 103                                  \\
+            Strategy 4          & Protection per register with slicing of CSR & 38                                & 131                                  \\
+            Strategy 5          & Coupling sliced registers                   & 39                                & 133                                  \\
             \bottomrule
         \end{tabular}
     \end{table}
@@ -182,6 +183,7 @@
 \begin{frame}{Implemented strategies - details}
     \begin{table}[t]
         \centering
+        \small
         \caption{Summary of DIFT-related protected registers -- taking SECDED}
         \label{tab:detail_strategies_group}
         \begin{tabular}{@{}cccccc@{}}

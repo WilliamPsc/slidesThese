@@ -124,9 +124,10 @@
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Main results : 3 cases}
-    \begin{table}[H]
+\begin{frame}{Buffer overflow}
+    \begin{table}[]
         \centering
+        \small
         \caption{End of simulation status}
         \label{table:end_sim_by_status}
         \begin{tabular}{lrrrlr}
@@ -134,16 +135,13 @@
                             & Crash & NSTR & Delay & Success     & Total \\
             \midrule
             Buffer overflow & 0     & 1380 & 20    & 24 (1.69\%) & 1422  \\
-            WU-FTPd         & 0     & 1767 & 77    & 52 (2.74\%) & 1896  \\
-            Compare/Compute & 0     & 917  & 12    & 19 (2.00\%) & 948   \\
             \bottomrule
         \end{tabular}
     \end{table}
-\end{frame}
 
-\begin{frame}{Buffer overflow}
     \begin{table}[]
         \centering
+        \small
         \caption{Buffer overflow : Register sensitivity as determined by fault model and simulation time}
         \label{table:end_sim_from_time_fault_register_buffer_overflow}
         \resizebox{\textwidth}{!}{%
