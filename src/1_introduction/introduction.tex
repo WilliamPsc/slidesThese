@@ -1,9 +1,9 @@
-\section{Introduction}
+\section*{Introduction}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Context}
-\begin{frame}{Context: Embedded Systems and IoT}
-	\begin{minipage}[c]{0.5\textwidth}
+\begin{frame}{Context: Internet of Things}
+    \begin{minipage}[c]{0.5\textwidth}
         \begin{block}{Internet of Things (IoT)}
             \begin{itemize}
                 \setbeamertemplate{itemize items}[square]
@@ -16,89 +16,151 @@
                 \item Increasingly vulnerable to multiple threats
             \end{itemize}
         \end{block}
-	\end{minipage}\hfill%
-	\begin{minipage}[c]{0.5\textwidth}
-		\begin{figure}
-			\centering
-			\includegraphics[width=.825\textwidth, trim={4.5cm 2.25cm 5.75cm 3.25cm}, clip]{src/1_introduction/img/iotapplications.pdf}
+    \end{minipage}\hfill%
+    \begin{minipage}[c]{0.5\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=.825\textwidth, trim={4.5cm 2.25cm 5.75cm 3.25cm}, clip]{src/1_introduction/img/iotapplications.pdf}
             % \caption{Example of IoT applications}
-			\label{fig:iot_application}
-		\end{figure}
+            \label{fig:iot_application}
+        \end{figure}
         \vspace{-5pt}
         \begin{figure}
             \centering
             \includegraphics[width=.825\textwidth]{src/1_introduction/img/iot_forecasts.pdf}
             \label{fig:nbr_iot}
         \end{figure}
-	\end{minipage}
+    \end{minipage}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Motivations}
 \begin{frame}{Motivations: IoT Under Threats}
-    \only<1>{
-        \begin{block}{Threats}
-            \begin{itemize}
-                \setbeamertemplate{itemize items}[square]
-                \justifying
-                \item Software threats: malwares, memory overflow attacks, SQL injection, etc
-                \item Network threats: DDoS, Man-In-The-Middle, jamming, etc
-                \item Hardware threats: physical attacks such as reverse engineering, Side-Channel Attacks (SCA), Fault Injection Attacks (FIA)
-            \end{itemize}
-        \end{block}
-    }
-    \only<2>{
-        \begin{block}{Threats}
-            \begin{itemize}
-                \setbeamertemplate{itemize items}[square]
-                \justifying
-                \item \textbf{\textcolor{red}{Software threats}}: malwares, memory overflow attacks, SQL injection, etc
-                \item Network threats: DDoS, man-in-the-middle, jamming, etc
-                \item \textbf{\textcolor{red}{Hardware threats}}: physical attacks such as reverse engineering, Side-Channel Attacks (SCA), \underline{Fault Injection Attacks (FIA)}
-            \end{itemize}
-        \end{block}
-    }
-
-    % \filigrane{A compléter}{45}{5}
+    \begin{minipage}[c]{0.7\textwidth}
+        \only<1>{
+            \begin{block}{Threats}
+                \begin{itemize}
+                    \setbeamertemplate{itemize items}[square]
+                    \justifying
+                    \item Software threats: malwares, memory overflow attacks, SQL injection, etc
+                    \item Network threats: DDoS, Man-In-The-Middle, jamming, etc
+                    \item Hardware threats: physical attacks such as reverse engineering, Side-Channel Attacks (SCA), Fault Injection Attacks (FIA)
+                \end{itemize}
+            \end{block}
+        }
+        \only<2>{
+            \begin{block}{Threats}
+                \begin{itemize}
+                    \setbeamertemplate{itemize items}[square]
+                    \justifying
+                    \item \textbf{\textcolor{red}{Software threats}}: malwares, memory overflow attacks, SQL injection, etc
+                    \item Network threats: DDoS, man-in-the-middle, jamming, etc
+                    \item \textbf{\textcolor{red}{Hardware threats}}: physical attacks such as reverse engineering, Side-Channel Attacks (SCA), \underline{Fault Injection Attacks (FIA)}
+                \end{itemize}
+            \end{block}
+        }
+    \end{minipage}\hfill%
+    \begin{minipage}[c]{0.3\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=.5\textwidth]{src/1_introduction/img/threats.png}
+        \end{figure}
+    \end{minipage}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Software threats: Information Flow Tracking}
 \begin{frame}{Software threats: Information Flow Tracking}
-    \begin{block}{}
-        \begin{itemize}
-            \setbeamertemplate{itemize items}[square]
-            \justifying
-            \item Security mechanism
-            \item Protection against software attacks (e.g.: \textit{buffer overflow}, \textit{format string}, \textit{SQL injections}, \ldots)~\cite{BSMCVEJCO-21-acmcsur, HAK-21-acmcsur}
-            \item Static or \underline{Dynamic}
-            \item Software, \underline{Hardware} or Hybrid
-            \only<1>{\item \textcolor{Gainsboro}{Hardware DIFT: off-core, off-loading core, in-core}}
-            \only<2->{\item Hardware DIFT:} \only<2>{\textbf{off-core}, \textcolor{Gainsboro}{off-loading core, in-core}}\only<3>{off-core, \textbf{off-loading core}, \textcolor{Gainsboro}{in-core}}\only<4>{off-core, off-loading core, \underline{\textbf{in-core}}}
-        \end{itemize}
-    \end{block}
-    
-
-    \only<2>{
-        \begin{figure}
-            \centering
-            \includegraphics[height=.5\textheight]{src/1_introduction/img/offcore.pdf}
-            \label{fig:offcore}
-        \end{figure}
-    }
-    \only<3>{
-        \begin{figure}
-            \centering
-            \includegraphics[height=.5\textheight]{src/1_introduction/img/offloading.pdf}
-            \label{fig:offloading}
-        \end{figure}
-    }
-    \only<4>{
-        \begin{figure}
-            \centering
-            \includegraphics[height=.5\textheight]{src/1_introduction/img/incore.pdf}
-            \label{fig:incore}
-        \end{figure}
-    }
+    \begin{minipage}[c]{0.55\textwidth}
+        \begin{block}{}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item Security mechanism
+                \item Protection against software attacks~\cite{BSMCVEJCO-21-acmcsur, HAK-21-acmcsur}% (e.g.: \textit{buffer overflow}, \textit{format string}, \textit{SQL injections}, \ldots)
+                \item Static or \underline{Dynamic}
+                \item Software, \underline{Hardware} or Hybrid
+                      \only<1>{\item \textcolor{Gainsboro}{Hardware DIFT: off-core, off-loading core, in-core}}
+                      \only<2->{\item Hardware DIFT:} \only<2>{\textbf{off-core}, \textcolor{Gainsboro}{off-loading core, in-core}}\only<3>{off-core, \textbf{off-loading core}, \textcolor{Gainsboro}{in-core}}\only<4>{off-core, off-loading core, \underline{\textbf{in-core}}}
+            \end{itemize}
+        \end{block}
+        \only<2>{
+            \begin{exampleblock}{}
+                \begin{itemize}
+                    \setbeamertemplate{itemize items}[square]
+                    \justifying
+                    \item Avantage: no internal hardware modification to the main core
+                \end{itemize}
+            \end{exampleblock}
+            
+            \begin{alertblock}{}
+                \begin{itemize}
+                    \setbeamertemplate{itemize items}[square]
+                    \justifying
+                    \item Disadvantage: needs support from the OS for the synchronisation between data and tags 
+                \end{itemize}
+            \end{alertblock}
+        }
+        \only<3>{
+            \begin{exampleblock}{}
+                \begin{itemize}
+                    \setbeamertemplate{itemize items}[square]
+                    \justifying
+                    \item Avantage: hardware does not need to know DIFT tags and policies and no synchronisation is needed
+                \end{itemize}
+            \end{exampleblock}
+            
+            \begin{alertblock}{}
+                \begin{itemize}
+                    \setbeamertemplate{itemize items}[square]
+                    \justifying
+                    \item Disadvantage: requires a multicore CPU, reducing the number of cores available and increase the power consumption
+                \end{itemize}
+            \end{alertblock}
+        }
+        \only<4>{
+            \begin{exampleblock}{}
+                \begin{itemize}
+                    \setbeamertemplate{itemize items}[square]
+                    \justifying
+                    \item Avantage: No multicore CPU and no synchronisation are needed. Very low performances overhead
+                \end{itemize}
+            \end{exampleblock}
+            
+            \begin{alertblock}{}
+                \begin{itemize}
+                    \setbeamertemplate{itemize items}[square]
+                    \justifying
+                    \item Disadvantage: highly invasive modification of internal hardware to each pipeline stage for tags computations and storing
+                \end{itemize}
+            \end{alertblock}
+        }
+    \end{minipage}\hfill%
+    \begin{minipage}[c]{0.4\textwidth}
+        \only<2>{
+            \begin{figure}
+                \centering
+                \includegraphics[height=.5\textheight]{src/1_introduction/img/offcore.pdf}
+                \caption{Representation of a Hardware Off-Core DIFT}
+                \label{fig:offcore}
+            \end{figure}
+        }
+        \only<3>{
+            \begin{figure}
+                \centering
+                \includegraphics[height=.5\textheight]{src/1_introduction/img/offloading.pdf}
+                \caption{Representation of a Hardware Off-Loading DIFT}
+                \label{fig:offloading}
+            \end{figure}
+        }
+        \only<4>{
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{src/1_introduction/img/incore.pdf}
+                \caption{Representation of a Hardware In-Core DIFT}
+                \label{fig:incore}
+            \end{figure}
+        }
+    \end{minipage}
 \end{frame}
 
 \begin{frame}{Dynamic Information Flow Tracking}
@@ -116,9 +178,9 @@
     \begin{minipage}[c]{0.6\linewidth}
         \begin{figure}
             \centering
-            \only<1>{\includegraphics<1>[width=1\textwidth, page=1]{src/1_introduction/img/schemaDIFT.pdf}}
-            \only<2>{\includegraphics<2>[width=1\textwidth, page=2]{src/1_introduction/img/schemaDIFT.pdf}}
-            \only<3->{\includegraphics<3->[width=1\textwidth, page=3]{src/1_introduction/img/schemaDIFT.pdf}}
+            \only<1>{\includegraphics<1>[width=\textwidth, page=1]{src/1_introduction/img/schemaDIFT.pdf}}
+            \only<2>{\includegraphics<2>[width=\textwidth, page=2]{src/1_introduction/img/schemaDIFT.pdf}}
+            \only<3->{\includegraphics<3->[width=\textwidth, page=3]{src/1_introduction/img/schemaDIFT.pdf}}
             \label{fig:schemaDIFT}
         \end{figure}
     \end{minipage}

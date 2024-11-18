@@ -31,7 +31,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=.5\textwidth, page=1]{src/3_strategies/img/simple_parity.pdf}
+            \includegraphics[width=.5\textwidth, page=1]{src/4_strategies/img/simple_parity.pdf}
             \caption{Simple parity codeword}
             \label{fig:simple_parity_codeword}
         \end{figure}
@@ -40,7 +40,7 @@
     \begin{frame}{Implementation - Simple Parity}
         \begin{figure}
             \centering
-            \includegraphics[width=\textwidth, page=1]{src/3_strategies/img/archi_contremesures.pdf}
+            \includegraphics[width=\textwidth, page=1]{src/4_strategies/img/archi_contremesures.pdf}
             \caption{Simple Parity implementation}
             \label{fig:simple_parity_implem}
         \end{figure}
@@ -72,30 +72,30 @@
         \begin{minipage}[c]{0.55\linewidth}
             \begin{figure}
                 \centering
-                \includegraphics[width=\textwidth, page=1]{src/3_strategies/img/hamming_bit.pdf}
+                \includegraphics[width=\textwidth, page=1]{src/4_strategies/img/hamming_bit.pdf}
                 \caption{Hamming codeword}
                 \label{fig:hamming_codeword}
             \end{figure}
         \end{minipage}
     \end{frame}
     
-    \begin{frame}{Implementation - Hamming Code}
-        \begin{figure}
-            \centering
-            \includegraphics[width=.9\textwidth, page=2]{src/3_strategies/img/archi_contremesures.pdf}
-            \caption{Hamming Code implementation for independant registers}
-            \label{fig:hamming_code_implem_independant_register}
-        \end{figure}
-    \end{frame}
+    % \begin{frame}{Implementation - Hamming Code}
+    %     \begin{figure}
+    %         \centering
+    %         \includegraphics[width=.9\textwidth, page=2]{src/4_strategies/img/archi_contremesures.pdf}
+    %         \caption{Hamming Code implementation for independant registers}
+    %         \label{fig:hamming_code_implem_independant_register}
+    %     \end{figure}
+    % \end{frame}
     
-    \begin{frame}{Implementation - Hamming Code}
-        \begin{figure}
-            \centering
-            \includegraphics[width=.9\textwidth, page=3]{src/3_strategies/img/archi_contremesures.pdf}
-            \caption{Hamming Code implementation for Register File}
-            \label{fig:hamming_code_implem_rf}
-        \end{figure}
-    \end{frame}
+    % \begin{frame}{Implementation - Hamming Code}
+    %     \begin{figure}
+    %         \centering
+    %         \includegraphics[width=.9\textwidth, page=3]{src/4_strategies/img/archi_contremesures.pdf}
+    %         \caption{Hamming Code implementation for Register File}
+    %         \label{fig:hamming_code_implem_rf}
+    %     \end{figure}
+    % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Hamming Code - SECDED}
 \begin{frame}{Detection of two-bit errors and correction of single-bit errors - SECDED}
@@ -104,8 +104,7 @@
             \justifying
             \item Based on Hamming Code.
             \item Detect two-bit error and correct single-bit error.
-            \item The number of redundancy bits depends on the number of bits to be protected {\scriptsize ($ 2^r \ge m + r + 1 $)}.
-            \item An additional bit is placed at index 0, it is called: general parity bit
+            \item An additional bit is added: general parity bit
         \end{itemize}
     \end{block}
 
@@ -123,7 +122,7 @@
     \begin{minipage}[c]{0.6\linewidth}
         \begin{figure}
             \centering
-            \includegraphics[width=\textwidth, page=1]{src/3_strategies/img/secded.pdf}
+            \includegraphics[width=\textwidth, page=1]{src/4_strategies/img/secded.pdf}
             \caption{SECDED codeword}
             \label{fig:secded_codeword}
         \end{figure}
@@ -133,7 +132,7 @@
 \begin{frame}{Implementation - SECDED}
     \begin{figure}
         \centering
-        \includegraphics[width=.8\textwidth, page=4]{src/3_strategies/img/archi_contremesures.pdf}
+        \includegraphics[width=.8\textwidth, page=4]{src/4_strategies/img/archi_contremesures.pdf}
         \caption{SECDED implementation for independant registers}
         \label{fig:secded_implem_independant_register}
     \end{figure}
@@ -142,7 +141,7 @@
 \begin{frame}{Implementation - SECDED}
     \begin{figure}
         \centering
-        \includegraphics[width=.9\textwidth, page=5]{src/3_strategies/img/archi_contremesures.pdf}
+        \includegraphics[width=.9\textwidth, page=5]{src/4_strategies/img/archi_contremesures.pdf}
         \caption{SECDED implementation for Register File}
         \label{fig:secded_implem_rf}
     \end{figure}

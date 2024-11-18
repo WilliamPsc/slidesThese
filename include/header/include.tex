@@ -47,7 +47,7 @@
 
 \hypersetup{
   colorlinks=true,       % false: boxed links; true: colored links
-  linkcolor=gray,          % color of internal links (change box color with linkbordercolor)
+  linkcolor=bleuLabSTICC,          % color of internal links (change box color with linkbordercolor)
   citecolor=red,        % color of links to bibliography
   filecolor=black,         % color of file links
   urlcolor=red,        % color of external links
@@ -61,17 +61,37 @@
 \bibliography{bib/bibliographie.bib}
 \renewcommand*{\bibfont}{\footnotesize}
 
-\AtBeginSection[] {
-  \begin{frame}[noframenumbering, plain]{Outline}
-    \vfill % Centres vertically
-    \tableofcontents[
-      currentsection,
-      currentsubsection,
-      hideothersubsections,
-      sectionstyle=show/shaded,
-      sections={\thesection}
-    ]
-    \vfill
+% \AtBeginSection[] {
+%   \begin{frame}[noframenumbering, plain]{Outline}
+%     \vfill % Centres vertically
+%     \tableofcontents[
+%       currentsection,
+%       currentsubsection,
+%       hideothersubsections,
+%       sectionstyle=show/shaded,
+%       sections={\thesection}
+%     ]
+%     \vfill
+%   \end{frame}
+% }
+
+\defbeamertemplate{section in toc}{sections numbered roman}{%
+  \leavevmode%
+  \MakeUppercase{\romannumeral\inserttocsectionnumber}.\ \inserttocsection\par
+}
+\defbeamertemplate{subsection in toc}{subsections numbered alone}{%
+  \leavevmode%
+  \hspace{1em}\inserttocsubsectionnumber.\ \inserttocsubsection\par
+}
+
+\setbeamertemplate{section in toc}[sections numbered roman]
+\setbeamertemplate{subsection in toc}[subsections numbered alone]
+
+\AtBeginSection[]{
+  \begin{frame}[noframenumbering]{}
+    \begin{center}
+            \Huge \tableofcontents[sectionstyle=show/hide, hideallsubsections]
+    \end{center}
   \end{frame}
 }
 
@@ -85,3 +105,6 @@
 \definecolor[named]{LightGray}{RGB}{230,230,230}
 
 \setbeamercovered{transparent}
+
+\newcommand{\tableTwoLines}[2]{\begin{tabular}[c]{@{}c@{}}#1\\ #2\end{tabular}}
+\newcommand{\tableCentered}[1]{\begin{tabular}[c]{@{}c@{}}#1\end{tabular}}

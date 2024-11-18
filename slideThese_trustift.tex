@@ -38,43 +38,55 @@
 \input{include/header/include.tex}
 \input{include/header/listings.tex}
 \input{include/header/titlepage.tex}
+% \setbeameroption{show notes on second screen = right}
+
 
 \begin{document}
-	% ---------------------------------------------------------------- %
-	\begin{frame}
-	    \titlepage
-	\end{frame}
-	% ---------------------------------------------------------------- %
-	\begin{frame}{Outline}
-		\tableofcontents[hideallsubsections]
-	\end{frame}
-	%
-	% ---------------------------------------------------------------- %
-	\input{src/1_introduction/introduction}
-	%
-	% ---------------------------------------------------------------- %
-	\input{src/2_vuln_assessment/driscy}
-	%
-	% ---------------------------------------------------------------- %
-	\input{src/3_fissa/fissa}
-	%
-	% ---------------------------------------------------------------- %
-	\input{src/3_strategies/countermeasures}
-	%
-	% ---------------------------------------------------------------- %
-	\input{src/4_results/results}
-	%
-	% ---------------------------------------------------------------- %
-	\input{src/5_conclusion/conclusion}
-	%
-	% ---------------------------------------------------------------- %
-	\input{src/5_conclusion/publications}
-	%
-	% ---------------------------------------------------------------- %
-	\input{bib/bibliographie}
-	%
-	% ---------------------------------------------------------------- %
-	\input{src/backup/backup}
-	%
-	% ---------------------------------------------------------------- %
+% ---------------------------------------------------------------- %
+\begin{frame}
+	\titlepage
+\end{frame}
+% ---------------------------------------------------------------- %
+\input{src/1_introduction/introduction}
+%
+% ---------------------------------------------------------------- %
+\begin{frame}{Outline}
+	\begin{columns}
+		\begin{column}{.15\linewidth}
+			\hfill
+		\end{column}
+		\begin{column}{.7\linewidth}
+			\tableofcontents[hideallsubsections]
+		\end{column}
+		\begin{column}{.15\linewidth}
+			\hfill
+		\end{column}
+	\end{columns}
+\end{frame}
+%
+% ---------------------------------------------------------------- %
+\input{src/2_vuln_assessment/driscy}
+%
+% ---------------------------------------------------------------- %
+\input{src/3_fissa/fissa}
+%
+% ---------------------------------------------------------------- %
+\input{src/4_strategies/countermeasures}
+%
+% ---------------------------------------------------------------- %
+\input{src/5_results/results}
+%
+% ---------------------------------------------------------------- %
+\input{src/6_conclusion/conclusion}
+%
+% ---------------------------------------------------------------- %
+\input{src/6_conclusion/publications}
+%
+% ---------------------------------------------------------------- %
+\input{bib/bibliographie}
+%
+% ---------------------------------------------------------------- %
+\input{src/backup/backup}
+%
+% ---------------------------------------------------------------- %
 \end{document}
