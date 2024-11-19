@@ -34,17 +34,16 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Motivations}
-\begin{frame}{Motivations: IoT Under Threats}
+\begin{frame}{Context: IoT Under Threats}
     \begin{minipage}[c]{0.7\textwidth}
         \only<1>{
             \begin{block}{Threats}
                 \begin{itemize}
                     \setbeamertemplate{itemize items}[square]
                     \justifying
-                    \item Software threats: malwares, memory overflow attacks, SQL injection, etc
-                    \item Network threats: DDoS, Man-In-The-Middle, jamming, etc
-                    \item Hardware threats: physical attacks such as reverse engineering, Side-Channel Attacks (SCA), Fault Injection Attacks (FIA)
+                    \item Software threats: malwares~\cite{FIMI-23-access}, memory overflow attackss~\cite{CWCBW-00-discex}, SQL injection, etc
+                    \item Network threats: Man-In-The-Middle~\cite{CDL-16-commsurtuto}, jamming~\cite{PZ-22-commsurtuto}, DDoS, etc
+                    \item Hardware threats: physical attacks such as reverse engineering, Side-Channel Attacks (SCA)~\cite{DM-21-appiot}, Fault Injection Attacks (FIA)~\cite{BCNTW-06-procieee}
                 \end{itemize}
             \end{block}
         }
@@ -53,9 +52,9 @@
                 \begin{itemize}
                     \setbeamertemplate{itemize items}[square]
                     \justifying
-                    \item \textbf{\textcolor{red}{Software threats}}: malwares, memory overflow attacks, SQL injection, etc
-                    \item Network threats: DDoS, man-in-the-middle, jamming, etc
-                    \item \textbf{\textcolor{red}{Hardware threats}}: physical attacks such as reverse engineering, Side-Channel Attacks (SCA), \underline{Fault Injection Attacks (FIA)}
+                    \item \textbf{\textcolor{red}{Software threats}}: malwares~\cite{FIMI-23-access}, memory overflow attackss~\cite{CWCBW-00-discex}, SQL injection, etc
+                    \item Network threats: Man-In-The-Middle~\cite{CDL-16-commsurtuto}, jamming~\cite{PZ-22-commsurtuto}, DDoS, etc
+                    \item \textbf{\textcolor{red}{Hardware threats}}: physical attacks such as reverse engineering, Side-Channel Attacks (SCA)~\cite{DM-21-appiot}, \underline{Fault Injection Attacks (FIA)}~\cite{BCNTW-06-procieee}
                 \end{itemize}
             \end{block}
         }
@@ -76,11 +75,11 @@
                 \setbeamertemplate{itemize items}[square]
                 \justifying
                 \item Security mechanism
-                \item Protection against software attacks~\cite{BSMCVEJCO-21-acmcsur, HAK-21-acmcsur}% (e.g.: \textit{buffer overflow}, \textit{format string}, \textit{SQL injections}, \ldots)
+                \item Protection against software attacks~\cite{HAK-21-acmcsur}% (e.g.: \textit{buffer overflow}, \textit{format string}, \textit{SQL injections}, \ldots)
                 \item Static or \underline{Dynamic}
                 \item Software, \underline{Hardware} or Hybrid
                       \only<1>{\item \textcolor{Gainsboro}{Hardware DIFT: off-core, off-loading core, in-core}}
-                      \only<2->{\item Hardware DIFT:} \only<2>{\textbf{off-core}, \textcolor{Gainsboro}{off-loading core, in-core}}\only<3>{off-core, \textbf{off-loading core}, \textcolor{Gainsboro}{in-core}}\only<4>{off-core, off-loading core, \underline{\textbf{in-core}}}
+                      \only<2->{\item Hardware DIFT:} \only<2>{\textbf{off-core} \cite{KDK-09-dsn}, \textcolor{Gainsboro}{off-loading core, in-core}}\only<3>{off-core, \textbf{off-loading core} \cite{CKSFGMRRRV-08-sigarch}, \textcolor{Gainsboro}{in-core}}\only<4>{off-core, off-loading core, \underline{\textbf{in-core}} \cite{DKK-07-sigarch}}
             \end{itemize}
         \end{block}
         \only<2>{
@@ -140,7 +139,7 @@
             \begin{figure}
                 \centering
                 \includegraphics[height=.5\textheight]{src/1_introduction/img/offcore.pdf}
-                \caption{Representation of a Hardware Off-Core DIFT}
+                \caption{Representation of a Hardware Off-Core DIFT (inspired by~\cite{KDK-09-dsn})}
                 \label{fig:offcore}
             \end{figure}
         }
@@ -148,7 +147,7 @@
             \begin{figure}
                 \centering
                 \includegraphics[height=.5\textheight]{src/1_introduction/img/offloading.pdf}
-                \caption{Representation of a Hardware Off-Loading DIFT}
+                \caption{Representation of a Hardware Off-Loading DIFT (inspired by~\cite{KDK-09-dsn})}
                 \label{fig:offloading}
             \end{figure}
         }
@@ -156,7 +155,7 @@
             \begin{figure}
                 \centering
                 \includegraphics[width=\textwidth]{src/1_introduction/img/incore.pdf}
-                \caption{Representation of a Hardware In-Core DIFT}
+                \caption{Representation of a Hardware In-Core DIFT (inspired by~\cite{KDK-09-dsn})}
                 \label{fig:incore}
             \end{figure}
         }
@@ -215,6 +214,18 @@
     }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Motivations}
+\begin{frame}{Motivations}
+    \begin{block}{}
+        \begin{itemize}
+            \item Possible to recover computed secret data using FIA on the RISC-V Rocket processor\footnote[frame]{\tiny\fullcite{LBDP-19-date}}
+            \item Manipulation of the power supply to control the program counter\footnote[frame]{\tiny\fullcite{TSW-16-fdtc}},
+            \item EM Fault Injection (EMFI) : recover an AES key by targeting the cache hierarchy and the MMU\footnote[frame]{\tiny\fullcite{TBELB-21-jce}},
+            \item Laser Fault Injection (LFI) can allow the replay of instructions\footnote[frame]{\tiny\fullcite{KDD-21-dsd}}.
+        \end{itemize}
+    \end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Issue}
 \begin{frame}{Issue}
     \begin{exampleblock}{}
@@ -228,10 +239,9 @@
         \begin{itemize}
             \setbeamertemplate{itemize items}[triangle]
             \justifying
-            \item Provide a robust security mechanism against software and hardware threats.
-            \item Take into account Fault Injection Attacks
-            \item Propose lightweight countermeasures against FIA
-            \item Take into account constraints, such as area and performance overhead
+            \item Provide a robust security mechanism against software and hardware threats,
+            \item Propose lightweight countermeasures against FIA,
+            \item Take into account constraints, such as area and performance overhead.
         \end{itemize}
     \end{block}
 \end{frame}

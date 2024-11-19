@@ -4,9 +4,9 @@
 \subsection{D-RI5CY - origins and architecture}
 \begin{frame}{D-RI5CY - origins}
     \begin{itemize}
-        \item Design~\cite{PDGLC-18-hpec} made by researchers at Columbia University (USA) with Politecnico di Torino (Italy)
+        \item Design\footnote[frame]{\tiny\fullcite{PDGLC-18-hpec}} made by researchers at Columbia University (USA) with Politecnico di Torino (Italy)
         \item Based on the 32-bit RISC-V processor: RI5CY (Pulp Platform)
-        \item Open source\footnote{\url{https://github.com/sld-columbia/riscv-dift}}
+        \item Open source\footnote{\tiny\url{https://github.com/sld-columbia/riscv-dift}}
         \item 1-bit tag datapath
         \item Flexible security policy that can be modified at runtime
     \end{itemize}
@@ -47,7 +47,7 @@
         \begin{itemize}
             \item Analysis of 3 use cases%: %buffer overflow attack, format string attack
             % \item Analysis of 1 use case to cover the DIFT surface: compare/compute
-            \item Published in Sensors S\&P 2023~\cite{PLG-23-SensorsSP}.
+            \item Published in Sensors S\&P 2023~\footnote[frame]{\tiny\fullcite{PLG-23-SensorsSP}}.
         \end{itemize}
     \end{block}
 \end{frame}
@@ -102,35 +102,45 @@
 \subsection{Experimental Setup}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Experimental Setup - Simulation fault injections campaign}
-    \begin{itemize}
-        \justifying
-        \item Logical fault injection simulation is used for preliminary evaluations
-              \begin{itemize}
-                  \justifying
-                  \item faults are injected in the HDL code at cycle accurate and bit accurate level
-                  \item a set of 55 DIFT-related registers are targeted
-                  \item a reference simulation is done without fault
-                  \item results are classed in four groups
-                        \begin{itemize}
-                            \justifying
-                            \item crash: reference cycle count exceeded,
-                            \item silent: current faulted simulation is the same as the reference simulation
-                            \item delay: illegal instruction is delayed
-                            \item success: DIFT has been bypassed
-                        \end{itemize}
-              \end{itemize}
-        \item Simulations with QuestaSim 10.6e.
-        \item FISSA is used in order to create our injection campaigns
-    \end{itemize}
+    \begin{columns}
+        \begin{column}{.125\linewidth}
+            \hfill
+        \end{column}
+        \begin{column}{.75\linewidth}
+            \begin{itemize}
+                \justifying
+                \item Logical fault injection simulation is used for preliminary evaluations
+                      \begin{itemize}
+                          \justifying
+                          \item faults are injected in the HDL code at cycle accurate and bit accurate level
+                          \item a set of 55 DIFT-related registers are targeted
+                          \item a reference simulation is done without fault
+                          \item results are classed in four groups
+                                \begin{itemize}
+                                    \justifying
+                                    \item crash: reference cycle count exceeded,
+                                    \item silent: current faulted simulation is the same as the reference simulation
+                                    \item delay: illegal instruction is delayed
+                                    \item success: DIFT has been bypassed
+                                \end{itemize}
+                      \end{itemize}
+                \item Simulations with QuestaSim 10.6e.
+                \item FISSA is used in order to create our injection campaigns
+            \end{itemize}
+        \end{column}
+        \begin{column}{.125\linewidth}
+            \hfill
+        \end{column}
+    \end{columns}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Buffer overflow}
-    \begin{table}[]
+    \begin{table}
         \centering
         \small
         \caption{End of simulation status}
         \label{table:end_sim_by_status}
-        \begin{tabular}{lrrrlr}
+        \begin{tabular}{@{}rccccc@{}}
             \toprule
                             & Crash & NSTR & Delay & Success     & Total \\
             \midrule
@@ -139,38 +149,47 @@
         \end{tabular}
     \end{table}
 
-    \begin{table}[]
+    \begin{table}
         \centering
-        \small
+        \scriptsize
         \caption{Buffer overflow : Register sensitivity as determined by fault model and simulation time}
         \label{table:end_sim_from_time_fault_register_buffer_overflow}
-        \resizebox{\textwidth}{!}{%
-            \begin{tabular}{llllllllllllllll}
-                \toprule
-                                                & \multicolumn{3}{c}{Cycle 3428} & \multicolumn{3}{c}{Cycle 3429} & \multicolumn{3}{c}{Cycle 3430} & \multicolumn{3}{c}{Cycle 3431} & \multicolumn{3}{c}{Cycle 3432}                                                                                                                 \\\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}\cmidrule(lr){11-13}\cmidrule(lr){14-16}
-                                                & set0                           & set1                           & bitflip                        & set0                           & set1                           & bitflip    & set0       & set1 & bitflip    & set0       & set1 & bitflip    & set0       & set1 & bitflip    \\
-                \midrule
-                pc\_if\_o\_tag                  &                                &                                &                                &                                &                                &            &            &      &            & \checkmark &      & \checkmark &            &      &            \\
-                memory\_set\_o\_tag             &                                & \checkmark                     & \checkmark                     &                                &                                &            &            &      &            &            &      &            &            &      &            \\
-                rf\_reg[1]                      &                                &                                &                                &                                &                                &            & \checkmark &      & \checkmark &            &      &            &            &      &            \\
-                tcr\_q                          & \checkmark                     &                                &                                & \checkmark                     &                                &            & \checkmark &      &            & \checkmark &      &            & \checkmark &      &            \\
-                \rowcolor{LightGray} tcr\_q[21] &                                &                                & \checkmark                     &                                &                                & \checkmark &            &      & \checkmark &            &      & \checkmark &            &      & \checkmark \\
-                tpr\_q                          & \checkmark                     & \checkmark                     &                                & \checkmark                     & \checkmark                     &            &            &      &            &            &      &            &            &      &            \\
-                \rowcolor{LightGray} tpr\_q[12] &                                &                                & \checkmark                     &                                &                                & \checkmark &            &      &            &            &      &            &            &      &            \\
-                \rowcolor{LightGray} tpr\_q[15] &                                &                                & \checkmark                     &                                &                                & \checkmark &            &      &            &            &      &            &            &      &            \\
-                \bottomrule
-            \end{tabular}
-        }
+        \setlength{\tabcolsep}{3pt}
+        \begin{tabular}{@{}lccccccccccccccc@{}}
+            \toprule
+                                            & \multicolumn{3}{c}{Cycle 3428} & \multicolumn{3}{c}{Cycle 3429} & \multicolumn{3}{c}{Cycle 3430} & \multicolumn{3}{c}{Cycle 3431} & \multicolumn{3}{c}{Cycle 3432}                                                                                                                                                                                                                                            \\\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}\cmidrule(lr){11-13}\cmidrule(lr){14-16}
+                                            & set0                           & set1                           & bitflip                        & set0                           & set1                           & bitflip                      & set0                        & set1 & bitflip                      & set0                        & set1 & bitflip                      & set0                        & set1 & bitflip                      \\
+            \midrule
+            pc\_if\_o\_tag                  &                                &                                &                                &                                &                                &                              &                             &      &                              & \textcolor{red}{\checkmark} &      & \textcolor{blue}{\checkmark} &                             &      &                              \\
+            memory\_set\_o\_tag             &                                & \textcolor{LimeGreen}{\checkmark}  & \textcolor{blue}{\checkmark}   &                                &                                &                              &                             &      &                              &                             &      &                              &                             &      &                              \\
+            rf\_reg[1]                      &                                &                                &                                &                                &                                &                              & \textcolor{red}{\checkmark} &      & \textcolor{blue}{\checkmark} &                             &      &                              &                             &      &                              \\
+            tcr\_q                          & \textcolor{red}{\checkmark}    &                                &                                & \textcolor{red}{\checkmark}    &                                &                              & \textcolor{red}{\checkmark} &      &                              & \textcolor{red}{\checkmark} &      &                              & \textcolor{red}{\checkmark} &      &                              \\
+            \rowcolor{LightGray} tcr\_q[21] &                                &                                & \textcolor{blue}{\checkmark}   &                                &                                & \textcolor{blue}{\checkmark} &                             &      & \textcolor{blue}{\checkmark} &                             &      & \textcolor{blue}{\checkmark} &                             &      & \textcolor{blue}{\checkmark} \\
+            tpr\_q                          & \textcolor{red}{\checkmark}    & \textcolor{LimeGreen}{\checkmark}  &                                & \textcolor{red}{\checkmark}    & \textcolor{LimeGreen}{\checkmark}  &                              &                             &      &                              &                             &      &                              &                             &      &                              \\
+            \rowcolor{LightGray} tpr\_q[12] &                                &                                & \textcolor{blue}{\checkmark}   &                                &                                & \textcolor{blue}{\checkmark} &                             &      &                              &                             &      &                              &                             &      &                              \\
+            \rowcolor{LightGray} tpr\_q[15] &                                &                                & \textcolor{blue}{\checkmark}   &                                &                                & \textcolor{blue}{\checkmark} &                             &      &                              &                             &      &                              &                             &      &                              \\
+            \bottomrule
+        \end{tabular}
     \end{table}
 \end{frame}
 
 \begin{frame}{Discussion}
-    \begin{itemize}
-        \setbeamertemplate{itemize items}[triangle]
-        \item 4266 simulations have been performed,
-        \item 95 successes (2.23\%),
-        \item We have shown that the D-RI5CY DIFT is vulnerable to FIA
-        \item Propagation of faults is facilitated by paths fully made of \textit{AND} gates
-    \end{itemize}
+    \begin{columns}
+        \begin{column}{.15\linewidth}
+            \hfill
+        \end{column}
+        \begin{column}{.7\linewidth}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[triangle]
+                \item 4266 simulations have been performed,
+                \item 95 successes (2.23\%),
+                \item We have shown that the D-RI5CY DIFT is vulnerable to FIA
+                \item Propagation of faults is facilitated by paths fully made of \textit{AND} gates
+            \end{itemize}
+        \end{column}
+        \begin{column}{.15\linewidth}
+            \hfill
+        \end{column}
+    \end{columns}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

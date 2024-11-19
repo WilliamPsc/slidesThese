@@ -45,6 +45,109 @@
 }
 \makeatother
 
+\makeatletter
+\setbeamertemplate{title page}{%
+    \vfill
+    \begingroup
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,rounded=true,shadow=false]{title}
+        \usebeamerfont{title}\inserttitle\par%
+        \ifx\insertsubtitle\@empty%
+        \else%
+            \vskip0.25em%
+            {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+        \fi%     
+    \end{beamercolorbox}%
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=8pt,center]{author}
+        \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+    \vspace{-.25cm}% NEW
+    \begin{beamercolorbox}[sep=8pt,center]{institute}
+        \usebeamerfont{institute}\footnotesize\insertinstitute
+    \end{beamercolorbox}
+    \vspace{-.5cm}% NEW
+    \begin{beamercolorbox}[sep=8pt,center]{date}
+        \usebeamerfont{date}\footnotesize\insertdate
+    \end{beamercolorbox}\vskip0.5em
+    \begin{columns}
+        \begin{column}{.4\linewidth}
+            \centering \scriptsize
+            \begin{tabular}{@{}rl@{}}
+                % \toprule
+                \multicolumn{2}{c}{\textbf{Composition of the Jury}} \\ \midrule
+                % President of the jury:  & TBD                        \\
+                Examiners:              & Jean-Max DUTERTRE          \\
+                                        & Francesco REGAZZONI        \\
+                Reviewers:              & Lejla BATINA               \\
+                                        & Nele MENTENS               \\
+                                        & Vincent BEROULLE           \\
+                PhD supervisor:         & Guy GOGNIAT                \\
+                Thesis co-director:     & Vianney LAPÔTRE            %\\ \bottomrule
+            \end{tabular}
+        \end{column}
+        \begin{column}{.6\linewidth}
+            {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+        \end{column}
+    \end{columns}
+    
+    \endgroup
+    \vfill
+}
+\makeatother
+
+\makeatletter
+\setbeamertemplate{back page}{%
+    \vfill
+    \begingroup
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,rounded=true,shadow=false]{title}
+        \usebeamerfont{title}\inserttitle\par%   
+    \end{beamercolorbox}%
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=8pt,center]{author}
+        \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+    \vspace{-.25cm}% NEW
+    \begin{beamercolorbox}[sep=8pt,center]{institute}
+        \usebeamerfont{institute}\footnotesize\insertinstitute
+        \LARGE \textcolor{bleuLabSTICC!50}{Thank you for your attention.}
+    \end{beamercolorbox}
+    \vspace{-.5cm}% NEW
+    \begin{beamercolorbox}[sep=8pt,center]{date}
+        \usebeamerfont{date}\footnotesize\insertdate
+    \end{beamercolorbox}\vskip0.5em
+    \begin{columns}
+        \begin{column}{.4\linewidth}
+            \centering \scriptsize
+            \begin{tabular}{@{}rl@{}}
+                % \toprule
+                \multicolumn{2}{c}{\textbf{Composition of the Jury}} \\ \midrule
+                % President of the jury:  & TBD                        \\
+                Examiners:              & Jean-Max DUTERTRE          \\
+                                        & Francesco REGAZZONI        \\
+                Reviewers:              & Lejla BATINA               \\
+                                        & Nele MENTENS               \\
+                                        & Vincent BEROULLE           \\
+                PhD supervisor:         & Guy GOGNIAT                \\
+                Thesis co-director:     & Vianney LAPÔTRE            %\\ \bottomrule
+            \end{tabular}
+        \end{column}
+        \begin{column}{.6\linewidth}
+            {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+        \end{column}
+    \end{columns}
+    
+    \endgroup
+    \vfill
+}
+\makeatother
+
+% Define backpage command
+\newcommand{\backpage}{
+    \usebeamertemplate{back page}
+}
+
 \hypersetup{
   colorlinks=true,       % false: boxed links; true: colored links
   linkcolor=bleuLabSTICC,          % color of internal links (change box color with linkbordercolor)
@@ -108,3 +211,4 @@
 
 \newcommand{\tableTwoLines}[2]{\begin{tabular}[c]{@{}c@{}}#1\\ #2\end{tabular}}
 \newcommand{\tableCentered}[1]{\begin{tabular}[c]{@{}c@{}}#1\end{tabular}}
+\captionsetup{font=footnotesize}
