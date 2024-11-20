@@ -106,6 +106,33 @@ void echo(){
         \label{fig:analyseLogiqueFormatString}
     \end{figure}
 \end{frame}
+
+\begin{frame}[noframenumbering]{}
+    \begin{table}[H]
+        \scriptsize
+        \centering
+        \caption{Logical fault injection simulation campaigns results for exhaustive multi-bits faults in two registers at a given clock cycle}
+        \label{tab:chap6_results_multi_bitflip_reg_multi_fs}
+        \setlength{\tabcolsep}{1pt}
+        \begin{tabular}{@{}ccccccccccc@{}}
+            \toprule
+                                                             &               & Crash & Silent      & Delay       & Detection   & \tableTwoLines{Detection \&}{Correction} & \tableTwoLines{Double Error}{Detection} & Success                      & Total          & \tableTwoLines{Execution}{time (h:min)} \\\midrule
+            \multirow{12}{*}{\tableTwoLines{Format}{String}} & No protection & 0     & \num{84419} & 4836        & --          & --                                       & --                                      & 2009 {\tiny (2.20\%)}        & \num{91264 }   & 104:15                                  \\
+                                                             & Simple parity & 0     & \num{32275} & 147         & \num{71198} & --                                       & --                                      & 444 {\tiny (0.43\%)}         & \num{104064}   & 138:40                                  \\
+                                                             & Hamming 1     & 0     & 0           & \num{20050} & --          & \num{375836}                             & --                                      & 9234 {\tiny (2.28\%)}        & \num{405120}   & 902:08                                  \\
+                                                             & Hamming 2     & 0     & 0           & \num{17597} & --          & \num{408894}                             & --                                      & \num{10757} {\tiny (2.46\%)} & \num{437248}   & 774:40                                  \\
+                                                             & Hamming 3     & 0     & 0           & \num{17926} & --          & \num{564154}                             & --                                      & \num{11456} {\tiny (1.93\%)} & \num{593536}   & 1021:50                                 \\
+                                                             & Hamming 4     & 0     & 0           & \num{20986} & --          & \num{767604}                             & --                                      & \num{13714} {\tiny (1.71\%)} & \num{802304}   & 1418:24                                 \\
+                                                             & Hamming 5     & 0     & 0           & \num{20547} & --          & \num{934077}                             & --                                      & \num{14336} {\tiny (1.48\%)} & \num{968960}   & 1690:05                                 \\
+                                                             & SECDED 1      & 0     & 0           & 5408        & --          & \num{194766}                             & \num{227655}                            & 4171 {\tiny (0.97\%)}        & \num{432000}   & 740:21                                  \\
+                                                             & SECDED 2      & 0     & 0           & 3611        & --          & \num{220568}                             & \num{247704}                            & 4565 {\tiny (0.96\%)}        & \num{476448}   & 836:41                                  \\
+                                                             & SECDED 3      & 0     & 0           & 3088        & --          & \num{395487}                             & \num{351553}                            & 4304 {\tiny (0.57\%)}        & \num{754432}   & 1305:36                                 \\
+                                                             & SECDED 4      & 0     & 0           & 1939        & --          & \num{604649}                             & \num{491945}                            & 3515 {\tiny (0.32\%)}        & \num{1102048}  & 1915:20                                 \\
+                                                             & SECDED 5      & 0     & 0           & 1938        & --          & \num{766527}                             & \num{535209}                            & 998 {\tiny (0.08\%)}         & \num{1304672}  & 2287:38                                 \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile,noframenumbering]{Case 3: Compare/Compute}
     \begin{itemize}
