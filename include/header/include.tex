@@ -150,11 +150,12 @@
 }
 
 \hypersetup{
+  % hidelinks,
   colorlinks=true,       % false: boxed links; true: colored links
   linkcolor=bleuLabSTICC,          % color of internal links (change box color with linkbordercolor)
   citecolor=red,        % color of links to bibliography
   filecolor=black,         % color of file links
-  urlcolor=red,        % color of external links
+  urlcolor=bleuLabSTICC,        % color of external links
   pdfauthor = {William PENSEC},			                        % Auteurs
   pdftitle = {Enhanced Processor Defence Against Physical and Software Threats by Securing DIFT Against Fault Injection Attacks},	% Titre du document
   pdfsubject = {PhD Dissertation Defense},		            % Sujet
@@ -193,9 +194,15 @@
 
 \AtBeginSection[]{
   \begin{frame}{}
+    \vfill
+    % \centering
+    % \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    %     \Huge\tableofcontents[sectionstyle=show/hide, hideallsubsections]
+    % \end{beamercolorbox}
     \begin{center}
-            \Huge \tableofcontents[sectionstyle=show/hide, hideallsubsections]
+        \Huge \tableofcontents[sectionstyle=show/hide, hideallsubsections]
     \end{center}
+    \vfill
   \end{frame}
 }
 

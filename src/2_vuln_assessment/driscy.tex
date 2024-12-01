@@ -4,10 +4,10 @@
 \subsection{D-RI5CY - origins and architecture}
 \begin{frame}{D-RI5CY - origins}
     \begin{itemize}
-        \item Design\footnote[frame]{\tiny\fullcite{PDGLC-18-hpec}} made by researchers at Columbia University (USA) with Politecnico di Torino (Italy)
+        \item DIFT design\footnote[frame]{\tiny\fullcite{PDGLC-18-hpec}} made by researchers at Columbia University (USA) with Politecnico di Torino (Italy)
         \item Based on the 32-bit RISC-V processor: RI5CY (Pulp Platform)
         \item Open source\footnote{\tiny\url{https://github.com/sld-columbia/riscv-dift}}
-        \item 1-bit tag datapath
+        \item DIFT considering 1-bit tag datapath
         \item Flexible security policy that can be modified at runtime
     \end{itemize}
 
@@ -47,7 +47,7 @@
         \begin{itemize}
             \item Analysis of 3 use cases%: %buffer overflow attack, format string attack
             % \item Analysis of 1 use case to cover the DIFT surface: compare/compute
-            \item Published in Sensors S\&P 2023~\footnote[frame]{\tiny\fullcite{PLG-23-SensorsSP}}.
+            \item Best paper at Sensors S\&P 2023~\footnote[frame]{\tiny\fullcite{PLG-23-SensorsSP}}.
         \end{itemize}
     \end{block}
 \end{frame}
@@ -125,7 +125,7 @@
                                 \end{itemize}
                       \end{itemize}
                 \item Simulations with QuestaSim 10.6e.
-                \item FISSA is used in order to create our injection campaigns
+                \item FISSA (presented later) is used in order to create our injection campaigns
             \end{itemize}
         \end{column}
         \begin{column}{.125\linewidth}
@@ -182,7 +182,8 @@
             \begin{itemize}
                 \setbeamertemplate{itemize items}[triangle]
                 \item 4266 simulations have been performed,
-                \item 95 successes (2.23\%),
+                \item 95 successes (2.23\%).
+                \item This campaign showed 43 highly sensitive registers on 55 DIFT-related registers
                 \item We have shown that the D-RI5CY DIFT is vulnerable to FIA
                 \item Propagation of faults is facilitated by paths fully made of \textit{AND} gates
             \end{itemize}

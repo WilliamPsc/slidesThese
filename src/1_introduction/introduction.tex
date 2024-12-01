@@ -9,10 +9,10 @@
                 \setbeamertemplate{itemize items}[square]
                 \justifying
                 \item Wide range of application
-                \item Fast growing market with exponential usage
-                \item Rely on sensors depending on their use
+                \item Fast growing market with exponential usage (on average 21 devices per household)
+                \item Rely on sensors, depending on their use
                 \item Collect and share data
-                \item Manipulation of critical data
+                \item Manipulation of sensitive data
                 \item Increasingly vulnerable to multiple threats
             \end{itemize}
         \end{block}
@@ -20,44 +20,65 @@
     \begin{minipage}[c]{0.5\textwidth}
         \begin{figure}
             \centering
-            \includegraphics[width=.825\textwidth, trim={4.5cm 2.25cm 5.75cm 3.25cm}, clip]{src/1_introduction/img/iotapplications.pdf}
+            \includegraphics[width=.78\textwidth, trim={4.5cm 2.25cm 5.75cm 3.25cm}, clip]{src/1_introduction/img/iotapplications.pdf}
             % \caption{Example of IoT applications}
             \label{fig:iot_application}
         \end{figure}
-        \vspace{-5pt}
+        \vspace{-15pt}
         \begin{figure}
             \centering
             \includegraphics[width=.825\textwidth]{src/1_introduction/img/iot_forecasts.pdf}
+            \vspace{-5pt}
+            \caption{Number of IoT devices worldwide from 2022 to 2033 (from~\cite{statista_iot})}
             \label{fig:nbr_iot}
         \end{figure}
     \end{minipage}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{Context: IoT Under Threats}
+%     \begin{figure}
+%         \centering
+%         \includegraphics[height=.85\textheight, trim={10.85cm 0cm 0cm 0cm}, clip]{src/1_introduction/img/threats_iot.pdf}
+%         \caption{Graph from BitDefender~\cite{bitdefender_netgear}}
+%     \end{figure}
+% \end{frame}
+
+\begin{frame}{Context: IoT Under Threats}
+    \begin{block}{Threats}
+        \begin{itemize}
+            \setbeamertemplate{itemize items}[square]
+            \justifying
+            \item Software threats: malwares~\cite{FIMI-23-access}, memory overflow attacks~\cite{CWCBW-00-discex}, SQL injection, etc
+            \item Network threats: Man-In-The-Middle~\cite{CDL-16-commsurtuto}, jamming~\cite{PZ-22-commsurtuto}, DDoS, etc
+            \item Hardware threats: Reverse Engineering, Side-Channel Attacks (SCA)~\cite{DM-21-appiot}, Fault Injection Attacks (FIA)~\cite{BCNTW-06-procieee}
+        \end{itemize}
+    \end{block}
+
+    \begin{center}
+        \begin{minipage}[r]{.4\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=.62\textheight, trim={10.85cm 0cm 0cm 0cm}, clip]{src/1_introduction/img/threats_iot.pdf}
+            \end{figure}
+        \end{minipage}\hspace{.5cm}%
+        \begin{minipage}[c]{0.3\textwidth}
+            \captionof{figure}{Graph from BitDefender~\cite{bitdefender_netgear}}
+        \end{minipage}
+    \end{center}
+\end{frame}
+
 \begin{frame}{Context: IoT Under Threats}
     \begin{minipage}[c]{0.7\textwidth}
-        \only<1>{
-            \begin{block}{Threats}
-                \begin{itemize}
-                    \setbeamertemplate{itemize items}[square]
-                    \justifying
-                    \item Software threats: malwares~\cite{FIMI-23-access}, memory overflow attackss~\cite{CWCBW-00-discex}, SQL injection, etc
-                    \item Network threats: Man-In-The-Middle~\cite{CDL-16-commsurtuto}, jamming~\cite{PZ-22-commsurtuto}, DDoS, etc
-                    \item Hardware threats: physical attacks such as reverse engineering, Side-Channel Attacks (SCA)~\cite{DM-21-appiot}, Fault Injection Attacks (FIA)~\cite{BCNTW-06-procieee}
-                \end{itemize}
-            \end{block}
-        }
-        \only<2>{
-            \begin{block}{Threats}
-                \begin{itemize}
-                    \setbeamertemplate{itemize items}[square]
-                    \justifying
-                    \item \textbf{\textcolor{red}{Software threats}}: malwares~\cite{FIMI-23-access}, memory overflow attackss~\cite{CWCBW-00-discex}, SQL injection, etc
-                    \item Network threats: Man-In-The-Middle~\cite{CDL-16-commsurtuto}, jamming~\cite{PZ-22-commsurtuto}, DDoS, etc
-                    \item \textbf{\textcolor{red}{Hardware threats}}: physical attacks such as reverse engineering, Side-Channel Attacks (SCA)~\cite{DM-21-appiot}, \underline{Fault Injection Attacks (FIA)}~\cite{BCNTW-06-procieee}
-                \end{itemize}
-            \end{block}
-        }
+        \begin{block}{Threats}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item \textbf{\textcolor{red}{Software threats}}: malwares~\cite{FIMI-23-access}, memory overflow attacks~\cite{CWCBW-00-discex}, SQL injection, etc
+                \item Network threats: Man-In-The-Middle~\cite{CDL-16-commsurtuto}, jamming~\cite{PZ-22-commsurtuto}, DDoS, etc
+                \item \textbf{\textcolor{red}{Hardware threats}}: physical attacks such as reverse engineering, Side-Channel Attacks (SCA)~\cite{DM-21-appiot}, \underline{Fault Injection Attacks (FIA)}~\cite{BCNTW-06-procieee}
+            \end{itemize}
+        \end{block}
     \end{minipage}\hfill%
     \begin{minipage}[c]{0.3\textwidth}
         \begin{figure}
@@ -87,7 +108,7 @@
                 \begin{itemize}
                     \setbeamertemplate{itemize items}[square]
                     \justifying
-                    \item Avantage: no internal hardware modification to the main core.
+                    \item Advantage: no internal hardware modification to the main core.
                 \end{itemize}
             \end{exampleblock}
             
@@ -95,7 +116,7 @@
                 \begin{itemize}
                     \setbeamertemplate{itemize items}[square]
                     \justifying
-                    \item Disadvantage: needs support from the OS for the synchronisation between data and tags.
+                    \item Disadvantage: needs support from the OS for the synchronization between data and tags.
                 \end{itemize}
             \end{alertblock}
         }
@@ -104,7 +125,7 @@
                 \begin{itemize}
                     \setbeamertemplate{itemize items}[square]
                     \justifying
-                    \item Avantage: hardware does not need to know DIFT tags and policies and no synchronisation is needed.
+                    \item Advantage: hardware does not need to know DIFT tags and policies, and no synchronization is needed.
                 \end{itemize}
             \end{exampleblock}
             
@@ -121,7 +142,7 @@
                 \begin{itemize}
                     \setbeamertemplate{itemize items}[square]
                     \justifying
-                    \item Avantage: No multicore CPU and no synchronisation are needed. Very low performances overhead.
+                    \item Advantage: no multicore CPU and no synchronization are needed. Very low performances overhead.
                 \end{itemize}
             \end{exampleblock}
             
@@ -197,6 +218,14 @@
         \end{itemize}
     \end{block}
 
+    \only<1>{
+        \begin{figure}
+            \centering
+            \includegraphics[height=.5\textheight, page=1]{src/1_introduction/img/rev_eng.png}
+            \label{fig:revEng}
+        \end{figure}
+    }
+
     \only<2>{
         \begin{figure}
             \centering
@@ -218,16 +247,16 @@
 \begin{frame}{Motivations}
     \begin{block}{}
         \begin{itemize}
-            \item Possible to recover computed secret data using FIA on the RISC-V Rocket processor\footnote[frame]{\tiny\fullcite{LBDP-19-date}}
-            \item Manipulation of the power supply to control the program counter\footnote[frame]{\tiny\fullcite{TSW-16-fdtc}},
-            \item EM Fault Injection (EMFI) : recover an AES key by targeting the cache hierarchy and the MMU\footnote[frame]{\tiny\fullcite{TBELB-21-jce}},
-            \item Laser Fault Injection (LFI) can allow the replay of instructions\footnote[frame]{\tiny\fullcite{KDD-21-dsd}}.
+            % \item Possible to recover computed secret data using FIA on the RISC-V Rocket processor\footnote[frame]{\tiny\fullcite{LBDP-19-date}}
+            \item Power supply : manipulations to control the program counter\footnote[frame]{\tiny\fullcite{TSW-16-fdtc}},
+            \item EM Fault Injection (EMFI) : to recover an AES key by targeting the cache hierarchy and the MMU\footnote[frame]{\tiny\fullcite{TBELB-21-jce}},
+            \item Laser Fault Injection (LFI) : allow the replay of instructions on a 32-bit microcontroller\footnote[frame]{\tiny\fullcite{KDD-21-dsd}}.
         \end{itemize}
     \end{block}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Issue}
-\begin{frame}{Issue}
+\subsection{Research challenge}
+\begin{frame}{Research challenge}
     \begin{exampleblock}{}
         How can we maintain maximum protection against software attacks in the presence of physical attacks?
     \end{exampleblock}
@@ -235,7 +264,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Objectives}
 \begin{frame}{Objectives of this PhD Thesis}
-    \begin{block}{Contributions}
+    \begin{block}{}
         \begin{itemize}
             \setbeamertemplate{itemize items}[triangle]
             \justifying
