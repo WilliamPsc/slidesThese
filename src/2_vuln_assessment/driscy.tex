@@ -68,17 +68,47 @@
         \end{subfigure}
         \begin{subfigure}[r]{.45\textwidth}
             \centering
-            \includegraphics[width=.9\textwidth, page=5]{src/2_vuln_assessment/img/buffer_overflow/schemaPedagogique.pdf}
-            \caption{Overflow and overwriting of $RA$ and its tag}
-            \label{fig:bo_3rd_step}
+            \includegraphics[width=.9\textwidth, page=2]{src/2_vuln_assessment/img/buffer_overflow/schemaPedagogique.pdf}
+            \caption{}
+            \label{fig:bo_2_step}
         \end{subfigure}
     \end{figure}
 
     \begin{itemize}
         \item As the data in the source buffer is manipulated by the user, it is marked as \textcolor{red}{\textit{untrusted}}.
-        \item Thanks to DIFT, the tags associated with the source buffer data overwrite the $RA$ register tag.
-        \item When the function returns, the corrupted register $RA$ is loaded into $PC$ using a jalr instruction.
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Case 1: Buffer overflow}
+    \begin{figure}
+        \centering
+        \begin{subfigure}[l]{.45\textwidth}
+            \centering
+            \includegraphics[width=.9\textwidth, page=3]{src/2_vuln_assessment/img/buffer_overflow/schemaPedagogique.pdf}
+            \caption{}
+            \label{fig:bo_3_step}
+        \end{subfigure}
+        \begin{subfigure}[r]{.45\textwidth}
+            \centering
+            \includegraphics[width=.9\textwidth, page=4]{src/2_vuln_assessment/img/buffer_overflow/schemaPedagogique.pdf}
+            \caption{}
+            \label{fig:bo_4_step}
+        \end{subfigure}
+    \end{figure}
+
+    \begin{itemize}
+        \item Thanks to DIFT, the tags associated with the source buffer data overwrite the $RA$ register tag.
+        \item When the function ends, the corrupted register $RA$ is loaded into $PC$ using a jalr instruction.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Case 1: Buffer overflow}
+    \begin{figure}
+        \centering
+        \includegraphics[width=.5\textwidth, page=5]{src/2_vuln_assessment/img/buffer_overflow/schemaPedagogique.pdf}
+        \caption{}
+        \label{fig:bo_5th_step}
+    \end{figure}
 \end{frame}
 
 \begin{frame}

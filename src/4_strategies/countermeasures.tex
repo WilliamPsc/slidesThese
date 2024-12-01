@@ -160,29 +160,35 @@
             Strategy 1          & Minimisation of groups                      & 5                                 & 65                                   \\
             Strategy 2          & Protection per pipeline stage               & 7                                 & 69                                   \\
             Strategy 3          & Protection per register                     & 24                                & 103                                  \\
-            Strategy 4          & Protection per register with slicing of CSR & 38                                & 131                                  \\
-            Strategy 5          & Coupling sliced registers                   & 39                                & 133                                  \\
+            Strategy 4          & Protection per register with CSR splitting  & 38                                & 131                                  \\
+            Strategy 5          & Coupling split registers                   & 39                                & 133                                  \\
             \bottomrule
         \end{tabular}
     \end{table}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Implemented strategies - details}
-    \begin{table}[t]
+    % \begin{table}[t]
+    %     \centering
+    %     \small
+    %     \caption{Summary of DIFT-related protected registers -- taking SECDED}
+    %     \label{tab:detail_strategies_group}
+    %     \begin{tabular}{@{}cccccc@{}}
+    %         \toprule
+    %                    & \begin{tabular}[c]{@{}c@{}}Number of\\ protected bits\end{tabular} & \begin{tabular}[c]{@{}c@{}}Number of\\ redundancy bits\end{tabular} & \begin{tabular}[c]{@{}c@{}}Number of\\ parity bits\end{tabular} & \begin{tabular}[c]{@{}c@{}}Number of\\ bits\end{tabular} \\ \midrule
+    %         Strategy 1 & 107                                                                & 25                                                                  & 5                                                               & 157                                                      \\
+    %         Strategy 2 & 107                                                                & 30                                                                  & 7                                                               & 164                                                      \\
+    %         Strategy 3 & 107                                                                & 64                                                                  & 24                                                              & 215                                                      \\
+    %         Strategy 4 & 103                                                                & 101                                                                 & 38                                                              & 266                                                      \\
+    %         Strategy 5 & 102                                                                & 114                                                                 & 39                                                              & 280                                                      \\
+    %         \bottomrule
+    %     \end{tabular}
+    % \end{table}
+    \begin{figure}
         \centering
-        \small
-        \caption{Summary of DIFT-related protected registers -- taking SECDED}
-        \label{tab:detail_strategies_group}
-        \begin{tabular}{@{}cccccc@{}}
-            \toprule
-                       & \begin{tabular}[c]{@{}c@{}}Number of\\ protected bits\end{tabular} & \begin{tabular}[c]{@{}c@{}}Number of\\ redundancy bits\end{tabular} & \begin{tabular}[c]{@{}c@{}}Number of\\ parity bits\end{tabular} & \begin{tabular}[c]{@{}c@{}}Number of\\ bits\end{tabular} \\ \midrule
-            Strategy 1 & 107                                                                & 25                                                                  & 5                                                               & 157                                                      \\
-            Strategy 2 & 107                                                                & 30                                                                  & 7                                                               & 164                                                      \\
-            Strategy 3 & 107                                                                & 64                                                                  & 24                                                              & 215                                                      \\
-            Strategy 4 & 103                                                                & 101                                                                 & 38                                                              & 266                                                      \\
-            Strategy 5 & 102                                                                & 114                                                                 & 39                                                              & 280                                                      \\
-            \bottomrule
-        \end{tabular}
-    \end{table}
+        \includegraphics[height=.8\textheight]{src/4_strategies/img/implem5_spaghetti.pdf}
+        \caption{Representation of the fifth strategy}
+        \label{fig:strategy_5}
+    \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

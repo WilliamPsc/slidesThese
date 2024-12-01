@@ -97,8 +97,8 @@
                 \justifying
                 \item Security mechanism
                 \item Protection against software attacks~\cite{HAK-21-acmcsur}% (e.g.: \textit{buffer overflow}, \textit{format string}, \textit{SQL injections}, \ldots)
-                \item Static or \underline{Dynamic}
-                \item Software, \underline{Hardware} or Hybrid
+                \item Static or \underline{\textbf{Dynamic}}
+                \item Software, \underline{\textbf{Hardware}} or Hybrid
                       \only<1>{\item \textcolor{Gainsboro}{Hardware DIFT: off-core, off-loading core, in-core}}
                       \only<2->{\item Hardware DIFT:} \only<2>{\textbf{off-core} \cite{KDK-09-dsn}, \textcolor{Gainsboro}{off-loading core, in-core}}\only<3>{off-core, \textbf{off-loading core} \cite{CKSFGMRRRV-08-sigarch}, \textcolor{Gainsboro}{in-core}}\only<4>{off-core, off-loading core, \underline{\textbf{in-core}} \cite{DKK-07-sigarch}}
             \end{itemize}
@@ -156,6 +156,14 @@
         }
     \end{minipage}\hfill%
     \begin{minipage}[c]{0.4\textwidth}
+        \only<1>{
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{src/1_introduction/img/arborescence_ift.pdf}
+                \caption{Taxonomy of IFTs}
+                \label{fig:taxoDIFT}
+            \end{figure}
+        }
         \only<2>{
             \begin{figure}
                 \centering
