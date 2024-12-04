@@ -9,8 +9,8 @@
                 \setbeamertemplate{itemize items}[square]
                 \justifying
                 \item Wide range of application
-                \item Fast growing market with exponential usage (on average 21 devices per household)
-                \item Rely on sensors, depending on their use
+                \item Fast growing market with exponential usage
+                \item Rely on sensors, depending on their applications
                 \item Collect and share data
                 \item Manipulation of sensitive data
                 \item Increasingly vulnerable to multiple threats
@@ -36,73 +36,114 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{Context: IoT Under Threats}
-%     \begin{figure}
-%         \centering
-%         \includegraphics[height=.85\textheight, trim={10.85cm 0cm 0cm 0cm}, clip]{src/1_introduction/img/threats_iot.pdf}
-%         \caption{Graph from BitDefender~\cite{bitdefender_netgear}}
-%     \end{figure}
-% \end{frame}
-
 \begin{frame}{Context: IoT Under Threats}
+    \only<1>{
     \begin{block}{Threats}
         \begin{itemize}
             \setbeamertemplate{itemize items}[square]
             \justifying
             \item Software threats: malwares~\cite{FIMI-23-access}, memory overflow attacks~\cite{CWCBW-00-discex}, SQL injection, etc
-            \item Network threats: Man-In-The-Middle~\cite{CDL-16-commsurtuto}, jamming~\cite{PZ-22-commsurtuto}, DDoS, etc
+            \item Network threats: Man-In-The-Middle~\cite{CDL-16-commsurtuto}, jamming~\cite{PZ-22-commsurtuto}, DoS, etc
             \item Hardware threats: Reverse Engineering, Side-Channel Attacks (SCA)~\cite{DM-21-appiot}, Fault Injection Attacks (FIA)~\cite{BCNTW-06-procieee}
         \end{itemize}
     \end{block}
+    }
+    \only<2>{
+    \begin{block}{Threats}
+        \begin{itemize}
+            \setbeamertemplate{itemize items}[square]
+            \justifying
+            \item \textbf{\textcolor{red}{Software threats}}: malwares~\cite{FIMI-23-access}, memory overflow attacks~\cite{CWCBW-00-discex}, SQL injection, etc
+            \item Network threats: Man-In-The-Middle~\cite{CDL-16-commsurtuto}, jamming~\cite{PZ-22-commsurtuto}, DDoS, etc
+            \item \textbf{\textcolor{red}{Hardware threats}}: physical attacks such as reverse engineering, Side-Channel Attacks (SCA)~\cite{DM-21-appiot}, \underline{Fault Injection Attacks (FIA)}~\cite{BCNTW-06-procieee}
+        \end{itemize}
+    \end{block}
+    }
 
     \begin{center}
         \begin{minipage}[r]{.4\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics[height=.62\textheight, trim={10.85cm 0cm 0cm 0cm}, clip]{src/1_introduction/img/threats_iot.pdf}
+                \includegraphics[width=\textwidth]{src/1_introduction/img/threats_iot_graph.pdf}
             \end{figure}
         \end{minipage}\hspace{.5cm}%
         \begin{minipage}[c]{0.3\textwidth}
-            \captionof{figure}{Graph from BitDefender~\cite{bitdefender_netgear}}
+            \captionof{figure}{Graph and data from BitDefender~\cite{bitdefender_netgear}}
         \end{minipage}
     \end{center}
 \end{frame}
 
-\begin{frame}{Context: IoT Under Threats}
-    \begin{minipage}[c]{0.7\textwidth}
-        \begin{block}{Threats}
-            \begin{itemize}
-                \setbeamertemplate{itemize items}[square]
-                \justifying
-                \item \textbf{\textcolor{red}{Software threats}}: malwares~\cite{FIMI-23-access}, memory overflow attacks~\cite{CWCBW-00-discex}, SQL injection, etc
-                \item Network threats: Man-In-The-Middle~\cite{CDL-16-commsurtuto}, jamming~\cite{PZ-22-commsurtuto}, DDoS, etc
-                \item \textbf{\textcolor{red}{Hardware threats}}: physical attacks such as reverse engineering, Side-Channel Attacks (SCA)~\cite{DM-21-appiot}, \underline{Fault Injection Attacks (FIA)}~\cite{BCNTW-06-procieee}
-            \end{itemize}
-        \end{block}
-    \end{minipage}\hfill%
-    \begin{minipage}[c]{0.3\textwidth}
-        \begin{figure}
-            \centering
-            \includegraphics[width=.5\textwidth]{src/1_introduction/img/threats.png}
-        \end{figure}
-    \end{minipage}
+\begin{frame}{Embedded system architecture}
+    \filigrane{Insérer image d'archi d'un SE}{20}{3}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Software threats: Information Flow Tracking}
 \begin{frame}{Software threats: Information Flow Tracking}
-    \begin{minipage}[c]{0.55\textwidth}
+    % % \begin{minipage}[c]{0.55\textwidth}
         \begin{block}{}
             \begin{itemize}
                 \setbeamertemplate{itemize items}[square]
                 \justifying
                 \item Security mechanism
-                \item Protection against software attacks~\cite{HAK-21-acmcsur}% (e.g.: \textit{buffer overflow}, \textit{format string}, \textit{SQL injections}, \ldots)
-                \item Static or \underline{\textbf{Dynamic}}
-                \item Software, \underline{\textbf{Hardware}} or Hybrid
-                      \only<1>{\item \textcolor{Gainsboro}{Hardware DIFT: off-core, off-loading core, in-core}}
-                      \only<2->{\item Hardware DIFT:} \only<2>{\textbf{off-core} \cite{KDK-09-dsn}, \textcolor{Gainsboro}{off-loading core, in-core}}\only<3>{off-core, \textbf{off-loading core} \cite{CKSFGMRRRV-08-sigarch}, \textcolor{Gainsboro}{in-core}}\only<4>{off-core, off-loading core, \underline{\textbf{in-core}} \cite{DKK-07-sigarch}}
+                \item Protection against software attacks~\cite{HAK-21-acmcsur} (e.g.: \textit{buffer overflow}, \textit{format string}, \textit{SQL injections}, \textit{malware})
+                \item Follow a security policy
             \end{itemize}
         \end{block}
+    % \end{minipage}\hfill%
+    % \begin{minipage}[c]{0.4\textwidth}
+    %         \begin{figure}
+    %             \centering
+    %             \includegraphics[width=\textwidth]{src/1_introduction/img/arborescence_ift.pdf}
+    %             \caption{Taxonomy of IFTs}
+    %             \label{fig:taxoDIFT}
+    %         \end{figure}
+    % \end{minipage}
+\end{frame}
+
+\begin{frame}{Software threats: Information Flow Tracking}
+    \begin{minipage}[c]{0.35\linewidth}
+        \begingroup
+        \begin{block}{\textbf{Three} steps}
+            \begin{itemize}
+                \item<1-> Tag initialisation
+                \item<2-> Tag propagation
+                \item<3-> Tag check
+            \end{itemize}
+        \end{block}
+        \endgroup
+    \end{minipage}\hfill%
+    \begin{minipage}[c]{0.6\linewidth}
+        \begin{figure}
+            \centering
+            \only<1>{\includegraphics<1>[width=\textwidth, page=1]{src/1_introduction/img/schemaDIFT.pdf}}
+            \only<2>{\includegraphics<2>[width=\textwidth, page=2]{src/1_introduction/img/schemaDIFT.pdf}}
+            \only<3->{\includegraphics<3->[width=\textwidth, page=3]{src/1_introduction/img/schemaDIFT.pdf}}
+            \label{fig:schemaDIFT}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Software threats: Information Flow Tracking}
+    \begin{minipage}[c]{0.55\textwidth}
+        \only<1>{
+        \begin{block}{}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item Static or \underline{\textbf{Dynamic}}
+                \item Software, \underline{\textbf{Hardware}} or Hybrid
+            \end{itemize}
+        \end{block}
+        }
+        \only<2->{
+        \begin{block}{}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                    \only<2->{\item Hardware DIFT:} \only<2>{\textbf{off-core} \cite{KDK-09-dsn}, \textcolor{Gainsboro}{off-loading core, in-core}}\only<3>{off-core, \textbf{off-loading core} \cite{CKSFGMRRRV-08-sigarch}, \textcolor{Gainsboro}{in-core}}\only<4>{off-core, off-loading core, \underline{\textbf{in-core}} \cite{DKK-07-sigarch}}
+            \end{itemize}
+        \end{block}
+        }
         \only<2>{
             \begin{exampleblock}{}
                 \begin{itemize}
@@ -190,83 +231,64 @@
         }
     \end{minipage}
 \end{frame}
-
-\begin{frame}{Dynamic Information Flow Tracking}
-    \begin{minipage}[c]{0.35\linewidth}
-        \begingroup
-        \begin{block}{\textbf{Three} steps}
-            \begin{itemize}
-                \item<1-> Tag initialisation
-                \item<2-> Tag propagation
-                \item<3-> Tag check
-            \end{itemize}
-        \end{block}
-        \endgroup
-    \end{minipage}\hfill%
-    \begin{minipage}[c]{0.6\linewidth}
-        \begin{figure}
-            \centering
-            \only<1>{\includegraphics<1>[width=\textwidth, page=1]{src/1_introduction/img/schemaDIFT.pdf}}
-            \only<2>{\includegraphics<2>[width=\textwidth, page=2]{src/1_introduction/img/schemaDIFT.pdf}}
-            \only<3->{\includegraphics<3->[width=\textwidth, page=3]{src/1_introduction/img/schemaDIFT.pdf}}
-            \label{fig:schemaDIFT}
-        \end{figure}
-    \end{minipage}
-\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Hardware threats: Physical Attacks}
-\begin{frame}{Hardware threats: Physical Attacks}
+\begin{frame}{Software and Hardware threats}
     \begin{block}{}
         \begin{itemize}
             \setbeamertemplate{itemize items}[square]
             \justifying
-            \item<1> Reverse Engineering: process of information retrieval from a product by analysing and understanding the design, functionality, and operation of existing hardware
-            \item<2> Side-Channel Attacks: exploit information leakages on the circuit behaviour
-            \item<3> \underline{Fault Injection Attacks}: involve deliberately introducing one or more fault(s) into the system to observe its behaviour and identify potential vulnerabilities.
+            \item IFT can protect efficiently a system against software attacks
+            \item What would happen if the IFT were disrupted?
+            \item Considering a tag, what happens if the tag is modified?
         \end{itemize}
     \end{block}
+\end{frame}
 
-    \only<1>{
-        \begin{figure}
-            \centering
-            \includegraphics[height=.5\textheight, page=1]{src/1_introduction/img/rev_eng.png}
-            \label{fig:revEng}
-        \end{figure}
-    }
-
-    \only<2>{
-        \begin{figure}
-            \centering
-            \includegraphics[height=.5\textheight, page=3]{src/1_introduction/img/physicalAttacks.pdf}
-            \label{fig:sca}
-        \end{figure}
-    }
-
-    \only<3>{
-        \begin{figure}
-            \centering
-            \includegraphics[height=.5\textheight, page=2]{src/1_introduction/img/physicalAttacks.pdf}
-            \label{fig:fia}
-        \end{figure}
-    }
+\begin{frame}{Hardware threats: Fault Injection Attacks}
+    \begin{block}{}
+        \begin{itemize}
+            \setbeamertemplate{itemize items}[square]
+            \justifying
+            \item \underline{Fault Injection Attacks} (FIA): involve deliberately introducing one or more fault(s) into the system to disturb its behaviour and identify potential vulnerabilities.
+            \item The precision may vary depending on the category used
+            \item Different fault model depending on the category
+        \end{itemize}
+    \end{block}
+    
+    \begin{figure}
+        \centering
+        \includegraphics[height=.5\textheight, page=2]{src/1_introduction/img/physicalAttacks.pdf}
+        \label{fig:fia}
+    \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Motivations}
 \begin{frame}{Motivations}
     \begin{block}{}
         \begin{itemize}
-            % \item Possible to recover computed secret data using FIA on the RISC-V Rocket processor\footnote[frame]{\tiny\fullcite{LBDP-19-date}}
-            \item Power supply : manipulations to control the program counter\footnote[frame]{\tiny\fullcite{TSW-16-fdtc}},
-            \item EM Fault Injection (EMFI) : to recover an AES key by targeting the cache hierarchy and the MMU\footnote[frame]{\tiny\fullcite{TBELB-21-jce}},
-            \item Laser Fault Injection (LFI) : allow the replay of instructions on a 32-bit microcontroller\footnote[frame]{\tiny\fullcite{KDD-21-dsd}}.
+            \item \textbf{Power supply} : manipulations to control the program counter\footnote[frame]{\tiny\fullcite{TSW-16-fdtc}},
+            \item \textbf{EM Fault Injection} (EMFI) : to recover an AES key by targeting the cache hierarchy and the MMU\footnote[frame]{\tiny\fullcite{TBELB-21-jce}},
+            \item \textbf{Laser Fault Injection} (LFI) : allow the replay of instructions on a 32-bit microcontroller\footnote[frame]{\tiny\fullcite{KDD-21-dsd}}.
         \end{itemize}
     \end{block}
+
+    \only<2>{
+    \begin{alertblock}{}
+        \begin{itemize}
+            \setbeamertemplate{itemize items}[triangle]
+            \justifying
+            \item No previous studies have shown the vulnerabilities of DIFT against FIA.
+        \end{itemize}
+    \end{alertblock}
+    }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Research challenge}
 \begin{frame}{Research challenge}
     \begin{exampleblock}{}
-        How can we maintain maximum protection against software attacks in the presence of physical attacks?
+        \centering
+        \Large How can we maintain maximum protection against software attacks in the presence of physical attacks?
     \end{exampleblock}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -278,7 +300,7 @@
             \justifying
             \item Provide a robust security mechanism against software and hardware threats,
             \item Propose lightweight countermeasures against FIA,
-            \item Take into account constraints, such as area and performance overhead.
+            \item Take into account constraints, such as efficiency, area, and performance overhead.
         \end{itemize}
     \end{block}
 \end{frame}

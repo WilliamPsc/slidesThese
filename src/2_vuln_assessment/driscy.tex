@@ -7,7 +7,7 @@
         \item DIFT design\footnote[frame]{\tiny\fullcite{PDGLC-18-hpec}} made by researchers at Columbia University (USA) with Politecnico di Torino (Italy)
         \item Based on the 32-bit RISC-V processor: RI5CY (Pulp Platform)
         \item Open source\footnote{\tiny\url{https://github.com/sld-columbia/riscv-dift}}
-        \item DIFT considering 1-bit tag datapath
+        \item DIFT considering 1-bit tag data path
         \item Flexible security policy that can be modified at runtime
     \end{itemize}
 
@@ -29,7 +29,26 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Vulnerability assessment}
-\begin{frame}{Vulnerability Assessment}
+\begin{frame}{Vulnerability Assessment - Why?}
+    \begin{block}{}
+        We do a vulnerability assessment to:
+        \begin{itemize}
+            \setbeamertemplate{itemize items}[triangle]
+            \justifying
+            \item check if this DIFT is vulnerable against FIA,
+            \item determine the spatial and temporal locations of vulnerabilities.
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{}
+        \begin{itemize}
+            \setbeamertemplate{itemize items}[triangle]
+            \item Best paper at Sensors S\&P 2023~\cite{PLG-23-SensorsSP}.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Vulnerability Assessment - Threat model}
     \begin{block}{Threat model}
         We consider an attacker able to:
         \begin{itemize}
@@ -45,15 +64,14 @@
 
     \begin{block}{Methodology}
         \begin{itemize}
-            \item Analysis of 3 use cases%: %buffer overflow attack, format string attack
-            % \item Analysis of 1 use case to cover the DIFT surface: compare/compute
-            \item Best paper at Sensors S\&P 2023~\footnote[frame]{\tiny\fullcite{PLG-23-SensorsSP}}.
+            \item Analysis of 3 use cases: buffer overflow attack, format string attack, and compare/compute
+            \item We do a temporal, and logical analysis of the tag propagation
         \end{itemize}
     \end{block}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Use case : presentation}
-\begin{frame}{Case 1: Buffer overflow}
+\begin{frame}{Case: Buffer overflow}
     \begin{itemize}
         \item The attacker exploits a buffer overflow to access the return address register ($RA$).
     \end{itemize}
@@ -63,68 +81,74 @@
         \begin{subfigure}[l]{.45\textwidth}
             \centering
             \includegraphics[width=.9\textwidth, page=1]{src/2_vuln_assessment/img/buffer_overflow/schemaPedagogique.pdf}
-            \caption{Malicious buffer and $RA$ trusted}
+            \caption{Initialisation}
             \label{fig:bo_1st_step}
         \end{subfigure}
         \begin{subfigure}[r]{.45\textwidth}
             \centering
             \includegraphics[width=.9\textwidth, page=2]{src/2_vuln_assessment/img/buffer_overflow/schemaPedagogique.pdf}
-            \caption{}
+            \caption{Copy of the source buffer into the destination buffer}
             \label{fig:bo_2_step}
         \end{subfigure}
     \end{figure}
 
     \begin{itemize}
         \item As the data in the source buffer is manipulated by the user, it is marked as \textcolor{red}{\textit{untrusted}}.
+        \item Thanks to the DIFT, the tags associated with the source buffer data overwrite the memory tags.
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Case 1: Buffer overflow}
+\begin{frame}{Case: Buffer overflow}
     \begin{figure}
         \centering
         \begin{subfigure}[l]{.45\textwidth}
             \centering
             \includegraphics[width=.9\textwidth, page=3]{src/2_vuln_assessment/img/buffer_overflow/schemaPedagogique.pdf}
-            \caption{}
+            \caption{An overflow occurs, the $RA$ register is overwritten}
             \label{fig:bo_3_step}
         \end{subfigure}
         \begin{subfigure}[r]{.45\textwidth}
             \centering
             \includegraphics[width=.9\textwidth, page=4]{src/2_vuln_assessment/img/buffer_overflow/schemaPedagogique.pdf}
-            \caption{}
+            \caption{Corrupted $RA$ register is loaded into the PC}
             \label{fig:bo_4_step}
         \end{subfigure}
     \end{figure}
 
     \begin{itemize}
-        \item Thanks to DIFT, the tags associated with the source buffer data overwrite the $RA$ register tag.
+        \item Thanks to the DIFT, the tags associated with the source buffer data overwrite the $RA$ register tag.
         \item When the function ends, the corrupted register $RA$ is loaded into $PC$ using a jalr instruction.
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Case 1: Buffer overflow}
+\begin{frame}{Case: Buffer overflow}
     \begin{figure}
         \centering
         \includegraphics[width=.5\textwidth, page=5]{src/2_vuln_assessment/img/buffer_overflow/schemaPedagogique.pdf}
-        \caption{}
+        \caption{PC address instruction is fetched}
         \label{fig:bo_5th_step}
     \end{figure}
+
+    \begin{itemize}
+        \item The $PC$ has been overwritten, it is now \textcolor{red}{untrusted}.
+        \item The $PC$ address is fetched to access the next address.
+    \end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Temporal analysis of the tag propagation}
     \begin{figure}
         \centering
         \includegraphics[width=.75\textwidth]{src/2_vuln_assessment/img/buffer_overflow/bufferOverflowAttack_short.pdf}
-        \caption{Temporal analysis of the tags propagation in \textit{Buffer Overflow} attack}
+        \caption{Temporal analysis of tags propagation in a \textit{Buffer Overflow} attack}
         \label{fig:analyseTempoBufferOverflow}
     \end{figure}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Logical analysis of the tag propagation}
     \begin{figure}
         \centering
         \includegraphics[height=.85\textheight]{src/2_vuln_assessment/img/buffer_overflow/arborescence_bufferOverflow.pdf}
-        \caption{Logical analysis of the tags propagation in a \textit{Buffer Overflow} attack}
+        \caption{Logical analysis of tags propagation in a \textit{Buffer Overflow} attack}
         \label{fig:analyseLogiqueBufferOverflow}
     \end{figure}
 \end{frame}
@@ -203,7 +227,7 @@
     \end{table}
 \end{frame}
 
-\begin{frame}{Discussion}
+\begin{frame}{Summary}
     \begin{columns}
         \begin{column}{.15\linewidth}
             \hfill

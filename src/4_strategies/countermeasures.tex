@@ -1,17 +1,32 @@
-\section{EDAC Codes to Protect against FIAs}
-
+\section{Solutions to Protect against FIAs}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Introduction}
     \begin{block}{Protections}
         \begin{itemize}
-            \item Focusing on lightweight countermeasures for IoT systems using parity codes:
+            \item Focusing on lightweight hardware countermeasures:
+            \begin{itemize}
+                \item \textbf{Hardware redundancy}: duplication, or triplication, of the circuit to compare the results obtained to check for any difference;
+                \item \textbf{Temporal redundancy}: repeating operations in reverse to compare the result with the initial value;
+                \item \textbf{Instruction replay}: executing multiple times the same instruction or block of instructions;
+                \item \textbf{Obfuscation}: addition of dummy cycles, or shuffle the data;
+                \only<1>{\item \textbf{Information redundancy}: adding additional data to the information to detect or correct the initial value, such as simple parity code, Hamming Code, BCH code, or Reed-Solomon.}
+                \only<2>{\item \textcolor{red}{\textbf{Information redundancy}: adding additional data to the information to detect or correct the initial value, such as simple parity code, Hamming Code, BCH code, or Reed-Solomon.}}
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Countermeasures}
+    \begin{block}{Protections}
+        \begin{itemize}
+            \item Focusing on information redundancy codes:
             \begin{itemize}
                 \item Simple parity
                 \item Hamming Code
                 \item Hamming Code with an additional bit (SECDED)
             \end{itemize}
-            \item Implementations of \textit{Hamming Code} and \textit{Simple parity} have been presented at ISVLSI~\footnote[frame]{\scriptsize\fullcite{PRLG-24-isvlsi}}
+            \item Implementations of \textit{Hamming Code} and \textit{Simple parity} have been presented at ISVLSI 2024~\cite{PRLG-24-isvlsi}.
         \end{itemize}
     \end{block}
 \end{frame}
@@ -55,7 +70,7 @@
                 \item Mostly used in digital communication and data storage systems.
                 \item Detect and correct single-bit error.
                 \item Redundancy bits are placed in power of 2 positions.
-                \item The number of redundancy bits depends on the number of bits to be protected {\scriptsize ($ 2^r \ge m + r + 1 $)}
+                % \item The number of redundancy bits depends on the number of bits to be protected {\scriptsize ($ 2^r \ge m + r + 1 $)}
             \end{itemize}
         \end{block}
 
@@ -147,6 +162,17 @@
     \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Implemented strategies - Evaluation of Group Composition}
+    \begin{block}{}
+        \begin{itemize}
+            \justifying
+            \item Different strategies of implementation can be done depending on the objective
+            \item The protection efficiency would vary
+            \item We want the best protection at the lower cost possible against different fault models
+        \end{itemize}
+    \end{block}
+\end{frame}
+
 \begin{frame}{Implemented strategies - Group composition}
     \begin{table}[t]
         \centering
@@ -168,22 +194,6 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Implemented strategies - details}
-    % \begin{table}[t]
-    %     \centering
-    %     \small
-    %     \caption{Summary of DIFT-related protected registers -- taking SECDED}
-    %     \label{tab:detail_strategies_group}
-    %     \begin{tabular}{@{}cccccc@{}}
-    %         \toprule
-    %                    & \begin{tabular}[c]{@{}c@{}}Number of\\ protected bits\end{tabular} & \begin{tabular}[c]{@{}c@{}}Number of\\ redundancy bits\end{tabular} & \begin{tabular}[c]{@{}c@{}}Number of\\ parity bits\end{tabular} & \begin{tabular}[c]{@{}c@{}}Number of\\ bits\end{tabular} \\ \midrule
-    %         Strategy 1 & 107                                                                & 25                                                                  & 5                                                               & 157                                                      \\
-    %         Strategy 2 & 107                                                                & 30                                                                  & 7                                                               & 164                                                      \\
-    %         Strategy 3 & 107                                                                & 64                                                                  & 24                                                              & 215                                                      \\
-    %         Strategy 4 & 103                                                                & 101                                                                 & 38                                                              & 266                                                      \\
-    %         Strategy 5 & 102                                                                & 114                                                                 & 39                                                              & 280                                                      \\
-    %         \bottomrule
-    %     \end{tabular}
-    % \end{table}
     \begin{figure}
         \centering
         \includegraphics[height=.8\textheight]{src/4_strategies/img/implem5_spaghetti.pdf}

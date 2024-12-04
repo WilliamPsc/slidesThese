@@ -4,15 +4,32 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Conclusion}
 \begin{frame}{Conclusion}
+    \begin{exampleblock}{}
+        \centering
+        How can we maintain maximum protection against software attacks in the presence of physical attacks?
+    \end{exampleblock}
+    
     \begin{columns}
         \begin{column}{.7\linewidth}
             \begin{block}{Presented:}
                 \begin{itemize}
                     \setbeamertemplate{itemize items}[triangle]
-                    \item Vulnerability assessment of a DIFT mechanism against FIA.
-                    \item Open-Source tool to help find vulnerabilities during the conceptual phase.
-                    % \item Taking into account multiple complex fault models.
-                    \item Proposition of 3 lightweight countermeasures with a low overhead of area and performances.
+                    \item<1> Vulnerability assessment of a DIFT mechanism against FIA
+                        \only<1>{
+                            \begin{itemize}
+                                \item We have shown that the DIFT mechanism is vulnerable
+                                \item Presented different fault models adapted from the state-of-the-art to defeat the DIFT and its protections
+                            \end{itemize}
+                        }
+                    \item<2> Open-Source tool to help find vulnerabilities during the conceptual phase. It enables the concept of \textit{Security by Design}
+                    \item<3> Proposition of 3 lightweight countermeasures with a low overhead of area and performances
+                        \only<3>{
+                            \begin{itemize}
+                                \item countermeasures based on parity codes
+                                \item area overhead smaller than 8\%
+                                \item no impact on performances
+                            \end{itemize}
+                        }
                 \end{itemize}
             \end{block}
         \end{column}
@@ -27,8 +44,6 @@
     \note{
         \textit{Vulnerability assessment:} taking into account different fault models up to very complex ones
 
-        \textit{FISSA:} Security by Design
-
         \textit{Countermeasures:} good efficiency, overhead is minimal compared to others countermeasures like BCH, spatial redundancy (duplication, triplication)
     }
 \end{frame}
@@ -39,16 +54,40 @@
     \begin{block}{Short terms}
         \begin{itemize}
             \setbeamertemplate{itemize items}[triangle]
-            \item Propose more robust countermeasures to correct multiple faults
-            \item Further development of FISSA
+            \item<1> Propose more robust countermeasures to correct multiple faults
+                \begin{itemize}
+                    \item Evaluating of Reed-Solomon, BCH codes, or triplication
+                    \item Evaluation of these countermeasures in terms of area and performances overhead compared to our actual proposed solutions
+                \end{itemize}
+            \item<2> Further development of FISSA
+                \begin{itemize}
+                    \item Better integration in the design workflow
+                    \item More fault models
+                    \item More configurability, for example, automatisation for finding targets
+                    \item Adding a graphical user interface to provide better experience
+                \end{itemize}
         \end{itemize}
     \end{block}
     
+    \begin{figure}
+        \centering
+        \includegraphics[height=.25\textheight]{src/6_conclusion/img/perspectives.jpg}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%
+\begin{frame}{Perspectives}
     \begin{block}{Long terms}
         \begin{itemize}
             \setbeamertemplate{itemize items}[triangle]
             \item Conduct real-world FIA
+                \begin{itemize}
+                    \item Evaluation against clock glitches (Chip Whisperer~\cite{chipwhisperer}) or EMFI (Chip Shouter~\cite{chipshouter}) for examples.
+                \end{itemize}
             \item Extend the assessment of more complex DIFT
+                \begin{itemize}
+                    \item Evaluation of DIFT with more bits in the tag (e.g: Raksha~\cite{DKK-07-sigarch} : 4-bit tags)
+                    \item Evaluation of our proposed protections for these DIFT and comparison with other protections
+                \end{itemize}
         \end{itemize}
     \end{block}
 
@@ -56,11 +95,5 @@
         \centering
         \includegraphics[height=.25\textheight]{src/6_conclusion/img/perspectives.jpg}
     \end{figure}
-
-    \note{
-        \textit{FISSA:} better integration in the design workflow, more fault models, more configurability (to find targets automatically)
-        
-        \textit{Actual FIA:} using chip whisperer for clock, chip shouter for EMFI
-    }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
