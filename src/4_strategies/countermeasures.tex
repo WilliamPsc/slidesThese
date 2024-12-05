@@ -177,17 +177,17 @@
     \begin{table}[t]
         \centering
         \small
-        \caption{Grouping composition of implemented strategies}
+        \caption{Grouping composition and objectives of implemented strategies}
         \label{tab:strategies_group}
-        \begin{tabular}{@{}cccc@{}}
+        % \setlength{\tabcolsep}{2pt}
+        \begin{tabular}{@{}cm{4cm}m{7cm}@{}}
             \toprule
-                                & \tableTwoLines{Grouping}{strategy}       & \tableTwoLines{Number of}{groups} & \tableTwoLines{Number of}{registers} \\ \midrule
-            Baseline -- D-RI5CY & --                                          & --                                & 55                                   \\
-            Strategy 1          & Minimisation of groups                      & 5                                 & 65                                   \\
-            Strategy 2          & Protection per pipeline stage               & 7                                 & 69                                   \\
-            Strategy 3          & Protection per register                     & 24                                & 103                                  \\
-            Strategy 4          & Protection per register with CSR splitting  & 38                                & 131                                  \\
-            Strategy 5          & Coupling split registers                   & 39                                & 133                                  \\
+                                & \tableCentered{Grouping strategy}           & Objective                                                       \\ \midrule
+            Strategy 1          & Minimisation of groups                      & Minimisation of the area overhead                               \\
+            Strategy 2          & Protection per pipeline stage               & One protection for each 7 pipeline stages                       \\
+            Strategy 3          & Protection per register                     & Each register is protected individually                         \\
+            Strategy 4          & Protection per register with CSR splitting  & Strategy 3 + Split the CSRs registers by group of operations    \\
+            Strategy 5          & Coupling split registers                    & Split each register and couple each bit to another register     \\
             \bottomrule
         \end{tabular}
     \end{table}

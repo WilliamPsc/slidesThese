@@ -68,14 +68,14 @@
             \end{figure}
         \end{minipage}\hspace{.5cm}%
         \begin{minipage}[c]{0.3\textwidth}
-            \captionof{figure}{Graph and data from BitDefender~\cite{bitdefender_netgear}}
+            \captionof{figure}{Data from BitDefender~\cite{bitdefender_netgear}}
         \end{minipage}
     \end{center}
 \end{frame}
 
-\begin{frame}{Embedded system architecture}
-    \filigrane{Insérer image d'archi d'un SE}{20}{3}
-\end{frame}
+% \begin{frame}{Embedded system architecture}
+%     \filigrane{Insérer image d'archi d'un SE}{20}{3}
+% \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Software threats: Information Flow Tracking}
 \begin{frame}{Software threats: Information Flow Tracking}
@@ -238,9 +238,9 @@
         \begin{itemize}
             \setbeamertemplate{itemize items}[square]
             \justifying
-            \item IFT can protect efficiently a system against software attacks
+            \item IFTs can protect efficiently a system against software attacks
             \item What would happen if the IFT were disrupted?
-            \item Considering a tag, what happens if the tag is modified?
+            \item Considering a tag, what happens if a tag is modified?
         \end{itemize}
     \end{block}
 \end{frame}
@@ -252,7 +252,6 @@
             \justifying
             \item \underline{Fault Injection Attacks} (FIA): involve deliberately introducing one or more fault(s) into the system to disturb its behaviour and identify potential vulnerabilities.
             \item The precision may vary depending on the category used
-            \item Different fault model depending on the category
         \end{itemize}
     \end{block}
     
@@ -267,8 +266,8 @@
 \begin{frame}{Motivations}
     \begin{block}{}
         \begin{itemize}
-            \item \textbf{Power supply} : manipulations to control the program counter\footnote[frame]{\tiny\fullcite{TSW-16-fdtc}},
-            \item \textbf{EM Fault Injection} (EMFI) : to recover an AES key by targeting the cache hierarchy and the MMU\footnote[frame]{\tiny\fullcite{TBELB-21-jce}},
+            \item \textbf{Power supply} : manipulations to control the program counter\footnote[frame]{\tiny\fullcite{TSW-16-fdtc}};
+            \item \textbf{EM Fault Injection} (EMFI) : to recover an AES key by targeting the cache hierarchy and the MMU\footnote[frame]{\tiny\fullcite{TBELB-21-jce}};
             \item \textbf{Laser Fault Injection} (LFI) : allow the replay of instructions on a 32-bit microcontroller\footnote[frame]{\tiny\fullcite{KDD-21-dsd}}.
         \end{itemize}
     \end{block}
@@ -298,8 +297,8 @@
         \begin{itemize}
             \setbeamertemplate{itemize items}[triangle]
             \justifying
-            \item Provide a robust security mechanism against software and hardware threats,
-            \item Propose lightweight countermeasures against FIA,
+            \item Provide a robust security mechanism against software and hardware threats;
+            \item Propose lightweight countermeasures against FIA;
             \item Take into account constraints, such as efficiency, area, and performance overhead.
         \end{itemize}
     \end{block}
