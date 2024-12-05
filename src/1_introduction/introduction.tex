@@ -42,9 +42,9 @@
         \begin{itemize}
             \setbeamertemplate{itemize items}[square]
             \justifying
-            \item Software threats: malwares~\cite{FIMI-23-access}, memory overflow attacks~\cite{CWCBW-00-discex}, SQL injection, etc
+            \item Software threats: malware~\cite{FIMI-23-access}, memory overflow attacks~\cite{CWCBW-00-discex}, SQL injection, etc
             \item Network threats: Man-In-The-Middle~\cite{CDL-16-commsurtuto}, jamming~\cite{PZ-22-commsurtuto}, DoS, etc
-            \item Hardware threats: Reverse Engineering, Side-Channel Attacks (SCA)~\cite{DM-21-appiot}, Fault Injection Attacks (FIA)~\cite{BCNTW-06-procieee}
+            \item Hardware threats: Reverse Engineering, Side-Channel Attacks~\cite{DM-21-appiot}, Fault Injection Attacks~\cite{BCNTW-06-procieee}
         \end{itemize}
     \end{block}
     }
@@ -53,15 +53,15 @@
         \begin{itemize}
             \setbeamertemplate{itemize items}[square]
             \justifying
-            \item \textbf{\textcolor{red}{Software threats}}: malwares~\cite{FIMI-23-access}, memory overflow attacks~\cite{CWCBW-00-discex}, SQL injection, etc
-            \item Network threats: Man-In-The-Middle~\cite{CDL-16-commsurtuto}, jamming~\cite{PZ-22-commsurtuto}, DDoS, etc
-            \item \textbf{\textcolor{red}{Hardware threats}}: physical attacks such as reverse engineering, Side-Channel Attacks (SCA)~\cite{DM-21-appiot}, \underline{Fault Injection Attacks (FIA)}~\cite{BCNTW-06-procieee}
+            \item \textbf{\textcolor{red}{Software threats}}: malware~\cite{FIMI-23-access}, memory overflow attacks~\cite{CWCBW-00-discex}, SQL injection, etc
+            \item Network threats: Man-In-The-Middle~\cite{CDL-16-commsurtuto}, jamming~\cite{PZ-22-commsurtuto}, DoS, etc
+            \item \textbf{\textcolor{red}{Hardware threats}}: physical attacks such as reverse engineering, Side-Channel Attacks~\cite{DM-21-appiot}, \underline{Fault Injection Attacks}~\cite{BCNTW-06-procieee}
         \end{itemize}
     \end{block}
     }
 
     \begin{center}
-        \begin{minipage}[r]{.4\textwidth}
+        \begin{minipage}[r]{.55\textwidth}
             \begin{figure}
                 \centering
                 \includegraphics[width=\textwidth]{src/1_introduction/img/threats_iot_graph.pdf}
@@ -124,8 +124,7 @@
 \end{frame}
 
 \begin{frame}{Software threats: Information Flow Tracking}
-    \begin{minipage}[c]{0.55\textwidth}
-        \only<1>{
+    \begin{minipage}[c]{0.4\textwidth}
         \begin{block}{}
             \begin{itemize}
                 \setbeamertemplate{itemize items}[square]
@@ -134,101 +133,121 @@
                 \item Software, \underline{\textbf{Hardware}} or Hybrid
             \end{itemize}
         \end{block}
-        }
-        \only<2->{
+    \end{minipage}\hfill%
+    \begin{minipage}[c]{0.55\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{src/1_introduction/img/arborescence_ift.pdf}
+            \caption{Taxonomy of IFTs}
+            \label{fig:taxoDIFT}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Software threats: Information Flow Tracking}
+    \begin{minipage}[c]{0.45\textwidth}
         \begin{block}{}
             \begin{itemize}
                 \setbeamertemplate{itemize items}[square]
                 \justifying
-                    \only<2->{\item Hardware DIFT:} \only<2>{\textbf{off-core} \cite{KDK-09-dsn}, \textcolor{Gainsboro}{off-loading core, in-core}}\only<3>{off-core, \textbf{off-loading core} \cite{CKSFGMRRRV-08-sigarch}, \textcolor{Gainsboro}{in-core}}\only<4>{off-core, off-loading core, \underline{\textbf{in-core}} \cite{DKK-07-sigarch}}
+                    \item \textbf{Hardware DIFT}: \textbf{off-core} \cite{KDK-09-dsn}, \textcolor{Gainsboro}{off-loading core, in-core}
             \end{itemize}
         \end{block}
-        }
-        \only<2>{
-            \begin{exampleblock}{}
-                \begin{itemize}
-                    \setbeamertemplate{itemize items}[square]
-                    \justifying
-                    \item Advantage: no internal hardware modification to the main core.
-                \end{itemize}
-            \end{exampleblock}
-            
-            \begin{alertblock}{}
-                \begin{itemize}
-                    \setbeamertemplate{itemize items}[square]
-                    \justifying
-                    \item Disadvantage: needs support from the OS for the synchronization between data and tags.
-                \end{itemize}
-            \end{alertblock}
-        }
-        \only<3>{
-            \begin{exampleblock}{}
-                \begin{itemize}
-                    \setbeamertemplate{itemize items}[square]
-                    \justifying
-                    \item Advantage: hardware does not need to know DIFT tags and policies, and no synchronization is needed.
-                \end{itemize}
-            \end{exampleblock}
-            
-            \begin{alertblock}{}
-                \begin{itemize}
-                    \setbeamertemplate{itemize items}[square]
-                    \justifying
-                    \item Disadvantage: requires a multicore CPU, reducing the number of cores available and increase the power consumption.
-                \end{itemize}
-            \end{alertblock}
-        }
-        \only<4>{
-            \begin{exampleblock}{}
-                \begin{itemize}
-                    \setbeamertemplate{itemize items}[square]
-                    \justifying
-                    \item Advantage: no multicore CPU and no synchronization are needed. Very low performances overhead.
-                \end{itemize}
-            \end{exampleblock}
-            
-            \begin{alertblock}{}
-                \begin{itemize}
-                    \setbeamertemplate{itemize items}[square]
-                    \justifying
-                    \item Disadvantage: highly invasive modifications of internal hardware for tags computations and storing.
-                \end{itemize}
-            \end{alertblock}
-        }
+        
+        \begin{exampleblock}{}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item \textbf{Advantage}: no internal hardware modification to the main core.
+            \end{itemize}
+        \end{exampleblock}
+        
+        \begin{alertblock}{}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item \textbf{Disadvantage}: needs support from the OS for the synchronization between data and tags.
+            \end{itemize}
+        \end{alertblock}
     \end{minipage}\hfill%
-    \begin{minipage}[c]{0.4\textwidth}
-        \only<1>{
-            \begin{figure}
-                \centering
-                \includegraphics[width=\textwidth]{src/1_introduction/img/arborescence_ift.pdf}
-                \caption{Taxonomy of IFTs}
-                \label{fig:taxoDIFT}
-            \end{figure}
-        }
-        \only<2>{
-            \begin{figure}
-                \centering
-                \includegraphics[height=.5\textheight]{src/1_introduction/img/offcore.pdf}
-                \caption{Representation of a Hardware Off-Core DIFT (inspired by~\cite{KDK-09-dsn})}
-                \label{fig:offcore}
-            \end{figure}
-        }
-        \only<3>{
-            \begin{figure}
-                \centering
-                \includegraphics[height=.5\textheight]{src/1_introduction/img/offloading.pdf}
-                \caption{Representation of a Hardware Off-Loading DIFT (inspired by~\cite{KDK-09-dsn})}
-                \label{fig:offloading}
-            \end{figure}
-        }
-        \only<4>{
-            \begin{figure}
-                \centering
-                \includegraphics[width=\textwidth]{src/1_introduction/img/incore.pdf}
-                \caption{Representation of a Hardware In-Core DIFT (inspired by~\cite{KDK-09-dsn})}
-                \label{fig:incore}
-            \end{figure}
-        }
+    \begin{minipage}[c]{0.5\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[height=.75\textheight]{src/1_introduction/img/offcore.pdf}
+            \caption{Representation of a Hardware Off-Core DIFT (inspired by~\cite{KDK-09-dsn})}
+            \label{fig:offcore}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Software threats: Information Flow Tracking}
+    \begin{minipage}[c]{0.45\textwidth}
+        \begin{block}{}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                    \item \textbf{Hardware DIFT}: off-core, \textbf{off-loading core} \cite{CKSFGMRRRV-08-sigarch}, \textcolor{Gainsboro}{in-core}
+            \end{itemize}
+        \end{block}
+        \begin{exampleblock}{}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item \textbf{Advantage}: hardware does not need to know DIFT tags and policies, and no synchronization is needed.
+            \end{itemize}
+        \end{exampleblock}
+        
+        \begin{alertblock}{}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item \textbf{Disadvantage}: requires a multicore CPU, reducing the number of cores available and increase the power consumption.
+            \end{itemize}
+        \end{alertblock}
+    \end{minipage}\hfill%
+    \begin{minipage}[c]{0.5\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[height=.75\textheight]{src/1_introduction/img/offloading.pdf}
+            \caption{Representation of a Hardware Off-Loading DIFT (inspired by~\cite{KDK-09-dsn})}
+            \label{fig:offloading}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Software threats: Information Flow Tracking}
+    \begin{minipage}[c]{0.45\textwidth}
+        \begin{block}{}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                    \item \textbf{Hardware DIFT}: off-core, off-loading core, \underline{\textbf{in-core}} \cite{DKK-07-sigarch}
+            \end{itemize}
+        \end{block}
+        
+        \begin{exampleblock}{}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item \textbf{Advantage}: no multicore CPU and no synchronization are needed. Very low performances overhead.
+            \end{itemize}
+        \end{exampleblock}
+        
+        \begin{alertblock}{}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item \textbf{Disadvantage}: highly invasive modifications of internal hardware for tags computations and storing.
+            \end{itemize}
+        \end{alertblock}
+    \end{minipage}\hfill%
+    \begin{minipage}[c]{0.5\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{src/1_introduction/img/incore.pdf}
+            \caption{Representation of a Hardware In-Core DIFT (inspired by~\cite{KDK-09-dsn})}
+            \label{fig:incore}
+        \end{figure}
     \end{minipage}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -246,40 +265,52 @@
 \end{frame}
 
 \begin{frame}{Hardware threats: Fault Injection Attacks}
-    \begin{block}{}
-        \begin{itemize}
-            \setbeamertemplate{itemize items}[square]
-            \justifying
-            \item \underline{Fault Injection Attacks} (FIA): involve deliberately introducing one or more fault(s) into the system to disturb its behaviour and identify potential vulnerabilities.
-            \item The precision may vary depending on the category used
-        \end{itemize}
-    \end{block}
-    
-    \begin{figure}
-        \centering
-        \includegraphics[height=.5\textheight, page=2]{src/1_introduction/img/physicalAttacks.pdf}
-        \label{fig:fia}
-    \end{figure}
+    \begin{minipage}[c]{0.5\textwidth}
+        \begin{block}{}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item \textbf{Fault Injection Attacks} (FIA): involve \underline{deliberately} introducing one or more fault(s) into the system \underline{to disturb} its behaviour and identify potential vulnerabilities.
+                \item The precision may vary depending on the category used
+            \end{itemize}
+        \end{block}
+        \end{minipage}\hfill%
+    \begin{minipage}[c]{0.5\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[height=.75\textheight, page=2]{src/1_introduction/img/physicalAttacks.pdf}
+            \label{fig:fia}
+        \end{figure}
+    \end{minipage}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Motivations}
 \begin{frame}{Motivations}
     \begin{block}{}
         \begin{itemize}
-            \item \textbf{Power supply} : manipulations to control the program counter\footnote[frame]{\tiny\fullcite{TSW-16-fdtc}};
-            \item \textbf{EM Fault Injection} (EMFI) : to recover an AES key by targeting the cache hierarchy and the MMU\footnote[frame]{\tiny\fullcite{TBELB-21-jce}};
-            \item \textbf{Laser Fault Injection} (LFI) : allow the replay of instructions on a 32-bit microcontroller\footnote[frame]{\tiny\fullcite{KDD-21-dsd}}.
+            \item \textbf{Power supply} : manipulations to control the program counter on ARM~\cite{TSW-16-fdtc};
+            \item \textbf{EM Fault Injection} (EMFI) : to recover an AES key by targeting the cache hierarchy and the MMU~\cite{TBELB-21-jce};
+            \item \textbf{Laser Fault Injection} (LFI) : allow the replay of instructions on a 32-bit microcontroller~\cite{KDD-21-dsd}.
         \end{itemize}
     \end{block}
 
+    
+
     \only<2>{
-    \begin{alertblock}{}
-        \begin{itemize}
-            \setbeamertemplate{itemize items}[triangle]
-            \justifying
-            \item No previous studies have shown the vulnerabilities of DIFT against FIA.
-        \end{itemize}
-    \end{alertblock}
+        \begin{columns}
+            \begin{column}{.125\linewidth}
+                \hfill
+            \end{column}
+            \begin{column}{.75\linewidth}
+                \begin{alertblock}{}
+                    \centering
+                    \textcolor{red}{\Forward}~No previous studies have shown the vulnerabilities of DIFT against FIA.~\textcolor{red}{\Rewind}
+                \end{alertblock}
+            \end{column}
+            \begin{column}{.125\linewidth}
+                \hfill
+            \end{column}
+        \end{columns}
     }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
