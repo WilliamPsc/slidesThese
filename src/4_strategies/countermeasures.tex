@@ -15,8 +15,10 @@
             \end{itemize}
         \end{itemize}
     \end{block}
-\end{frame}
 
+    \note{lightweight : only add a few bits of data without an overhead on performances to detect and correct 1 or 2 errors}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Countermeasures}
     \begin{block}{Protections}
         \begin{itemize}
@@ -49,15 +51,6 @@
             \includegraphics[width=.5\textwidth, page=1]{src/4_strategies/img/simple_parity.pdf}
             \caption{Simple parity codeword}
             \label{fig:simple_parity_codeword}
-        \end{figure}
-    \end{frame}
-
-    \begin{frame}{Implementation - Simple Parity}
-        \begin{figure}
-            \centering
-            \includegraphics[width=.75\textwidth, page=1]{src/4_strategies/img/archi_contremesures.pdf}
-            \caption{Simple Parity implementation}
-            \label{fig:simple_parity_implem}
         \end{figure}
     \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,24 +86,6 @@
             \end{figure}
         \end{minipage}
     \end{frame}
-    
-    % \begin{frame}{Implementation - Hamming Code}
-    %     \begin{figure}
-    %         \centering
-    %         \includegraphics[width=.9\textwidth, page=2]{src/4_strategies/img/archi_contremesures.pdf}
-    %         \caption{Hamming Code implementation for independant registers}
-    %         \label{fig:hamming_code_implem_independant_register}
-    %     \end{figure}
-    % \end{frame}
-    
-    % \begin{frame}{Implementation - Hamming Code}
-    %     \begin{figure}
-    %         \centering
-    %         \includegraphics[width=.9\textwidth, page=3]{src/4_strategies/img/archi_contremesures.pdf}
-    %         \caption{Hamming Code implementation for Register File}
-    %         \label{fig:hamming_code_implem_rf}
-    %     \end{figure}
-    % \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Hamming Code - SECDED}
 \begin{frame}{Detection of two-bit errors and correction of single-bit errors - SECDED}
@@ -143,21 +118,39 @@
         \end{figure}
     \end{minipage}
 \end{frame}
-    
-\begin{frame}{Implementation - SECDED}
+
+\begin{frame}{Implementation - One register for one encoder}
+    \begin{figure}
+        \centering
+        \includegraphics[width=.75\textwidth, page=1]{src/4_strategies/img/archi_contremesures.pdf}
+        \caption{Implementation of a protection for one register}
+        \label{fig:simple_parity_implem}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Implementation - Multiple registers for one encoder}
     \begin{figure}
         \centering
         \includegraphics[width=.8\textwidth, page=4]{src/4_strategies/img/archi_contremesures.pdf}
-        \caption{SECDED implementation for independant registers}
+        \caption{SImplementation of a protection for multiple registers}
         \label{fig:secded_implem_independant_register}
     \end{figure}
 \end{frame}
 
-\begin{frame}{Implementation - SECDED}
+\begin{frame}{Implementation - One register on multiple encoders}
+    \begin{figure}
+        \centering
+        \includegraphics[width=.9\textwidth, page=6]{src/4_strategies/img/archi_contremesures.pdf}
+        \caption{Implementation of a protection for one register splitted}
+        \label{fig:secded_implem_splitted}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Implementation - Special case for Register File tag}
     \begin{figure}
         \centering
         \includegraphics[width=.9\textwidth, page=5]{src/4_strategies/img/archi_contremesures.pdf}
-        \caption{SECDED implementation for Register File}
+        \caption{Special implementation for the Register File Tag}
         \label{fig:secded_implem_rf}
     \end{figure}
 \end{frame}

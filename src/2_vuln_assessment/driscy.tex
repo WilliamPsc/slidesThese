@@ -52,7 +52,14 @@
                       \item bit reset,
                       \item bit-flip.
                   \end{itemize}
+                  \begin{tikzpicture}[remember picture, overlay]
+                      \node (start) at (2, 1.625) {}; % Adjust the position
+                      \node (end) at (2, 0.3) {};
+                    \draw[decorate, decoration={brace, amplitude=10pt}] (start) -- (end)
+                      node[midway, right, xshift=10pt] {\scriptsize Fault model at bit level}; % Label the brace
+                  \end{tikzpicture}
         \end{itemize}
+        \vspace{-15pt}
     \end{block}
 
     \begin{block}{Methodology}
@@ -61,6 +68,8 @@
             \item We do a temporal, and logical analysis of the tag propagation
         \end{itemize}
     \end{block}
+
+    \note{modèles de fautes adaptés pour le data path des tags sur 1 bit car modèles au niveau bit}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Use case : presentation}
@@ -135,6 +144,7 @@
         \caption{Temporal analysis of tags propagation in a \textit{Buffer Overflow} attack}
         \label{fig:analyseTempoBufferOverflow}
     \end{figure}
+    \note{conclusion du slide : attaquant a plusieurs cycles pour fauter le tag (3 cycles de fenêtre d'attaque)}
 \end{frame}
 
 \begin{frame}{Logical analysis of the tag propagation}
@@ -144,10 +154,11 @@
         \caption{Logical analysis of tags propagation in a \textit{Buffer Overflow} attack}
         \label{fig:analyseLogiqueBufferOverflow}
     \end{figure}
+
+    \note{conclusion : attaquant a un ensemble de registres qu'il peut viser pour cibler le DIFT (figure permettant de déterminer les registres cibles) pour ensuite confirmer par la simu pour voir à quel instant et à quel endroit il doit injecter une faute pour bypass}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Experimental Setup}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Experimental Setup - Simulation fault injections campaign}
     \begin{columns}
         \begin{column}{.125\linewidth}
@@ -172,7 +183,7 @@
                                 \end{itemize}
                       \end{itemize}
                 \item Simulations with QuestaSim 10.6e.
-                \item FISSA (presented later) is used in order to create our injection campaigns
+                \item FISSA (presented later) is used in order to automate our injection campaigns
             \end{itemize}
         \end{column}
         \begin{column}{.125\linewidth}
@@ -219,7 +230,7 @@
         \end{tabular}
     \end{table}
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Summary}
     \begin{columns}
         \begin{column}{.15\linewidth}
@@ -233,19 +244,12 @@
                 \item This campaign showed 43 highly sensitive registers on 55 DIFT-related registers
                 \item We have shown that the D-RI5CY DIFT is vulnerable to FIA
                 \item Propagation of faults is facilitated by paths fully made of \textit{AND} gates
+                \item Presented at Sensors S\&P 2023~\cite{PLG-23-SensorsSP}.
             \end{itemize}
-
-            % \begin{block}{}
-                \begin{itemize}
-                    \setbeamertemplate{itemize items}[triangle]
-                    \item Best paper at Sensors S\&P 2023~\cite{PLG-23-SensorsSP}.
-                \end{itemize}
-            % \end{block}
         \end{column}
         \begin{column}{.15\linewidth}
             \hfill
         \end{column}
     \end{columns}
-    
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

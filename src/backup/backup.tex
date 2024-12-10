@@ -10,6 +10,27 @@
     \vfill
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[noframenumbering]{Software threats: Dynamic Information Flow Tracking}
+    \begin{minipage}[c]{0.4\textwidth}
+        \begin{block}{}
+            \begin{itemize}
+                \setbeamertemplate{itemize items}[square]
+                \justifying
+                \item Static or \underline{\textbf{Dynamic}}
+                \item Software, \underline{\textbf{Hardware}} or Hybrid
+            \end{itemize}
+        \end{block}
+    \end{minipage}\hfill%
+    \begin{minipage}[c]{0.55\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{src/1_introduction/img/arborescence_ift.pdf}
+            \caption{Taxonomy of IFTs}
+            \label{fig:taxoDIFT}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[noframenumbering]{Tag Propagation Register}
     \begin{table}[!t]
         \centering
@@ -70,33 +91,6 @@
     \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[noframenumbering]{Case 1: Buffer Overflow}
-    \begin{table}[H]
-        \scriptsize
-        \centering
-        \caption{Logical fault injection simulation campaigns results for single bit-flip in two registers at a given clock cycle}
-        \label{tab:chap6_results_single_bitflip_spatial_bo}
-        \setlength{\tabcolsep}{2pt}
-        \begin{tabular}{@{}ccccccccccc@{}}
-            \toprule
-                                                               &               & Crash & Silent      & Delay      & Detection   & \tableTwoLines{Detection \&}{Correction} & \tableTwoLines{Double Error}{Detection} & Success                     & Total        & \tableTwoLines{Execution}{time (h:min)} \\\midrule
-            \multirow{12}{*}{\tableTwoLines{Buffer}{Overflow}} & No protection & 0     & \num{45097} & \num{1503} & --          & --                                       & --                                      & \num{1406} {\tiny (2.93\%)} & \num{48006}  & 13:43                                   \\
-                                                               & Simple parity & 0     & \num{10551} & 134        & \num{40952} & --                                       & --                                      & 239 {\tiny (0.46\%)}        & \num{51876 } & 14:07                                   \\
-                                                               & Hamming 1     & 0     & 0           & 575        & --          & \num{67829 }                             & --                                      & 452 {\tiny (0.66\%)}        & \num{68856 } & 19:48                                   \\
-                                                               & Hamming 2     & 0     & 0           & 297        & --          & \num{72867 }                             & --                                      & 312 {\tiny (0.42\%)}        & \num{73476 } & 97:16                                   \\
-                                                               & Hamming 3     & 0     & 0           & 263        & --          & \num{108326}                             & --                                      & 281 {\tiny (0.26\%)}        & \num{108870} & 30:00                                   \\
-                                                               & Hamming 4     & 0     & 0           & 57         & --          & \num{155112}                             & --                                      & 99  {\tiny (0.06\%)}        & \num{155268} & 46:30                                   \\
-                                                               & Hamming 5     & 0     & 0           & 55         & --          & \num{173367}                             & --                                      & 98  {\tiny (0.06\%)}        & \num{173520} & 53:00                                   \\
-                                                               & SECDED 1      & 0     & 2436        & 0          & --          & \num{59424 }                             & \num{11616}                             & 0                           & \num{73476 } & 20:56                                   \\
-                                                               & SECDED 2      & 0     & 0           & 0          & --          & \num{69354 }                             & \num{10842}                             & 0                           & \num{80196 } & 21:49                                   \\
-                                                               & SECDED 3      & 0     & 0           & 0          & --          & \num{128376}                             & \num{9654 }                             & 0                           & \num{138030} & 40:14                                   \\
-                                                               & SECDED 4      & 0     & 0           & 0          & --          & \num{204060}                             & \num{7410 }                             & 0                           & \num{211470} & 64:02                                   \\
-                                                               & SECDED 5      & 0     & \num{12096} & 0          & --          & \num{214722}                             & \num{7542 }                             & 0                           & \num{234360} & 69:44                                   \\
-            \bottomrule
-        \end{tabular}
-    \end{table}
-\end{frame}
-
 \begin{frame}[noframenumbering]{Case 1: Buffer Overflow}
     \begin{table}[H]
         \scriptsize
