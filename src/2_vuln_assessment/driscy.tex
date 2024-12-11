@@ -1,8 +1,8 @@
 \section{D-RI5CY -- Vulnerability Assessment}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{D-RI5CY - origins and architecture}
-\begin{frame}{D-RI5CY - origins}
+\subsection{D-RI5CY — origins and architecture}
+\begin{frame}{D-RI5CY — origins}
     \begin{itemize}
         \item DIFT design\footnote[frame]{\tiny\fullcite{PDGLC-18-hpec}} made by researchers at Columbia University (USA) with Politecnico di Torino (Italy)
         \item Based on the 32-bit RISC-V processor: RI5CY (Pulp Platform)
@@ -19,7 +19,7 @@
     \vfill
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{D-RI5CY - architecture}
+\begin{frame}{D-RI5CY — architecture}
     \begin{figure}
         \centering
         \includegraphics[width=.9\textwidth]{src/2_vuln_assessment/img/RI5CY.pdf}
@@ -29,9 +29,9 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Vulnerability assessment}
-\begin{frame}{Vulnerability Assessment - Why?}
+\begin{frame}{Vulnerability Assessment — Why?}
     \begin{block}{}
-        We do a vulnerability assessment to:
+        We do a vulnerability assessment in order to:
         \begin{itemize}
             \setbeamertemplate{itemize items}[triangle]
             \justifying
@@ -41,7 +41,7 @@
     \end{block}
 \end{frame}
 
-\begin{frame}{Vulnerability Assessment - Threat model}
+\begin{frame}{Vulnerability Assessment — Threat model}
     \begin{block}{Threat model}
         We consider an attacker able to:
         \begin{itemize}
@@ -72,7 +72,7 @@
     \note{modèles de fautes adaptés pour le data path des tags sur 1 bit car modèles au niveau bit}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Use case : presentation}
+\subsection{Use case: presentation}
 \begin{frame}{Case: Buffer overflow}
     \begin{itemize}
         \item The attacker exploits a buffer overflow to access the return address register ($RA$).
@@ -159,7 +159,7 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Experimental Setup}
-\begin{frame}{Experimental Setup - Simulation fault injections campaign}
+\begin{frame}{Experimental Setup — Simulation fault injections campaign}
     \begin{columns}
         \begin{column}{.125\linewidth}
             \hfill

@@ -34,7 +34,7 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Simple Parity}
-    \begin{frame}{Detection of single-bit errors - Simple Parity}
+    \begin{frame}{Detection of single-bit errors — Simple Parity}
         \begin{block}{}
             \begin{itemize}
                 \justifying
@@ -55,11 +55,11 @@
     \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Hamming Code}
-    \begin{frame}{Detection and correction of single-bit errors - Hamming Code}
+    \begin{frame}{Detection and correction of single-bit errors — Hamming Code}
         \begin{block}{}
             \begin{itemize}
                 \justifying
-                \item Linear error-correcting codes invented by Richard W. Hamming~\cite{H-50-bstj}.
+                \item Linear error-correcting codes, invented by Richard W. Hamming~\cite{H-50-bstj}.
                 \item Mostly used in digital communication and data storage systems.
                 \item Detect and correct single-bit error.
                 \item Redundancy bits are placed in power of 2 positions.
@@ -87,8 +87,8 @@
         \end{minipage}
     \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Hamming Code - SECDED}
-\begin{frame}{Detection of two-bit errors and correction of single-bit errors - SECDED}
+\subsection{Hamming Code — SECDED}
+\begin{frame}{Detection of two-bit errors and correction of single-bit errors — SECDED}
     \begin{block}{}
         \begin{itemize}
             \justifying
@@ -118,8 +118,8 @@
         \end{figure}
     \end{minipage}
 \end{frame}
-
-\begin{frame}{Implementation - One register for one encoder}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Implementation — One register for one encoder}
     \begin{figure}
         \centering
         \includegraphics[width=.75\textwidth, page=1]{src/4_strategies/img/archi_contremesures.pdf}
@@ -128,25 +128,25 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Implementation - Multiple registers for one encoder}
+\begin{frame}{Implementation — Multiple registers for one encoder}
     \begin{figure}
         \centering
         \includegraphics[width=.8\textwidth, page=4]{src/4_strategies/img/archi_contremesures.pdf}
-        \caption{SImplementation of a protection for multiple registers}
+        \caption{Implementation of a protection for multiple registers}
         \label{fig:secded_implem_independant_register}
     \end{figure}
 \end{frame}
 
-\begin{frame}{Implementation - One register on multiple encoders}
+\begin{frame}{Implementation — One register on multiple encoders}
     \begin{figure}
         \centering
         \includegraphics[width=.9\textwidth, page=6]{src/4_strategies/img/archi_contremesures.pdf}
-        \caption{Implementation of a protection for one register splitted}
+        \caption{Implementation of a protection for one register split}
         \label{fig:secded_implem_splitted}
     \end{figure}
 \end{frame}
 
-\begin{frame}{Implementation - Special case for Register File tag}
+\begin{frame}{Implementation — Special case for Register File tag}
     \begin{figure}
         \centering
         \includegraphics[width=.9\textwidth, page=5]{src/4_strategies/img/archi_contremesures.pdf}
@@ -155,7 +155,7 @@
     \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Implemented strategies - Evaluation of Group Composition}
+\begin{frame}{Implemented strategies — Evaluation of Group Composition}
     \begin{block}{}
         \begin{itemize}
             \justifying
@@ -166,7 +166,7 @@
     \end{block}
 \end{frame}
 
-\begin{frame}{Implemented strategies - Group composition}
+\begin{frame}{Implemented strategies — Group composition}
     \begin{table}[t]
         \centering
         \small
@@ -186,7 +186,7 @@
     \end{table}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Implemented strategies - details}
+\begin{frame}{Implemented strategies — details}
     \begin{figure}
         \centering
         \includegraphics[height=.8\textheight]{src/4_strategies/img/implem5_spaghetti.pdf}
