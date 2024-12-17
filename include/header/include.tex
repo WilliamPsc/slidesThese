@@ -113,10 +113,6 @@
         \usebeamerfont{institute}\footnotesize\insertinstitute
         \LARGE \textcolor{bleuLabSTICC!50}{Thank you for your attention.}
     \end{beamercolorbox}
-    % \vspace{-.5cm}% NEW
-    % \begin{beamercolorbox}[sep=8pt,center]{date}
-    %     \usebeamerfont{date}\footnotesize\insertdate
-    % \end{beamercolorbox}
     \vskip0.5em
     \begin{columns}
         \begin{column}{.4\linewidth}
@@ -166,20 +162,6 @@
 \bibliography{bib/bibliographie.bib}
 \renewcommand*{\bibfont}{\footnotesize}
 
-% \AtBeginSection[] {
-%   \begin{frame}[noframenumbering, plain]{Outline}
-%     \vfill % Centres vertically
-%     \tableofcontents[
-%       currentsection,
-%       currentsubsection,
-%       hideothersubsections,
-%       sectionstyle=show/shaded,
-%       sections={\thesection}
-%     ]
-%     \vfill
-%   \end{frame}
-% }
-
 \defbeamertemplate{section in toc}{sections numbered roman}{%
   \leavevmode%
   \MakeUppercase{\romannumeral\inserttocsectionnumber}.\ \inserttocsection\par
@@ -195,10 +177,6 @@
 \AtBeginSection[]{
   \begin{frame}{}
     \vfill
-    % \centering
-    % \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
-    %     \Huge\tableofcontents[sectionstyle=show/hide, hideallsubsections]
-    % \end{beamercolorbox}
     \begin{center}
         \Huge \tableofcontents[sectionstyle=show/hide, hideallsubsections]
     \end{center}
