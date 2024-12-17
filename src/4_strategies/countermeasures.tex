@@ -137,21 +137,21 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Implementation — One register on multiple encoders}
-    \begin{figure}
-        \centering
-        \includegraphics[width=.9\textwidth, page=6]{src/4_strategies/img/archi_contremesures.pdf}
-        \caption{Implementation of a protection for one register split}
-        \label{fig:secded_implem_splitted}
-    \end{figure}
-\end{frame}
-
 \begin{frame}{Implementation — Special case for Register File tag}
     \begin{figure}
         \centering
         \includegraphics[width=.9\textwidth, page=5]{src/4_strategies/img/archi_contremesures.pdf}
         \caption{Special implementation for the Register File Tag}
         \label{fig:secded_implem_rf}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Implementation — One register on multiple encoders}
+    \begin{figure}
+        \centering
+        \includegraphics[width=.9\textwidth, page=6]{src/4_strategies/img/archi_contremesures.pdf}
+        \caption{Implementation of a protection for one register split}
+        \label{fig:secded_implem_splitted}
     \end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -177,7 +177,7 @@
             \toprule
                                 & \tableCentered{Grouping strategy}           & Objective                                                       \\ \midrule
             Strategy 1          & Minimisation of groups                      & Minimisation of the area overhead                               \\
-            Strategy 2          & Protection per pipeline stage               & One protection for each 7 pipeline stages                       \\
+            Strategy 2          & Protection per stage                        & One protection for each 7 main stages                           \\
             Strategy 3          & Protection per register                     & Each register is protected individually                         \\
             Strategy 4          & Protection per register with CSR splitting  & Strategy 3 + Split the CSRs registers by group of operations    \\
             Strategy 5          & Coupling split registers                    & Split each register and couple each bit to another register     \\
