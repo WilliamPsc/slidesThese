@@ -34,7 +34,7 @@
     \begin{table}[t]
         \centering
         \footnotesize
-        \caption{FPGA implementation results — Vivado 2023.2}
+        \caption{FPGA implementation results\footnote{Zedboard Xilinx Zynq-7000} — Vivado 2023.2}
         \label{tab:chap6_implementation}
         \begin{tabular}{@{}rccc@{}}
             \toprule
@@ -84,7 +84,7 @@
         \begin{tabular}{@{}ccccccccccc@{}}
             \toprule
                                                                &               & Crash & Silent      & Delay      & Detection   & \tableTwoLines{Detection \&}{Correction} & \tableTwoLines{Double Error}{Detection} & Success                     & Total        & \tableTwoLines{Execution}{time (h:min)} \\\midrule
-            \multirow{12}{*}{\tableTwoLines{Buffer}{Overflow}} & No protection & 0     & \num{45097} & \num{1503} & --          & --                                       & --                                      & \textcolor{blue}{\num{1406} {\tiny (2.93\%)}} & \num{48006}  & 13:43                                   \\
+            \multirow{12}{*}{\tableTwoLines{Buffer}{Overflow}} & No protection & 0     & \num{45097} & \num{1503} & --          & --                                       & --                                      & \textcolor{blue}{\num{1406} {\tiny (2.93\%)}} & \textcolor{blue}{\num{48006}}  & 13:43                                   \\
                                                                & Simple parity & 0     & \num{10551} & 134        & \num{40952} & --                                       & --                                      & 239 {\tiny (0.46\%)}        & \num{51876 } & 14:07                                   \\
                                                                & Hamming 1     & 0     & 0           & 575        & --          & \num{67829 }                             & --                                      & 452 {\tiny (0.66\%)}        & \num{68856 } & 19:48                                   \\
                                                                & Hamming 2     & 0     & 0           & 297        & --          & \num{72867 }                             & --                                      & 312 {\tiny (0.42\%)}        & \num{73476 } & 97:16                                   \\
@@ -111,10 +111,10 @@
         \begin{tabular}{@{}ccccccccccc@{}}
             \toprule
                                                                &               & Crash & Silent       & Delay & Detection   & \tableTwoLines{Detection \&}{Correction} & \tableTwoLines{Double Error}{Detection} & Success                                      & Total        & \tableTwoLines{Execution}{time (h:min)} \\\midrule
-            \multirow{12}{*}{\tableTwoLines{Buffer}{Overflow}} & No protection & 0     & \num{67072 } & 926   & --          & --                                       & --                                      & \textcolor{blue}{450 {\tiny (0.66\%)}}  & \num{68448 } & 11:11                                   \\
+            \multirow{12}{*}{\tableTwoLines{Buffer}{Overflow}} & No protection & 0     & \num{67072 } & 926   & --          & --                                       & --                                      & \textcolor{blue}{450 {\tiny (0.66\%)}}  & \textcolor{blue}{\num{68448}} & 11:11                                   \\
                                                                & Simple parity & 0     & \num{24622 } & 8     & \num{53359} & --                                       & --                                      & 59 {\tiny (0.08\%)}                          & \num{78048 } & 25:00                                   \\
                                                                & Hamming 1     & 0     & \num{294464} & 6273  & --          & --                                       & --                                      & 3103 {\tiny (1.02\%)}                        & \num{303840} & 99:36                                   \\
-                                                               & Hamming 2     & 0     & 0            & 3992  & --          & \num{319588}                             & --                                      & \textcolor{red}{4356 {\tiny (1.33\%)}} & \num{327936} & 131:12                                  \\
+                                                               & Hamming 2     & 0     & 0            & 3992  & --          & \num{319588}                             & --                                      & \textcolor{red}{4356 {\tiny (1.33\%)}} & \textcolor{red}{\num{327936}} & 131:12                                  \\
                                                                & Hamming 3     & 0     & 0            & 4557  & --          & \num{436187}                             & --                                      & 4408 {\tiny (0.99\%)}                        & \num{445152} & 121:20                                  \\
                                                                & Hamming 4     & 0     & 0            & 5446  & --          & \num{590953}                             & --                                      & 5329 {\tiny (0.89\%)}                        & \num{601728} & 167:00                                  \\
                                                                & Hamming 5     & 0     & 0            & 5987  & --          & \num{714873}                             & --                                      & 5860 {\tiny (0.81\%)}                        & \num{726720} & 210:31                                  \\
@@ -122,7 +122,7 @@
                                                                & SECDED 2      & 0     & 0            & 1186  & --          & \num{170805}                             & \num{184761}                            & 584 {\tiny (0.16\%)}                         & \num{357336} & 94:04                                   \\
                                                                & SECDED 3      & 0     & 0            & 1230  & --          & \num{300260}                             & \num{263665}                            & 669 {\tiny (0.12\%)}                         & \num{565824} & 161:30                                  \\
                                                                & SECDED 4      & 0     & 0            & 18    & --          & \num{457498}                             & \num{368959}                            & 61 {\tiny (0.0074\%)}                          & \num{826536} & 244:48                                  \\
-                                                               & SECDED 5      & 0     & 0            & 39    & --          & \num{576992}                             & \num{401407}                            & \textcolor{LimeGreen}{66 {\tiny (0.0067\%)}}   & \num{978504} & 284:45                                  \\
+                                                               & SECDED 5      & 0     & 0            & 39    & --          & \num{576992}                             & \num{401407}                            & \textcolor{LimeGreen}{66 {\tiny (0.0067\%)}}   & \textcolor{LimeGreen}{\num{978504}} & 284:45                                  \\
             \bottomrule
         \end{tabular}
     \end{table}

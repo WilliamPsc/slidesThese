@@ -22,12 +22,13 @@
 \begin{frame}{Countermeasures}
     \begin{block}{Protections}
         \begin{itemize}
-            \item Focusing on information redundancy codes:
+            \item Focusing on information redundancy codes for IoT devices:
             \begin{itemize}
                 \item Simple parity
                 \item Hamming Code
                 \item Hamming Code with an additional bit (SECDED)
             \end{itemize}
+            \item Only adds a few bits to detect and correct $\Rightarrow$ small overhead on area
             \item Implementations of \textit{Hamming Code} and \textit{Simple parity} have been presented at ISVLSI 2024~\cite{PRLG-24-isvlsi}.
         \end{itemize}
     \end{block}
@@ -159,7 +160,7 @@
     \begin{block}{}
         \begin{itemize}
             \justifying
-            \item Different strategies of implementation can be done depending on the objective
+            \item Different implementation strategies can be applied depending on protection requirements.
             \item The protection efficiency would vary
             \item We want the best protection at the lowest cost possible against different fault models
         \end{itemize}
