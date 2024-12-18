@@ -4,9 +4,9 @@
 \subsection{D-RI5CY — origins and architecture}
 \begin{frame}{D-RI5CY — origins}
     \begin{itemize}
-        \item DIFT design\footnote[frame]{\tiny\fullcite{PDGLC-18-hpec}} made by researchers at Columbia University (USA) with Politecnico di Torino (Italy)
+        \item DIFT design~\cite{PDGLC-18-hpec} made by researchers at Columbia University (USA) with Politecnico di Torino (Italy)
         \item Based on the 32-bit RISC-V processor: RI5CY (Pulp Platform)
-        \item Open source\footnote{\tiny\url{https://github.com/sld-columbia/riscv-dift}}
+        \item Open source\footnote{\footnotesize\url{https://github.com/sld-columbia/riscv-dift}}
         \item DIFT considering 1-bit tag data path
         \item Flexible security policy that can be modified at runtime
     \end{itemize}
@@ -37,6 +37,12 @@
             \justifying
             \item check if this DIFT is vulnerable against FIA,
             \item determine the spatial and temporal locations of vulnerabilities.
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{}
+        \begin{itemize}
+            \item Presented at Sensors S\&P 2023~\cite{PLG-23-SensorsSP}.
         \end{itemize}
     \end{block}
 \end{frame}
@@ -244,7 +250,6 @@
                 \item This campaign showed 43 highly sensitive registers on 55 DIFT-related registers
                 \item We have shown that the D-RI5CY DIFT is vulnerable to FIA
                 \item Propagation of faults is facilitated by paths fully made of \textit{AND} gates
-                \item Presented at Sensors S\&P 2023~\cite{PLG-23-SensorsSP}.
             \end{itemize}
         \end{column}
         \begin{column}{.15\linewidth}
